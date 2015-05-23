@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Queue">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="QueueId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Required />
+          <Hidden />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="BusinessUnitId"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Business Unit" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OrganizationId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Organization" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EMailAddress"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="E-mail" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PrimaryUserId"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owner (deprecated)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="QueueTypeCode"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Queue Type" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Description" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VersionNumber"
+        IsReadOnly="True"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IgnoreUnsolicitedEmail"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Convert To E-mail Activities" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsFaxQueue"
+        IsReadOnly="True"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Fax Queue" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailPassword"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Password" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IncomingEmailDeliveryMethod"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Incoming E-mail Delivery Method" />
+          <SupportedValue
+            DisplayName="None"
+            Value="0" />
+          <SupportedValue
+            DisplayName="EmailRouter"
+            Value="2" />
+          <SupportedValue
+            DisplayName="ForwardMailbox"
+            Value="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailUsername"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="User Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OutgoingEmailDeliveryMethod"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Outgoing Email Delivery Method" />
+          <SupportedValue
+            DisplayName="None"
+            Value="0" />
+          <SupportedValue
+            DisplayName="EmailRouter"
+            Value="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AllowEmailCredentials"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Allow credentials for the E-mail Router" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IncomingEmailFilteringMethod"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Incoming E-mail Filtering Method" />
+          <SupportedValue
+            DisplayName="Allemailmessages"
+            Value="0" />
+          <SupportedValue
+            DisplayName="EmailmessagesinresponsetoCRMemail"
+            Value="1" />
+          <SupportedValue
+            DisplayName="EmailmessagesfromCRMLeads_ContactsAccounts"
+            Value="2" />
+          <SupportedValue
+            DisplayName="EmailmessagesfromCRMrecordsthatareemailenabled"
+            Value="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwnerId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owner" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OverriddenCreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Record Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StatusCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status Reason" />
+          <SupportedValue
+            DisplayName="Active"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Inactive"
+            Value="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningBusinessUnit"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning Business Unit" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningUser"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning User" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StateCode"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status" />
+          <SupportedValue
+            DisplayName="Active"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Inactive"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ImportSequenceNumber"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Import Sequence Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningTeam"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning Team" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TransactionCurrencyId"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Currency" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ExchangeRate"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Exchange Rate" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailRouterAccessApproval"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Primary E-mail Status" />
+          <SupportedValue
+            DisplayName="Empty"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Approved"
+            Value="1" />
+          <SupportedValue
+            DisplayName="PendingApproval"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Rejected"
+            Value="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="queue_teams"
+        Association="queue_team"
+        FromEnd="Queue"
+        ToEnd="Team">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="team" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="queue_team">
+    <AssociationEnd
+      Name="Team"
+      Multiplicity="Many"
+      EntityType="Team" />
+    <AssociationEnd
+      Name="Queue"
+      EntityType="Queue">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Queues"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Queue" />
+    <AssociationSet
+      Name="queue_team"
+      Association="queue_team">
+      <AssociationSetEnd
+        Name="Team"
+        EntitySet="Teams" />
+      <AssociationSetEnd
+        Name="Queue"
+        EntitySet="Queues" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Queues_Single"
+      ReturnType="Queue">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="QueueId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="QueueId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Queues" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="QueueId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'QueueId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Queues_SingleOrDefault"
+      ReturnType="Queue">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="QueueId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="QueueId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Queues" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="QueueId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'QueueId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Queues">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetQueues"
+          EntityTypeName="Xpert360Lightning.Queue" />
+        <WcfRiaProperty
+          Name="Name"
+          Property="Queue/Properties[Name]" />
+        <WcfRiaProperty
+          Name="QueueId"
+          Property="Queue/Properties[QueueId]" />
+        <WcfRiaProperty
+          Name="BusinessUnitId"
+          Property="Queue/Properties[BusinessUnitId]" />
+        <WcfRiaProperty
+          Name="OrganizationId"
+          Property="Queue/Properties[OrganizationId]" />
+        <WcfRiaProperty
+          Name="EMailAddress"
+          Property="Queue/Properties[EMailAddress]" />
+        <WcfRiaProperty
+          Name="PrimaryUserId"
+          Property="Queue/Properties[PrimaryUserId]" />
+        <WcfRiaProperty
+          Name="QueueTypeCode"
+          Property="Queue/Properties[QueueTypeCode]" />
+        <WcfRiaProperty
+          Name="Description"
+          Property="Queue/Properties[Description]" />
+        <WcfRiaProperty
+          Name="CreatedOn"
+          Property="Queue/Properties[CreatedOn]" />
+        <WcfRiaProperty
+          Name="CreatedBy"
+          Property="Queue/Properties[CreatedBy]" />
+        <WcfRiaProperty
+          Name="ModifiedBy"
+          Property="Queue/Properties[ModifiedBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOn"
+          Property="Queue/Properties[ModifiedOn]" />
+        <WcfRiaProperty
+          Name="VersionNumber"
+          Property="Queue/Properties[VersionNumber]" />
+        <WcfRiaProperty
+          Name="IgnoreUnsolicitedEmail"
+          Property="Queue/Properties[IgnoreUnsolicitedEmail]" />
+        <WcfRiaProperty
+          Name="IsFaxQueue"
+          Property="Queue/Properties[IsFaxQueue]" />
+        <WcfRiaProperty
+          Name="EmailPassword"
+          Property="Queue/Properties[EmailPassword]" />
+        <WcfRiaProperty
+          Name="IncomingEmailDeliveryMethod"
+          Property="Queue/Properties[IncomingEmailDeliveryMethod]" />
+        <WcfRiaProperty
+          Name="EmailUsername"
+          Property="Queue/Properties[EmailUsername]" />
+        <WcfRiaProperty
+          Name="OutgoingEmailDeliveryMethod"
+          Property="Queue/Properties[OutgoingEmailDeliveryMethod]" />
+        <WcfRiaProperty
+          Name="AllowEmailCredentials"
+          Property="Queue/Properties[AllowEmailCredentials]" />
+        <WcfRiaProperty
+          Name="IncomingEmailFilteringMethod"
+          Property="Queue/Properties[IncomingEmailFilteringMethod]" />
+        <WcfRiaProperty
+          Name="OwnerId"
+          Property="Queue/Properties[OwnerId]" />
+        <WcfRiaProperty
+          Name="OverriddenCreatedOn"
+          Property="Queue/Properties[OverriddenCreatedOn]" />
+        <WcfRiaProperty
+          Name="StatusCode"
+          Property="Queue/Properties[StatusCode]" />
+        <WcfRiaProperty
+          Name="OwningBusinessUnit"
+          Property="Queue/Properties[OwningBusinessUnit]" />
+        <WcfRiaProperty
+          Name="OwningUser"
+          Property="Queue/Properties[OwningUser]" />
+        <WcfRiaProperty
+          Name="StateCode"
+          Property="Queue/Properties[StateCode]" />
+        <WcfRiaProperty
+          Name="CreatedOnBehalfBy"
+          Property="Queue/Properties[CreatedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOnBehalfBy"
+          Property="Queue/Properties[ModifiedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="ImportSequenceNumber"
+          Property="Queue/Properties[ImportSequenceNumber]" />
+        <WcfRiaProperty
+          Name="OwningTeam"
+          Property="Queue/Properties[OwningTeam]" />
+        <WcfRiaProperty
+          Name="TransactionCurrencyId"
+          Property="Queue/Properties[TransactionCurrencyId]" />
+        <WcfRiaProperty
+          Name="ExchangeRate"
+          Property="Queue/Properties[ExchangeRate]" />
+        <WcfRiaProperty
+          Name="EmailRouterAccessApproval"
+          Property="Queue/Properties[EmailRouterAccessApproval]" />
+        <WcfRiaProperty
+          Name="queue_teams"
+          Property="Queue/Properties[queue_teams]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="queue_team">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[queue_team]/Members[Team]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="QueueId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[queue_team]/Members[Queue]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="QueueId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

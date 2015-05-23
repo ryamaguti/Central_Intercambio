@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="ActivityParty">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="AddressUsed"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="ActivityPartyId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Required />
+          <Hidden />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="DoNotEMail"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Do not allow E-mails" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DoNotFax"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Do not allow Faxes" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DoNotPhone"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Do not allow Phone Calls" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DoNotPostalMail"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Do not allow Postal Mail" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Effort"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Effort" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ExchangeEntryId"
+        IsReadOnly="True"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Exchange Emtry" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsPartyDeleted"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Is Party Deleted" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InstanceTypeCode"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Appointment Type" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ScheduledEnd"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Scheduled End" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ScheduledStart"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Scheduled Start" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VersionNumber"
+        IsReadOnly="True"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="ActivityParty_Activity"
+        Association="activitypointer_activity_parties"
+        FromEnd="ActivityParty"
+        ToEnd="Activity">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Activity" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="ActivityParties"
+      CanUpdate="True"
+      EntityType="ActivityParty" />
+    <QueryOperation
+      Name="ActivityParties_Single"
+      ReturnType="ActivityParty">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ActivityPartyId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ActivityPartyId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ActivityParties" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ActivityPartyId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'ActivityPartyId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ActivityParties_SingleOrDefault"
+      ReturnType="ActivityParty">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ActivityPartyId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ActivityPartyId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ActivityParties" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ActivityPartyId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'ActivityPartyId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="ActivityParties">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetActivityParties"
+          EntityTypeName="Xpert360Lightning.ActivityParty" />
+        <WcfRiaProperty
+          Name="AddressUsed"
+          Property="ActivityParty/Properties[AddressUsed]" />
+        <WcfRiaProperty
+          Name="ActivityPartyId"
+          Property="ActivityParty/Properties[ActivityPartyId]" />
+        <WcfRiaProperty
+          Name="DoNotEMail"
+          Property="ActivityParty/Properties[DoNotEMail]" />
+        <WcfRiaProperty
+          Name="DoNotFax"
+          Property="ActivityParty/Properties[DoNotFax]" />
+        <WcfRiaProperty
+          Name="DoNotPhone"
+          Property="ActivityParty/Properties[DoNotPhone]" />
+        <WcfRiaProperty
+          Name="DoNotPostalMail"
+          Property="ActivityParty/Properties[DoNotPostalMail]" />
+        <WcfRiaProperty
+          Name="Effort"
+          Property="ActivityParty/Properties[Effort]" />
+        <WcfRiaProperty
+          Name="ExchangeEntryId"
+          Property="ActivityParty/Properties[ExchangeEntryId]" />
+        <WcfRiaProperty
+          Name="IsPartyDeleted"
+          Property="ActivityParty/Properties[IsPartyDeleted]" />
+        <WcfRiaProperty
+          Name="InstanceTypeCode"
+          Property="ActivityParty/Properties[InstanceTypeCode]" />
+        <WcfRiaProperty
+          Name="ScheduledEnd"
+          Property="ActivityParty/Properties[ScheduledEnd]" />
+        <WcfRiaProperty
+          Name="ScheduledStart"
+          Property="ActivityParty/Properties[ScheduledStart]" />
+        <WcfRiaProperty
+          Name="VersionNumber"
+          Property="ActivityParty/Properties[VersionNumber]" />
+        <WcfRiaProperty
+          Name="ActivityParty_Activity"
+          Property="ActivityParty/Properties[ActivityParty_Activity]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

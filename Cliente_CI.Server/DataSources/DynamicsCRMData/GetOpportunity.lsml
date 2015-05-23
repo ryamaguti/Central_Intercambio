@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <QueryOperation
+      Name="GetOpportunity"
+      ReturnType="Opportunity">
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Opportunities" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="OpportunityId"
+        ParameterType=":Guid?" />
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <QueryOperationMapping
+      Operation="GetOpportunity">
+      <QueryOperationMapping.Attributes>
+        <WcfRiaQueryOperation
+          Name="GetOpportunity" />
+        <WcfRiaQueryOperationParameter
+          Name="OpportunityId"
+          QueryOperationParameter="DynamicsCRMData/Members[GetOpportunity]/Parameters[OpportunityId]" />
+      </QueryOperationMapping.Attributes>
+    </QueryOperationMapping>
+  </DataService>
+</ServiceApplication>

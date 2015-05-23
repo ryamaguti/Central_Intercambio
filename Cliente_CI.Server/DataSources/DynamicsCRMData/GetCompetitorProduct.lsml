@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <QueryOperation
+      Name="GetCompetitorProduct"
+      ReturnType="CompetitorProduct">
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CompetitorProducts" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CompetitorProductId"
+        ParameterType=":Guid?" />
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <QueryOperationMapping
+      Operation="GetCompetitorProduct">
+      <QueryOperationMapping.Attributes>
+        <WcfRiaQueryOperation
+          Name="GetCompetitorProduct" />
+        <WcfRiaQueryOperationParameter
+          Name="CompetitorProductId"
+          QueryOperationParameter="DynamicsCRMData/Members[GetCompetitorProduct]/Parameters[CompetitorProductId]" />
+      </QueryOperationMapping.Attributes>
+    </QueryOperationMapping>
+  </DataService>
+</ServiceApplication>

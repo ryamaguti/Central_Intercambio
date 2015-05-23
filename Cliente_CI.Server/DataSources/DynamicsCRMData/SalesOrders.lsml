@@ -1,0 +1,1531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="SalesOrder">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="SalesOrderId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Required />
+          <Hidden />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="PriorityCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Priority" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SubmitStatus"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Submitted Status" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningUser"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning User" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SubmitDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Date Submitted" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningBusinessUnit"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning Business Unit" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SubmitStatusDescription"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Submitted Status Description" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LastBackofficeSubmit"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Last Submitted to Backoffice" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AccountId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Account" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ContactId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Contact" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OrderNumber"
+        IsReadOnly="True"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Order ID" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PricingErrorCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Pricing Error " />
+          <SupportedValue
+            DisplayName="None"
+            Value="0" />
+          <SupportedValue
+            DisplayName="DetailError"
+            Value="1" />
+          <SupportedValue
+            DisplayName="MissingPriceLevel"
+            Value="2" />
+          <SupportedValue
+            DisplayName="InactivePriceLevel"
+            Value="3" />
+          <SupportedValue
+            DisplayName="MissingQuantity"
+            Value="4" />
+          <SupportedValue
+            DisplayName="MissingUnitPrice"
+            Value="5" />
+          <SupportedValue
+            DisplayName="MissingProduct"
+            Value="6" />
+          <SupportedValue
+            DisplayName="InvalidProduct"
+            Value="7" />
+          <SupportedValue
+            DisplayName="MissingPricingCode"
+            Value="8" />
+          <SupportedValue
+            DisplayName="InvalidPricingCode"
+            Value="9" />
+          <SupportedValue
+            DisplayName="MissingUOM"
+            Value="10" />
+          <SupportedValue
+            DisplayName="ProductNotInPriceLevel"
+            Value="11" />
+          <SupportedValue
+            DisplayName="MissingPriceLevelAmount"
+            Value="12" />
+          <SupportedValue
+            DisplayName="MissingPriceLevelPercentage"
+            Value="13" />
+          <SupportedValue
+            DisplayName="MissingPrice"
+            Value="14" />
+          <SupportedValue
+            DisplayName="MissingCurrentCost"
+            Value="15" />
+          <SupportedValue
+            DisplayName="MissingStandardCost"
+            Value="16" />
+          <SupportedValue
+            DisplayName="InvalidPriceLevelAmount"
+            Value="17" />
+          <SupportedValue
+            DisplayName="InvalidPriceLevelPercentage"
+            Value="18" />
+          <SupportedValue
+            DisplayName="InvalidPrice"
+            Value="19" />
+          <SupportedValue
+            DisplayName="InvalidCurrentCost"
+            Value="20" />
+          <SupportedValue
+            DisplayName="InvalidStandardCost"
+            Value="21" />
+          <SupportedValue
+            DisplayName="InvalidRoundingPolicy"
+            Value="22" />
+          <SupportedValue
+            DisplayName="InvalidRoundingOption"
+            Value="23" />
+          <SupportedValue
+            DisplayName="InvalidRoundingAmount"
+            Value="24" />
+          <SupportedValue
+            DisplayName="PriceCalculationError"
+            Value="25" />
+          <SupportedValue
+            DisplayName="InvalidDiscountType"
+            Value="26" />
+          <SupportedValue
+            DisplayName="DiscountTypeInvalidState"
+            Value="27" />
+          <SupportedValue
+            DisplayName="InvalidDiscount"
+            Value="28" />
+          <SupportedValue
+            DisplayName="InvalidQuantity"
+            Value="29" />
+          <SupportedValue
+            DisplayName="InvalidPricingPrecision"
+            Value="30" />
+          <SupportedValue
+            DisplayName="MissingProductDefaultUOM"
+            Value="31" />
+          <SupportedValue
+            DisplayName="MissingProductUOMSchedule"
+            Value="32" />
+          <SupportedValue
+            DisplayName="InactiveDiscountType"
+            Value="33" />
+          <SupportedValue
+            DisplayName="InvalidPriceLevelCurrency"
+            Value="34" />
+          <SupportedValue
+            DisplayName="PriceAttributeOutOfRange"
+            Value="35" />
+          <SupportedValue
+            DisplayName="BaseCurrencyAttributeOverflow"
+            Value="36" />
+          <SupportedValue
+            DisplayName="BaseCurrencyAttributeUnderflow"
+            Value="37" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Description" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiscountAmount"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Order Discount Amount" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FreightAmount"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Freight Amount" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalAmount"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Amount" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalLineItemAmount"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Detail Amount" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalLineItemDiscountAmount"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Line Item Discount Amount" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalAmountLessFreight"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Pre-Freight Amount" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalDiscountAmount"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Discount Amount" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RequestDeliveryBy"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Requested Delivery Date" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalTax"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Tax" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShippingMethodCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Shipping Method" />
+          <SupportedValue
+            DisplayName="Airborne"
+            Value="1" />
+          <SupportedValue
+            DisplayName="DHL"
+            Value="2" />
+          <SupportedValue
+            DisplayName="FedEx"
+            Value="3" />
+          <SupportedValue
+            DisplayName="UPS"
+            Value="4" />
+          <SupportedValue
+            DisplayName="PostalMail"
+            Value="5" />
+          <SupportedValue
+            DisplayName="FullLoad"
+            Value="6" />
+          <SupportedValue
+            DisplayName="WillCall"
+            Value="7" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PaymentTermsCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Payment Terms" />
+          <SupportedValue
+            DisplayName="Net30"
+            Value="1" />
+          <SupportedValue
+            DisplayName="e2_10_Net30"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Net45"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Net60"
+            Value="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FreightTermsCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Freight Terms" />
+          <SupportedValue
+            DisplayName="FOB"
+            Value="1" />
+          <SupportedValue
+            DisplayName="NoCharge"
+            Value="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StateCode"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status" />
+          <SupportedValue
+            DisplayName="Active"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Submitted"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Canceled"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Fulfilled"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Invoiced"
+            Value="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StatusCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status Reason" />
+          <SupportedValue
+            DisplayName="New"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Pending"
+            Value="2" />
+          <SupportedValue
+            DisplayName="InProgress"
+            Value="3" />
+          <SupportedValue
+            DisplayName="NoMoney"
+            Value="4" />
+          <SupportedValue
+            DisplayName="Complete"
+            Value="100001" />
+          <SupportedValue
+            DisplayName="Partial"
+            Value="100002" />
+          <SupportedValue
+            DisplayName="Invoiced"
+            Value="100003" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VersionNumber"
+        IsReadOnly="True"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_Line1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To Street 1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_Line2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To Street 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_Line3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To Street 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_City"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To City" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_StateOrProvince"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To State/Province" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_Country"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To Country/Region" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_PostalCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To ZIP/Postal Code" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WillCall"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_Telephone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To Phone" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_FreightTermsCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To Freight Terms" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_Fax"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship to Fax" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_Line1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To Street 1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_Line2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To Street 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_Line3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To Street 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_City"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To City" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_StateOrProvince"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To State/Province" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_Country"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To Country/Region" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_PostalCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To ZIP/Postal Code" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_Telephone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To Phone" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_Fax"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To Fax" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiscountPercentage"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Order Discount (%)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwnerId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owner" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_ContactName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To Contact Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CampaignId"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Source Campaign" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BillTo_AddressId"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Bill To Address ID" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_AddressId"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To Address ID" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsPriceLocked"
+        IsReadOnly="True"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Prices Locked" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DateFulfilled"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Date Fulfilled" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShipTo_ContactName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ship To Contact Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UTCConversionTimeZoneCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="UTC Conversion Time Zone Code" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TransactionCurrencyId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Currency" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TimeZoneRuleVersionNumber"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Time Zone Rule Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ImportSequenceNumber"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Import Sequence Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ExchangeRate"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Exchange Rate" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OverriddenCreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Record Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalLineItemAmount_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Detail Amount (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalDiscountAmount_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Discount Amount (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalAmountLessFreight_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Pre-Freight Amount (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalAmount_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Amount (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiscountAmount_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Order Discount Amount (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FreightAmount_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Freight Amount (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalLineItemDiscountAmount_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Line Item Discount Amount (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalTax_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Tax (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="quote_orders"
+        Association="quote_orders"
+        FromEnd="SalesOrder"
+        ToEnd="Quote">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="quote" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="contactorders_associations"
+        Association="contactorders_association_salesorder"
+        FromEnd="SalesOrder"
+        ToEnd="ContactOrder">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="ContactOrder" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="order_customer_accounts"
+        Association="order_customer_accounts"
+        FromEnd="SalesOrder"
+        ToEnd="Account">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="account" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="opportunity_sales_orders"
+        Association="opportunity_sales_orders"
+        FromEnd="SalesOrder"
+        ToEnd="Opportunity">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="opportunity" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="team_orders"
+        Association="team_orders"
+        FromEnd="SalesOrder"
+        ToEnd="Team">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="team" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="price_level_orders"
+        Association="price_level_orders"
+        FromEnd="SalesOrder"
+        ToEnd="PriceLevel">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="pricelevel" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Order_invoices"
+        Association="order_invoices"
+        FromEnd="SalesOrder"
+        ToEnd="Invoice">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="invoice" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Order_details"
+        Association="order_details"
+        FromEnd="SalesOrder"
+        ToEnd="SalesOrderDetail">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="salesorderdetail" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="contactorders_association_salesorder">
+    <AssociationEnd
+      Name="SalesOrder"
+      Multiplicity="One"
+      EntityType="SalesOrder">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ContactOrder"
+      Multiplicity="Many"
+      EntityType="ContactOrder" />
+  </Association>
+  <Association
+    Name="order_invoices">
+    <AssociationEnd
+      Name="SalesOrder"
+      EntityType="SalesOrder">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Invoice"
+      Multiplicity="Many"
+      EntityType="Invoice" />
+  </Association>
+  <Association
+    Name="order_details">
+    <AssociationEnd
+      Name="SalesOrder"
+      EntityType="SalesOrder">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SalesOrderDetail"
+      Multiplicity="Many"
+      EntityType="SalesOrderDetail" />
+  </Association>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="SalesOrders"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="SalesOrder" />
+    <AssociationSet
+      Name="contactorders_association_salesorder"
+      Association="contactorders_association_salesorder">
+      <AssociationSetEnd
+        Name="SalesOrder"
+        EntitySet="SalesOrders" />
+      <AssociationSetEnd
+        Name="ContactOrder"
+        EntitySet="ContactOrders" />
+    </AssociationSet>
+    <AssociationSet
+      Name="order_invoices"
+      Association="order_invoices">
+      <AssociationSetEnd
+        Name="SalesOrder"
+        EntitySet="SalesOrders" />
+      <AssociationSetEnd
+        Name="Invoice"
+        EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet
+      Name="order_details"
+      Association="order_details">
+      <AssociationSetEnd
+        Name="SalesOrder"
+        EntitySet="SalesOrders" />
+      <AssociationSetEnd
+        Name="SalesOrderDetail"
+        EntitySet="SalesOrderDetails" />
+    </AssociationSet>
+    <QueryOperation
+      Name="SalesOrders_Single"
+      ReturnType="SalesOrder">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="SalesOrderId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="SalesOrderId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SalesOrders" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="SalesOrderId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'SalesOrderId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="SalesOrders_SingleOrDefault"
+      ReturnType="SalesOrder">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="SalesOrderId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="SalesOrderId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SalesOrders" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="SalesOrderId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'SalesOrderId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="SalesOrders">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetOrders"
+          EntityTypeName="Xpert360Lightning.SalesOrder" />
+        <WcfRiaProperty
+          Name="Name"
+          Property="SalesOrder/Properties[Name]" />
+        <WcfRiaProperty
+          Name="SalesOrderId"
+          Property="SalesOrder/Properties[SalesOrderId]" />
+        <WcfRiaProperty
+          Name="PriorityCode"
+          Property="SalesOrder/Properties[PriorityCode]" />
+        <WcfRiaProperty
+          Name="SubmitStatus"
+          Property="SalesOrder/Properties[SubmitStatus]" />
+        <WcfRiaProperty
+          Name="OwningUser"
+          Property="SalesOrder/Properties[OwningUser]" />
+        <WcfRiaProperty
+          Name="SubmitDate"
+          Property="SalesOrder/Properties[SubmitDate]" />
+        <WcfRiaProperty
+          Name="OwningBusinessUnit"
+          Property="SalesOrder/Properties[OwningBusinessUnit]" />
+        <WcfRiaProperty
+          Name="SubmitStatusDescription"
+          Property="SalesOrder/Properties[SubmitStatusDescription]" />
+        <WcfRiaProperty
+          Name="LastBackofficeSubmit"
+          Property="SalesOrder/Properties[LastBackofficeSubmit]" />
+        <WcfRiaProperty
+          Name="AccountId"
+          Property="SalesOrder/Properties[AccountId]" />
+        <WcfRiaProperty
+          Name="ContactId"
+          Property="SalesOrder/Properties[ContactId]" />
+        <WcfRiaProperty
+          Name="OrderNumber"
+          Property="SalesOrder/Properties[OrderNumber]" />
+        <WcfRiaProperty
+          Name="PricingErrorCode"
+          Property="SalesOrder/Properties[PricingErrorCode]" />
+        <WcfRiaProperty
+          Name="Description"
+          Property="SalesOrder/Properties[Description]" />
+        <WcfRiaProperty
+          Name="DiscountAmount"
+          Property="SalesOrder/Properties[DiscountAmount]" />
+        <WcfRiaProperty
+          Name="FreightAmount"
+          Property="SalesOrder/Properties[FreightAmount]" />
+        <WcfRiaProperty
+          Name="TotalAmount"
+          Property="SalesOrder/Properties[TotalAmount]" />
+        <WcfRiaProperty
+          Name="TotalLineItemAmount"
+          Property="SalesOrder/Properties[TotalLineItemAmount]" />
+        <WcfRiaProperty
+          Name="TotalLineItemDiscountAmount"
+          Property="SalesOrder/Properties[TotalLineItemDiscountAmount]" />
+        <WcfRiaProperty
+          Name="TotalAmountLessFreight"
+          Property="SalesOrder/Properties[TotalAmountLessFreight]" />
+        <WcfRiaProperty
+          Name="TotalDiscountAmount"
+          Property="SalesOrder/Properties[TotalDiscountAmount]" />
+        <WcfRiaProperty
+          Name="RequestDeliveryBy"
+          Property="SalesOrder/Properties[RequestDeliveryBy]" />
+        <WcfRiaProperty
+          Name="TotalTax"
+          Property="SalesOrder/Properties[TotalTax]" />
+        <WcfRiaProperty
+          Name="ShippingMethodCode"
+          Property="SalesOrder/Properties[ShippingMethodCode]" />
+        <WcfRiaProperty
+          Name="PaymentTermsCode"
+          Property="SalesOrder/Properties[PaymentTermsCode]" />
+        <WcfRiaProperty
+          Name="FreightTermsCode"
+          Property="SalesOrder/Properties[FreightTermsCode]" />
+        <WcfRiaProperty
+          Name="CreatedBy"
+          Property="SalesOrder/Properties[CreatedBy]" />
+        <WcfRiaProperty
+          Name="CreatedOn"
+          Property="SalesOrder/Properties[CreatedOn]" />
+        <WcfRiaProperty
+          Name="ModifiedBy"
+          Property="SalesOrder/Properties[ModifiedBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOn"
+          Property="SalesOrder/Properties[ModifiedOn]" />
+        <WcfRiaProperty
+          Name="StateCode"
+          Property="SalesOrder/Properties[StateCode]" />
+        <WcfRiaProperty
+          Name="StatusCode"
+          Property="SalesOrder/Properties[StatusCode]" />
+        <WcfRiaProperty
+          Name="ShipTo_Name"
+          Property="SalesOrder/Properties[ShipTo_Name]" />
+        <WcfRiaProperty
+          Name="VersionNumber"
+          Property="SalesOrder/Properties[VersionNumber]" />
+        <WcfRiaProperty
+          Name="ShipTo_Line1"
+          Property="SalesOrder/Properties[ShipTo_Line1]" />
+        <WcfRiaProperty
+          Name="ShipTo_Line2"
+          Property="SalesOrder/Properties[ShipTo_Line2]" />
+        <WcfRiaProperty
+          Name="ShipTo_Line3"
+          Property="SalesOrder/Properties[ShipTo_Line3]" />
+        <WcfRiaProperty
+          Name="ShipTo_City"
+          Property="SalesOrder/Properties[ShipTo_City]" />
+        <WcfRiaProperty
+          Name="ShipTo_StateOrProvince"
+          Property="SalesOrder/Properties[ShipTo_StateOrProvince]" />
+        <WcfRiaProperty
+          Name="ShipTo_Country"
+          Property="SalesOrder/Properties[ShipTo_Country]" />
+        <WcfRiaProperty
+          Name="ShipTo_PostalCode"
+          Property="SalesOrder/Properties[ShipTo_PostalCode]" />
+        <WcfRiaProperty
+          Name="WillCall"
+          Property="SalesOrder/Properties[WillCall]" />
+        <WcfRiaProperty
+          Name="ShipTo_Telephone"
+          Property="SalesOrder/Properties[ShipTo_Telephone]" />
+        <WcfRiaProperty
+          Name="BillTo_Name"
+          Property="SalesOrder/Properties[BillTo_Name]" />
+        <WcfRiaProperty
+          Name="ShipTo_FreightTermsCode"
+          Property="SalesOrder/Properties[ShipTo_FreightTermsCode]" />
+        <WcfRiaProperty
+          Name="ShipTo_Fax"
+          Property="SalesOrder/Properties[ShipTo_Fax]" />
+        <WcfRiaProperty
+          Name="BillTo_Line1"
+          Property="SalesOrder/Properties[BillTo_Line1]" />
+        <WcfRiaProperty
+          Name="BillTo_Line2"
+          Property="SalesOrder/Properties[BillTo_Line2]" />
+        <WcfRiaProperty
+          Name="BillTo_Line3"
+          Property="SalesOrder/Properties[BillTo_Line3]" />
+        <WcfRiaProperty
+          Name="BillTo_City"
+          Property="SalesOrder/Properties[BillTo_City]" />
+        <WcfRiaProperty
+          Name="BillTo_StateOrProvince"
+          Property="SalesOrder/Properties[BillTo_StateOrProvince]" />
+        <WcfRiaProperty
+          Name="BillTo_Country"
+          Property="SalesOrder/Properties[BillTo_Country]" />
+        <WcfRiaProperty
+          Name="BillTo_PostalCode"
+          Property="SalesOrder/Properties[BillTo_PostalCode]" />
+        <WcfRiaProperty
+          Name="BillTo_Telephone"
+          Property="SalesOrder/Properties[BillTo_Telephone]" />
+        <WcfRiaProperty
+          Name="BillTo_Fax"
+          Property="SalesOrder/Properties[BillTo_Fax]" />
+        <WcfRiaProperty
+          Name="DiscountPercentage"
+          Property="SalesOrder/Properties[DiscountPercentage]" />
+        <WcfRiaProperty
+          Name="OwnerId"
+          Property="SalesOrder/Properties[OwnerId]" />
+        <WcfRiaProperty
+          Name="BillTo_ContactName"
+          Property="SalesOrder/Properties[BillTo_ContactName]" />
+        <WcfRiaProperty
+          Name="CampaignId"
+          Property="SalesOrder/Properties[CampaignId]" />
+        <WcfRiaProperty
+          Name="BillTo_AddressId"
+          Property="SalesOrder/Properties[BillTo_AddressId]" />
+        <WcfRiaProperty
+          Name="ShipTo_AddressId"
+          Property="SalesOrder/Properties[ShipTo_AddressId]" />
+        <WcfRiaProperty
+          Name="IsPriceLocked"
+          Property="SalesOrder/Properties[IsPriceLocked]" />
+        <WcfRiaProperty
+          Name="DateFulfilled"
+          Property="SalesOrder/Properties[DateFulfilled]" />
+        <WcfRiaProperty
+          Name="ShipTo_ContactName"
+          Property="SalesOrder/Properties[ShipTo_ContactName]" />
+        <WcfRiaProperty
+          Name="UTCConversionTimeZoneCode"
+          Property="SalesOrder/Properties[UTCConversionTimeZoneCode]" />
+        <WcfRiaProperty
+          Name="TransactionCurrencyId"
+          Property="SalesOrder/Properties[TransactionCurrencyId]" />
+        <WcfRiaProperty
+          Name="TimeZoneRuleVersionNumber"
+          Property="SalesOrder/Properties[TimeZoneRuleVersionNumber]" />
+        <WcfRiaProperty
+          Name="ImportSequenceNumber"
+          Property="SalesOrder/Properties[ImportSequenceNumber]" />
+        <WcfRiaProperty
+          Name="ExchangeRate"
+          Property="SalesOrder/Properties[ExchangeRate]" />
+        <WcfRiaProperty
+          Name="OverriddenCreatedOn"
+          Property="SalesOrder/Properties[OverriddenCreatedOn]" />
+        <WcfRiaProperty
+          Name="TotalLineItemAmount_Base"
+          Property="SalesOrder/Properties[TotalLineItemAmount_Base]" />
+        <WcfRiaProperty
+          Name="TotalDiscountAmount_Base"
+          Property="SalesOrder/Properties[TotalDiscountAmount_Base]" />
+        <WcfRiaProperty
+          Name="TotalAmountLessFreight_Base"
+          Property="SalesOrder/Properties[TotalAmountLessFreight_Base]" />
+        <WcfRiaProperty
+          Name="TotalAmount_Base"
+          Property="SalesOrder/Properties[TotalAmount_Base]" />
+        <WcfRiaProperty
+          Name="DiscountAmount_Base"
+          Property="SalesOrder/Properties[DiscountAmount_Base]" />
+        <WcfRiaProperty
+          Name="FreightAmount_Base"
+          Property="SalesOrder/Properties[FreightAmount_Base]" />
+        <WcfRiaProperty
+          Name="TotalLineItemDiscountAmount_Base"
+          Property="SalesOrder/Properties[TotalLineItemDiscountAmount_Base]" />
+        <WcfRiaProperty
+          Name="TotalTax_Base"
+          Property="SalesOrder/Properties[TotalTax_Base]" />
+        <WcfRiaProperty
+          Name="CreatedOnBehalfBy"
+          Property="SalesOrder/Properties[CreatedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOnBehalfBy"
+          Property="SalesOrder/Properties[ModifiedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="quote_orders"
+          Property="SalesOrder/Properties[quote_orders]" />
+        <WcfRiaProperty
+          Name="contactorders_associations"
+          Property="SalesOrder/Properties[contactorders_associations]" />
+        <WcfRiaProperty
+          Name="order_customer_accounts"
+          Property="SalesOrder/Properties[order_customer_accounts]" />
+        <WcfRiaProperty
+          Name="opportunity_sales_orders"
+          Property="SalesOrder/Properties[opportunity_sales_orders]" />
+        <WcfRiaProperty
+          Name="team_orders"
+          Property="SalesOrder/Properties[team_orders]" />
+        <WcfRiaProperty
+          Name="price_level_orders"
+          Property="SalesOrder/Properties[price_level_orders]" />
+        <WcfRiaProperty
+          Name="Order_invoices"
+          Property="SalesOrder/Properties[Order_invoices]" />
+        <WcfRiaProperty
+          Name="Order_details"
+          Property="SalesOrder/Properties[Order_details]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="contactorders_association_salesorder">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[contactorders_association_salesorder]/Members[SalesOrder]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="SalesOrderId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[contactorders_association_salesorder]/Members[ContactOrder]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="SalesOrderId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="order_invoices">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[order_invoices]/Members[SalesOrder]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="SalesOrderId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[order_invoices]/Members[Invoice]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="SalesOrderId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="order_details">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[order_details]/Members[SalesOrder]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="SalesOrderId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[order_details]/Members[SalesOrderDetail]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="SalesOrderId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

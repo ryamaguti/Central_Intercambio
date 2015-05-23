@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="QuoteClose">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="Subject"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Subject" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="ActivityId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Required />
+          <Hidden />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="VersionNumber"
+        IsReadOnly="True"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwnerId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owner" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsWorkflowCreated"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Is Workflow Created" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Description" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Revision"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Revision" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Subcategory"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Sub-Category" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsBilled"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Is Billed" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StatusCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status Reason" />
+          <SupportedValue
+            DisplayName="Open"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Completed"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Canceled"
+            Value="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ScheduledEnd"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Scheduled End" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="QuoteNumber"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Quote Number" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StateCode"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status" />
+          <SupportedValue
+            DisplayName="Open"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Completed"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Canceled"
+            Value="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ServiceId"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Service" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ActualEnd"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Closed Date" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Category"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Category" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ActualDurationMinutes"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Actual Duration " />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ScheduledStart"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Scheduled Start" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningBusinessUnit"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning Business Unit" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ScheduledDurationMinutes"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Scheduled Duration" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ActualStart"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Actual Start" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningUser"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning User" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ImportSequenceNumber"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Import Sequence Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UTCConversionTimeZoneCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="UTC Conversion Time Zone Code" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TimeZoneRuleVersionNumber"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Time Zone Rule Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OverriddenCreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Record Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ActivityTypeCode"
+        IsReadOnly="True"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Activity Type" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsRegularActivity"
+        IsReadOnly="True"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Is Regular Activity" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Quote_QuoteClose"
+        Association="Quote_QuoteClose"
+        FromEnd="QuoteClose"
+        ToEnd="Quote">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="quote" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="team_quoteclose"
+        Association="team_quoteclose"
+        FromEnd="QuoteClose"
+        ToEnd="Team">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="team" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="QuoteCloses"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="QuoteClose" />
+    <QueryOperation
+      Name="QuoteCloses_Single"
+      ReturnType="QuoteClose">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ActivityId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ActivityId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="QuoteCloses" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ActivityId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'ActivityId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="QuoteCloses_SingleOrDefault"
+      ReturnType="QuoteClose">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ActivityId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ActivityId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="QuoteCloses" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ActivityId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'ActivityId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="QuoteCloses">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetQuoteCloseActivities"
+          EntityTypeName="Xpert360Lightning.QuoteClose" />
+        <WcfRiaProperty
+          Name="Subject"
+          Property="QuoteClose/Properties[Subject]" />
+        <WcfRiaProperty
+          Name="ActivityId"
+          Property="QuoteClose/Properties[ActivityId]" />
+        <WcfRiaProperty
+          Name="VersionNumber"
+          Property="QuoteClose/Properties[VersionNumber]" />
+        <WcfRiaProperty
+          Name="OwnerId"
+          Property="QuoteClose/Properties[OwnerId]" />
+        <WcfRiaProperty
+          Name="IsWorkflowCreated"
+          Property="QuoteClose/Properties[IsWorkflowCreated]" />
+        <WcfRiaProperty
+          Name="Description"
+          Property="QuoteClose/Properties[Description]" />
+        <WcfRiaProperty
+          Name="Revision"
+          Property="QuoteClose/Properties[Revision]" />
+        <WcfRiaProperty
+          Name="ModifiedOn"
+          Property="QuoteClose/Properties[ModifiedOn]" />
+        <WcfRiaProperty
+          Name="Subcategory"
+          Property="QuoteClose/Properties[Subcategory]" />
+        <WcfRiaProperty
+          Name="IsBilled"
+          Property="QuoteClose/Properties[IsBilled]" />
+        <WcfRiaProperty
+          Name="StatusCode"
+          Property="QuoteClose/Properties[StatusCode]" />
+        <WcfRiaProperty
+          Name="CreatedBy"
+          Property="QuoteClose/Properties[CreatedBy]" />
+        <WcfRiaProperty
+          Name="ScheduledEnd"
+          Property="QuoteClose/Properties[ScheduledEnd]" />
+        <WcfRiaProperty
+          Name="QuoteNumber"
+          Property="QuoteClose/Properties[QuoteNumber]" />
+        <WcfRiaProperty
+          Name="StateCode"
+          Property="QuoteClose/Properties[StateCode]" />
+        <WcfRiaProperty
+          Name="ServiceId"
+          Property="QuoteClose/Properties[ServiceId]" />
+        <WcfRiaProperty
+          Name="ActualEnd"
+          Property="QuoteClose/Properties[ActualEnd]" />
+        <WcfRiaProperty
+          Name="ModifiedBy"
+          Property="QuoteClose/Properties[ModifiedBy]" />
+        <WcfRiaProperty
+          Name="Category"
+          Property="QuoteClose/Properties[Category]" />
+        <WcfRiaProperty
+          Name="ActualDurationMinutes"
+          Property="QuoteClose/Properties[ActualDurationMinutes]" />
+        <WcfRiaProperty
+          Name="ScheduledStart"
+          Property="QuoteClose/Properties[ScheduledStart]" />
+        <WcfRiaProperty
+          Name="OwningBusinessUnit"
+          Property="QuoteClose/Properties[OwningBusinessUnit]" />
+        <WcfRiaProperty
+          Name="ScheduledDurationMinutes"
+          Property="QuoteClose/Properties[ScheduledDurationMinutes]" />
+        <WcfRiaProperty
+          Name="ActualStart"
+          Property="QuoteClose/Properties[ActualStart]" />
+        <WcfRiaProperty
+          Name="CreatedOn"
+          Property="QuoteClose/Properties[CreatedOn]" />
+        <WcfRiaProperty
+          Name="OwningUser"
+          Property="QuoteClose/Properties[OwningUser]" />
+        <WcfRiaProperty
+          Name="ImportSequenceNumber"
+          Property="QuoteClose/Properties[ImportSequenceNumber]" />
+        <WcfRiaProperty
+          Name="UTCConversionTimeZoneCode"
+          Property="QuoteClose/Properties[UTCConversionTimeZoneCode]" />
+        <WcfRiaProperty
+          Name="TimeZoneRuleVersionNumber"
+          Property="QuoteClose/Properties[TimeZoneRuleVersionNumber]" />
+        <WcfRiaProperty
+          Name="OverriddenCreatedOn"
+          Property="QuoteClose/Properties[OverriddenCreatedOn]" />
+        <WcfRiaProperty
+          Name="CreatedOnBehalfBy"
+          Property="QuoteClose/Properties[CreatedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOnBehalfBy"
+          Property="QuoteClose/Properties[ModifiedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="ActivityTypeCode"
+          Property="QuoteClose/Properties[ActivityTypeCode]" />
+        <WcfRiaProperty
+          Name="IsRegularActivity"
+          Property="QuoteClose/Properties[IsRegularActivity]" />
+        <WcfRiaProperty
+          Name="Quote_QuoteClose"
+          Property="QuoteClose/Properties[Quote_QuoteClose]" />
+        <WcfRiaProperty
+          Name="team_quoteclose"
+          Property="QuoteClose/Properties[team_quoteclose]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

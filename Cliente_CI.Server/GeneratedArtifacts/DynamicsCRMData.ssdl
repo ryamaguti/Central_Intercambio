@@ -1,0 +1,3552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DynamicsCRMDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DynamicsCRMDataStore">
+    <EntitySet Name="GetAccountLeads" EntityType="DynamicsCRMDataStore.AccountLead" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.AccountLead" />
+    <EntitySet Name="GetAccounts" EntityType="DynamicsCRMDataStore.Account" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Account" />
+    <EntitySet Name="GetActivities" EntityType="DynamicsCRMDataStore.Activity" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Activity" />
+    <EntitySet Name="GetActivityParties" EntityType="DynamicsCRMDataStore.ActivityParty" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.ActivityParty" />
+    <EntitySet Name="GetAttachments" EntityType="DynamicsCRMDataStore.Attachment" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Attachment" />
+    <EntitySet Name="GetCompetitorProducts" EntityType="DynamicsCRMDataStore.CompetitorProduct" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.CompetitorProduct" />
+    <EntitySet Name="GetCompetitors" EntityType="DynamicsCRMDataStore.Competitor" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Competitor" />
+    <EntitySet Name="GetContactLeads" EntityType="DynamicsCRMDataStore.ContactLead" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.ContactLead" />
+    <EntitySet Name="GetContactOrders" EntityType="DynamicsCRMDataStore.ContactOrder" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.ContactOrder" />
+    <EntitySet Name="GetContacts" EntityType="DynamicsCRMDataStore.Contact" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Contact" />
+    <EntitySet Name="GetContractLines" EntityType="DynamicsCRMDataStore.ContractDetail" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.ContractDetail" />
+    <EntitySet Name="GetContracts" EntityType="DynamicsCRMDataStore.Contract" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Contract" />
+    <EntitySet Name="GetInvoiceProducts" EntityType="DynamicsCRMDataStore.InvoiceDetail" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.InvoiceDetail" />
+    <EntitySet Name="GetInvoices" EntityType="DynamicsCRMDataStore.Invoice" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Invoice" />
+    <EntitySet Name="GetLeadCompetitors" EntityType="DynamicsCRMDataStore.LeadCompetitor" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.LeadCompetitor" />
+    <EntitySet Name="GetLeadProducts" EntityType="DynamicsCRMDataStore.LeadProduct" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.LeadProduct" />
+    <EntitySet Name="GetLeads" EntityType="DynamicsCRMDataStore.Lead" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Lead" />
+    <EntitySet Name="GetOpportunities" EntityType="DynamicsCRMDataStore.Opportunity" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Opportunity" />
+    <EntitySet Name="GetOpportunityCloseActivities" EntityType="DynamicsCRMDataStore.OpportunityClose" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.OpportunityClose" />
+    <EntitySet Name="GetOpportunityCompetitors" EntityType="DynamicsCRMDataStore.OpportunityCompetitor" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.OpportunityCompetitor" />
+    <EntitySet Name="GetOpportunityProducts" EntityType="DynamicsCRMDataStore.OpportunityProduct" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.OpportunityProduct" />
+    <EntitySet Name="GetPriceLists" EntityType="DynamicsCRMDataStore.PriceLevel" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.PriceLevel" />
+    <EntitySet Name="GetProducts" EntityType="DynamicsCRMDataStore.Product" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Product" />
+    <EntitySet Name="GetQueues" EntityType="DynamicsCRMDataStore.Queue" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Queue" />
+    <EntitySet Name="GetQuoteCloseActivities" EntityType="DynamicsCRMDataStore.QuoteClose" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.QuoteClose" />
+    <EntitySet Name="GetQuoteProducts" EntityType="DynamicsCRMDataStore.QuoteDetail" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.QuoteDetail" />
+    <EntitySet Name="GetQuotes" EntityType="DynamicsCRMDataStore.Quote" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Quote" />
+    <EntitySet Name="GetSecurityRoles" EntityType="DynamicsCRMDataStore.Role" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Role" />
+    <EntitySet Name="GetOrderProducts" EntityType="DynamicsCRMDataStore.SalesOrderDetail" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.SalesOrderDetail" />
+    <EntitySet Name="GetOrders" EntityType="DynamicsCRMDataStore.SalesOrder" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.SalesOrder" />
+    <EntitySet Name="GetSdkMessagePairs" EntityType="DynamicsCRMDataStore.SdkMessagePair" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.SdkMessagePair" />
+    <EntitySet Name="GetSdkMessageRequests" EntityType="DynamicsCRMDataStore.SdkMessageRequest" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.SdkMessageRequest" />
+    <EntitySet Name="GetSdkMessageResponses" EntityType="DynamicsCRMDataStore.SdkMessageResponse" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.SdkMessageResponse" />
+    <EntitySet Name="GetSdkMessages" EntityType="DynamicsCRMDataStore.SdkMessage" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.SdkMessage" />
+    <EntitySet Name="GetSolutions" EntityType="DynamicsCRMDataStore.Solution" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Solution" />
+    <EntitySet Name="GetTeamRoless" EntityType="DynamicsCRMDataStore.TeamRole" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.TeamRoles" />
+    <EntitySet Name="GetTeams" EntityType="DynamicsCRMDataStore.Team" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Team" />
+    <EntitySet Name="GetTerritories" EntityType="DynamicsCRMDataStore.Territory" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Territory" />
+    <EntitySet Name="GetUnits" EntityType="DynamicsCRMDataStore.UoM" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.UoM" />
+    <EntitySet Name="GetUnitGroups" EntityType="DynamicsCRMDataStore.UoMSchedule" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.UoMSchedule" />
+    <EntitySet Name="GetProcessDependencies" EntityType="DynamicsCRMDataStore.WorkflowDependency" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.WorkflowDependency" />
+    <EntitySet Name="GetProcessLogs" EntityType="DynamicsCRMDataStore.WorkflowLog" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.WorkflowLog" />
+    <EntitySet Name="GetProcesses" EntityType="DynamicsCRMDataStore.Workflow" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.Workflow" />
+    <EntitySet Name="GetX360Configuration" EntityType="DynamicsCRMDataStore.X360Configuration" store:Type="Tables" Schema="dbo" Table="Xpert360Lightning.X360Configuration" />
+    <AssociationSet Name="quote_customer_accounts" Association="DynamicsCRMDataStore.quote_customer_accounts">
+      <End Role="Account" EntitySet="GetAccounts" />
+      <End Role="Quote" EntitySet="GetQuotes" />
+    </AssociationSet>
+    <AssociationSet Name="order_customer_accounts" Association="DynamicsCRMDataStore.order_customer_accounts">
+      <End Role="Account" EntitySet="GetAccounts" />
+      <End Role="SalesOrder" EntitySet="GetOrders" />
+    </AssociationSet>
+    <AssociationSet Name="invoice_customer_accounts" Association="DynamicsCRMDataStore.invoice_customer_accounts">
+      <End Role="Account" EntitySet="GetAccounts" />
+      <End Role="Invoice" EntitySet="GetInvoices" />
+    </AssociationSet>
+    <AssociationSet Name="lead_customer_accounts" Association="DynamicsCRMDataStore.lead_customer_accounts">
+      <End Role="Account" EntitySet="GetAccounts" />
+      <End Role="Lead" EntitySet="GetLeads" />
+    </AssociationSet>
+    <AssociationSet Name="opportunity_customer_accounts" Association="DynamicsCRMDataStore.opportunity_customer_accounts">
+      <End Role="Account" EntitySet="GetAccounts" />
+      <End Role="Opportunity" EntitySet="GetOpportunities" />
+    </AssociationSet>
+    <AssociationSet Name="accountleads_association_account" Association="DynamicsCRMDataStore.accountleads_association_account">
+      <End Role="Account" EntitySet="GetAccounts" />
+      <End Role="AccountLead" EntitySet="GetAccountLeads" />
+    </AssociationSet>
+    <AssociationSet Name="account_master_account" Association="DynamicsCRMDataStore.account_master_account">
+      <End Role="Account1" EntitySet="GetAccounts" />
+      <End Role="Account" EntitySet="GetAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="account_parent_account" Association="DynamicsCRMDataStore.account_parent_account">
+      <End Role="Account1" EntitySet="GetAccounts" />
+      <End Role="Account" EntitySet="GetAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="contract_billingcustomer_accounts" Association="DynamicsCRMDataStore.contract_billingcustomer_accounts">
+      <End Role="Account" EntitySet="GetAccounts" />
+      <End Role="Contract" EntitySet="GetContracts" />
+    </AssociationSet>
+    <AssociationSet Name="contract_customer_accounts" Association="DynamicsCRMDataStore.contract_customer_accounts">
+      <End Role="Account" EntitySet="GetAccounts" />
+      <End Role="Contract" EntitySet="GetContracts" />
+    </AssociationSet>
+    <AssociationSet Name="contractlineitem_customer_accounts" Association="DynamicsCRMDataStore.contractlineitem_customer_accounts">
+      <End Role="Account" EntitySet="GetAccounts" />
+      <End Role="ContractDetail" EntitySet="GetContractLines" />
+    </AssociationSet>
+    <AssociationSet Name="contact_customer_accounts" Association="DynamicsCRMDataStore.contact_customer_accounts">
+      <End Role="Account" EntitySet="GetAccounts" />
+      <End Role="Contact" EntitySet="GetContacts" />
+    </AssociationSet>
+    <AssociationSet Name="activitypointer_activity_parties" Association="DynamicsCRMDataStore.activitypointer_activity_parties">
+      <End Role="Activity" EntitySet="GetActivities" />
+      <End Role="ActivityParty" EntitySet="GetActivityParties" />
+    </AssociationSet>
+    <AssociationSet Name="leadcompetitors_association_competitor" Association="DynamicsCRMDataStore.leadcompetitors_association_competitor">
+      <End Role="Competitor" EntitySet="GetCompetitors" />
+      <End Role="LeadCompetitor" EntitySet="GetLeadCompetitors" />
+    </AssociationSet>
+    <AssociationSet Name="competitor_opportunity_activities" Association="DynamicsCRMDataStore.competitor_opportunity_activities">
+      <End Role="Competitor" EntitySet="GetCompetitors" />
+      <End Role="OpportunityClose" EntitySet="GetOpportunityCloseActivities" />
+    </AssociationSet>
+    <AssociationSet Name="opportunitycompetitors_association_competitor" Association="DynamicsCRMDataStore.opportunitycompetitors_association_competitor">
+      <End Role="Competitor" EntitySet="GetCompetitors" />
+      <End Role="OpportunityCompetitor" EntitySet="GetOpportunityCompetitors" />
+    </AssociationSet>
+    <AssociationSet Name="competitorproduct_association_competitor" Association="DynamicsCRMDataStore.competitorproduct_association_competitor">
+      <End Role="Competitor" EntitySet="GetCompetitors" />
+      <End Role="CompetitorProduct" EntitySet="GetCompetitorProducts" />
+    </AssociationSet>
+    <AssociationSet Name="account_primary_contact" Association="DynamicsCRMDataStore.account_primary_contact">
+      <End Role="Contact" EntitySet="GetContacts" />
+      <End Role="Account" EntitySet="GetAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="contactleads_association_contact" Association="DynamicsCRMDataStore.contactleads_association_contact">
+      <End Role="Contact" EntitySet="GetContacts" />
+      <End Role="ContactLead" EntitySet="GetContactLeads" />
+    </AssociationSet>
+    <AssociationSet Name="contactorders_association_contact" Association="DynamicsCRMDataStore.contactorders_association_contact">
+      <End Role="Contact" EntitySet="GetContacts" />
+      <End Role="ContactOrder" EntitySet="GetContactOrders" />
+    </AssociationSet>
+    <AssociationSet Name="contact_master_contact" Association="DynamicsCRMDataStore.contact_master_contact">
+      <End Role="Contact1" EntitySet="GetContacts" />
+      <End Role="Contact" EntitySet="GetContacts" />
+    </AssociationSet>
+    <AssociationSet Name="contract_originating_contract" Association="DynamicsCRMDataStore.contract_originating_contract">
+      <End Role="Contract1" EntitySet="GetContracts" />
+      <End Role="Contract" EntitySet="GetContracts" />
+    </AssociationSet>
+    <AssociationSet Name="contract_line_items" Association="DynamicsCRMDataStore.contract_line_items">
+      <End Role="Contract" EntitySet="GetContracts" />
+      <End Role="ContractDetail" EntitySet="GetContractLines" />
+    </AssociationSet>
+    <AssociationSet Name="invoice_details" Association="DynamicsCRMDataStore.invoice_details">
+      <End Role="Invoice" EntitySet="GetInvoices" />
+      <End Role="InvoiceDetail" EntitySet="GetInvoiceProducts" />
+    </AssociationSet>
+    <AssociationSet Name="accountleads_association_lead" Association="DynamicsCRMDataStore.accountleads_association_lead">
+      <End Role="Lead" EntitySet="GetLeads" />
+      <End Role="AccountLead" EntitySet="GetAccountLeads" />
+    </AssociationSet>
+    <AssociationSet Name="contactleads_association_lead" Association="DynamicsCRMDataStore.contactleads_association_lead">
+      <End Role="Lead" EntitySet="GetLeads" />
+      <End Role="ContactLead" EntitySet="GetContactLeads" />
+    </AssociationSet>
+    <AssociationSet Name="leadcompetitors_association_lead" Association="DynamicsCRMDataStore.leadcompetitors_association_lead">
+      <End Role="Lead" EntitySet="GetLeads" />
+      <End Role="LeadCompetitor" EntitySet="GetLeadCompetitors" />
+    </AssociationSet>
+    <AssociationSet Name="leadproduct_association_lead" Association="DynamicsCRMDataStore.leadproduct_association_lead">
+      <End Role="Lead" EntitySet="GetLeads" />
+      <End Role="LeadProduct" EntitySet="GetLeadProducts" />
+    </AssociationSet>
+    <AssociationSet Name="lead_master_lead" Association="DynamicsCRMDataStore.lead_master_lead">
+      <End Role="Lead1" EntitySet="GetLeads" />
+      <End Role="Lead" EntitySet="GetLeads" />
+    </AssociationSet>
+    <AssociationSet Name="account_originating_lead" Association="DynamicsCRMDataStore.account_originating_lead">
+      <End Role="Lead" EntitySet="GetLeads" />
+      <End Role="Account" EntitySet="GetAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="contact_originating_lead" Association="DynamicsCRMDataStore.contact_originating_lead">
+      <End Role="Lead" EntitySet="GetLeads" />
+      <End Role="Contact" EntitySet="GetContacts" />
+    </AssociationSet>
+    <AssociationSet Name="opportunity_originating_lead" Association="DynamicsCRMDataStore.opportunity_originating_lead">
+      <End Role="Lead" EntitySet="GetLeads" />
+      <End Role="Opportunity" EntitySet="GetOpportunities" />
+    </AssociationSet>
+    <AssociationSet Name="opportunity_quotes" Association="DynamicsCRMDataStore.opportunity_quotes">
+      <End Role="Opportunity" EntitySet="GetOpportunities" />
+      <End Role="Quote" EntitySet="GetQuotes" />
+    </AssociationSet>
+    <AssociationSet Name="opportunity_sales_orders" Association="DynamicsCRMDataStore.opportunity_sales_orders">
+      <End Role="Opportunity" EntitySet="GetOpportunities" />
+      <End Role="SalesOrder" EntitySet="GetOrders" />
+    </AssociationSet>
+    <AssociationSet Name="opportunity_invoices" Association="DynamicsCRMDataStore.opportunity_invoices">
+      <End Role="Opportunity" EntitySet="GetOpportunities" />
+      <End Role="Invoice" EntitySet="GetInvoices" />
+    </AssociationSet>
+    <AssociationSet Name="opportunitycompetitors_association_opportunity" Association="DynamicsCRMDataStore.opportunitycompetitors_association_opportunity">
+      <End Role="Opportunity" EntitySet="GetOpportunities" />
+      <End Role="OpportunityCompetitor" EntitySet="GetOpportunityCompetitors" />
+    </AssociationSet>
+    <AssociationSet Name="Opportunity_OpportunityClose" Association="DynamicsCRMDataStore.Opportunity_OpportunityClose">
+      <End Role="Opportunity" EntitySet="GetOpportunities" />
+      <End Role="OpportunityClose" EntitySet="GetOpportunityCloseActivities" />
+    </AssociationSet>
+    <AssociationSet Name="product_opportunities" Association="DynamicsCRMDataStore.product_opportunities">
+      <End Role="Opportunity" EntitySet="GetOpportunities" />
+      <End Role="OpportunityProduct" EntitySet="GetOpportunityProducts" />
+    </AssociationSet>
+    <AssociationSet Name="price_level_quotes" Association="DynamicsCRMDataStore.price_level_quotes">
+      <End Role="PriceLevel" EntitySet="GetPriceLists" />
+      <End Role="Quote" EntitySet="GetQuotes" />
+    </AssociationSet>
+    <AssociationSet Name="price_level_orders" Association="DynamicsCRMDataStore.price_level_orders">
+      <End Role="PriceLevel" EntitySet="GetPriceLists" />
+      <End Role="SalesOrder" EntitySet="GetOrders" />
+    </AssociationSet>
+    <AssociationSet Name="price_level_invoices" Association="DynamicsCRMDataStore.price_level_invoices">
+      <End Role="PriceLevel" EntitySet="GetPriceLists" />
+      <End Role="Invoice" EntitySet="GetInvoices" />
+    </AssociationSet>
+    <AssociationSet Name="price_level_opportunties" Association="DynamicsCRMDataStore.price_level_opportunties">
+      <End Role="PriceLevel" EntitySet="GetPriceLists" />
+      <End Role="Opportunity" EntitySet="GetOpportunities" />
+    </AssociationSet>
+    <AssociationSet Name="price_level_accounts" Association="DynamicsCRMDataStore.price_level_accounts">
+      <End Role="PriceLevel" EntitySet="GetPriceLists" />
+      <End Role="Account" EntitySet="GetAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="price_level_contacts" Association="DynamicsCRMDataStore.price_level_contacts">
+      <End Role="PriceLevel" EntitySet="GetPriceLists" />
+      <End Role="Contact" EntitySet="GetContacts" />
+    </AssociationSet>
+    <AssociationSet Name="price_level_products" Association="DynamicsCRMDataStore.price_level_products">
+      <End Role="PriceLevel" EntitySet="GetPriceLists" />
+      <End Role="Product" EntitySet="GetProducts" />
+    </AssociationSet>
+    <AssociationSet Name="product_quote_details" Association="DynamicsCRMDataStore.product_quote_details">
+      <End Role="Product" EntitySet="GetProducts" />
+      <End Role="QuoteDetail" EntitySet="GetQuoteProducts" />
+    </AssociationSet>
+    <AssociationSet Name="product_order_details" Association="DynamicsCRMDataStore.product_order_details">
+      <End Role="Product" EntitySet="GetProducts" />
+      <End Role="SalesOrderDetail" EntitySet="GetOrderProducts" />
+    </AssociationSet>
+    <AssociationSet Name="product_invoice_details" Association="DynamicsCRMDataStore.product_invoice_details">
+      <End Role="Product" EntitySet="GetProducts" />
+      <End Role="InvoiceDetail" EntitySet="GetInvoiceProducts" />
+    </AssociationSet>
+    <AssociationSet Name="leadproduct_association_product" Association="DynamicsCRMDataStore.leadproduct_association_product">
+      <End Role="Product" EntitySet="GetProducts" />
+      <End Role="LeadProduct" EntitySet="GetLeadProducts" />
+    </AssociationSet>
+    <AssociationSet Name="opportunity_products" Association="DynamicsCRMDataStore.opportunity_products">
+      <End Role="Product" EntitySet="GetProducts" />
+      <End Role="OpportunityProduct" EntitySet="GetOpportunityProducts" />
+    </AssociationSet>
+    <AssociationSet Name="competitorproduct_association_product" Association="DynamicsCRMDataStore.competitorproduct_association_product">
+      <End Role="Product" EntitySet="GetProducts" />
+      <End Role="CompetitorProduct" EntitySet="GetCompetitorProducts" />
+    </AssociationSet>
+    <AssociationSet Name="product_contract_line_items" Association="DynamicsCRMDataStore.product_contract_line_items">
+      <End Role="Product" EntitySet="GetProducts" />
+      <End Role="ContractDetail" EntitySet="GetContractLines" />
+    </AssociationSet>
+    <AssociationSet Name="queue_team" Association="DynamicsCRMDataStore.queue_team">
+      <End Role="Queue" EntitySet="GetQueues" />
+      <End Role="Team" EntitySet="GetTeams" />
+    </AssociationSet>
+    <AssociationSet Name="Quote_QuoteClose" Association="DynamicsCRMDataStore.Quote_QuoteClose">
+      <End Role="Quote" EntitySet="GetQuotes" />
+      <End Role="QuoteClose" EntitySet="GetQuoteCloseActivities" />
+    </AssociationSet>
+    <AssociationSet Name="quote_details" Association="DynamicsCRMDataStore.quote_details">
+      <End Role="Quote" EntitySet="GetQuotes" />
+      <End Role="QuoteDetail" EntitySet="GetQuoteProducts" />
+    </AssociationSet>
+    <AssociationSet Name="quote_orders" Association="DynamicsCRMDataStore.quote_orders">
+      <End Role="Quote" EntitySet="GetQuotes" />
+      <End Role="SalesOrder" EntitySet="GetOrders" />
+    </AssociationSet>
+    <AssociationSet Name="teamroles_association_role" Association="DynamicsCRMDataStore.teamroles_association_role">
+      <End Role="Role" EntitySet="GetSecurityRoles" />
+      <End Role="TeamRole" EntitySet="GetTeamRoless" />
+    </AssociationSet>
+    <AssociationSet Name="role_parent_role" Association="DynamicsCRMDataStore.role_parent_role">
+      <End Role="Role1" EntitySet="GetSecurityRoles" />
+      <End Role="Role" EntitySet="GetSecurityRoles" />
+    </AssociationSet>
+    <AssociationSet Name="role_parent_root_role" Association="DynamicsCRMDataStore.role_parent_root_role">
+      <End Role="Role1" EntitySet="GetSecurityRoles" />
+      <End Role="Role" EntitySet="GetSecurityRoles" />
+    </AssociationSet>
+    <AssociationSet Name="contactorders_association_salesorder" Association="DynamicsCRMDataStore.contactorders_association_salesorder">
+      <End Role="SalesOrder" EntitySet="GetOrders" />
+      <End Role="ContactOrder" EntitySet="GetContactOrders" />
+    </AssociationSet>
+    <AssociationSet Name="order_invoices" Association="DynamicsCRMDataStore.order_invoices">
+      <End Role="SalesOrder" EntitySet="GetOrders" />
+      <End Role="Invoice" EntitySet="GetInvoices" />
+    </AssociationSet>
+    <AssociationSet Name="order_details" Association="DynamicsCRMDataStore.order_details">
+      <End Role="SalesOrder" EntitySet="GetOrders" />
+      <End Role="SalesOrderDetail" EntitySet="GetOrderProducts" />
+    </AssociationSet>
+    <AssociationSet Name="messagepair_sdkmessagerequest" Association="DynamicsCRMDataStore.messagepair_sdkmessagerequest">
+      <End Role="SdkMessagePair" EntitySet="GetSdkMessagePairs" />
+      <End Role="SdkMessageRequest" EntitySet="GetSdkMessageRequests" />
+    </AssociationSet>
+    <AssociationSet Name="messagerequest_sdkmessageresponse" Association="DynamicsCRMDataStore.messagerequest_sdkmessageresponse">
+      <End Role="SdkMessageRequest" EntitySet="GetSdkMessageRequests" />
+      <End Role="SdkMessageResponse" EntitySet="GetSdkMessageResponses" />
+    </AssociationSet>
+    <AssociationSet Name="sdkmessageid_workflow_dependency" Association="DynamicsCRMDataStore.sdkmessageid_workflow_dependency">
+      <End Role="SdkMessage" EntitySet="GetSdkMessages" />
+      <End Role="WorkflowDependency" EntitySet="GetProcessDependencies" />
+    </AssociationSet>
+    <AssociationSet Name="message_sdkmessagepair" Association="DynamicsCRMDataStore.message_sdkmessagepair">
+      <End Role="SdkMessage" EntitySet="GetSdkMessages" />
+      <End Role="SdkMessagePair" EntitySet="GetSdkMessagePairs" />
+    </AssociationSet>
+    <AssociationSet Name="team_workflow" Association="DynamicsCRMDataStore.team_workflow">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="Workflow" EntitySet="GetProcesses" />
+    </AssociationSet>
+    <AssociationSet Name="team_workflowlog" Association="DynamicsCRMDataStore.team_workflowlog">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="WorkflowLog" EntitySet="GetProcessLogs" />
+    </AssociationSet>
+    <AssociationSet Name="team_quotes" Association="DynamicsCRMDataStore.team_quotes">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="Quote" EntitySet="GetQuotes" />
+    </AssociationSet>
+    <AssociationSet Name="team_quoteclose" Association="DynamicsCRMDataStore.team_quoteclose">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="QuoteClose" EntitySet="GetQuoteCloseActivities" />
+    </AssociationSet>
+    <AssociationSet Name="team_orders" Association="DynamicsCRMDataStore.team_orders">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="SalesOrder" EntitySet="GetOrders" />
+    </AssociationSet>
+    <AssociationSet Name="teamroles_association_team" Association="DynamicsCRMDataStore.teamroles_association_team">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="TeamRole" EntitySet="GetTeamRoless" />
+    </AssociationSet>
+    <AssociationSet Name="team_accounts" Association="DynamicsCRMDataStore.team_accounts">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="Account" EntitySet="GetAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="team_contacts" Association="DynamicsCRMDataStore.team_contacts">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="Contact" EntitySet="GetContacts" />
+    </AssociationSet>
+    <AssociationSet Name="team_service_contracts" Association="DynamicsCRMDataStore.team_service_contracts">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="Contract" EntitySet="GetContracts" />
+    </AssociationSet>
+    <AssociationSet Name="team_invoices" Association="DynamicsCRMDataStore.team_invoices">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="Invoice" EntitySet="GetInvoices" />
+    </AssociationSet>
+    <AssociationSet Name="lead_owning_team" Association="DynamicsCRMDataStore.lead_owning_team">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="Lead" EntitySet="GetLeads" />
+    </AssociationSet>
+    <AssociationSet Name="team_opportunities" Association="DynamicsCRMDataStore.team_opportunities">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="Opportunity" EntitySet="GetOpportunities" />
+    </AssociationSet>
+    <AssociationSet Name="team_opportunityclose" Association="DynamicsCRMDataStore.team_opportunityclose">
+      <End Role="Team" EntitySet="GetTeams" />
+      <End Role="OpportunityClose" EntitySet="GetOpportunityCloseActivities" />
+    </AssociationSet>
+    <AssociationSet Name="territory_accounts" Association="DynamicsCRMDataStore.territory_accounts">
+      <End Role="Territory" EntitySet="GetTerritories" />
+      <End Role="Account" EntitySet="GetAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="unit_of_measurement_base_unit" Association="DynamicsCRMDataStore.unit_of_measurement_base_unit">
+      <End Role="UoM1" EntitySet="GetUnits" />
+      <End Role="UoM" EntitySet="GetUnits" />
+    </AssociationSet>
+    <AssociationSet Name="unit_of_measurement_products" Association="DynamicsCRMDataStore.unit_of_measurement_products">
+      <End Role="UoM" EntitySet="GetUnits" />
+      <End Role="Product" EntitySet="GetProducts" />
+    </AssociationSet>
+    <AssociationSet Name="unit_of_measurement_contract_line_items" Association="DynamicsCRMDataStore.unit_of_measurement_contract_line_items">
+      <End Role="UoM" EntitySet="GetUnits" />
+      <End Role="ContractDetail" EntitySet="GetContractLines" />
+    </AssociationSet>
+    <AssociationSet Name="unit_of_measurement_invoice_details" Association="DynamicsCRMDataStore.unit_of_measurement_invoice_details">
+      <End Role="UoM" EntitySet="GetUnits" />
+      <End Role="InvoiceDetail" EntitySet="GetInvoiceProducts" />
+    </AssociationSet>
+    <AssociationSet Name="unit_of_measurement_opportunity_products" Association="DynamicsCRMDataStore.unit_of_measurement_opportunity_products">
+      <End Role="UoM" EntitySet="GetUnits" />
+      <End Role="OpportunityProduct" EntitySet="GetOpportunityProducts" />
+    </AssociationSet>
+    <AssociationSet Name="unit_of_measurement_quote_details" Association="DynamicsCRMDataStore.unit_of_measurement_quote_details">
+      <End Role="UoM" EntitySet="GetUnits" />
+      <End Role="QuoteDetail" EntitySet="GetQuoteProducts" />
+    </AssociationSet>
+    <AssociationSet Name="unit_of_measurement_order_details" Association="DynamicsCRMDataStore.unit_of_measurement_order_details">
+      <End Role="UoM" EntitySet="GetUnits" />
+      <End Role="SalesOrderDetail" EntitySet="GetOrderProducts" />
+    </AssociationSet>
+    <AssociationSet Name="unit_of_measure_schedule_conversions" Association="DynamicsCRMDataStore.unit_of_measure_schedule_conversions">
+      <End Role="UoMSchedule" EntitySet="GetUnitGroups" />
+      <End Role="UoM" EntitySet="GetUnits" />
+    </AssociationSet>
+    <AssociationSet Name="unit_of_measurement_schedule_products" Association="DynamicsCRMDataStore.unit_of_measurement_schedule_products">
+      <End Role="UoMSchedule" EntitySet="GetUnitGroups" />
+      <End Role="Product" EntitySet="GetProducts" />
+    </AssociationSet>
+    <AssociationSet Name="contract_detail_unit_of_measure_schedule" Association="DynamicsCRMDataStore.contract_detail_unit_of_measure_schedule">
+      <End Role="UoMSchedule" EntitySet="GetUnitGroups" />
+      <End Role="ContractDetail" EntitySet="GetContractLines" />
+    </AssociationSet>
+    <AssociationSet Name="workflow_active_workflow" Association="DynamicsCRMDataStore.workflow_active_workflow">
+      <End Role="Workflow1" EntitySet="GetProcesses" />
+      <End Role="Workflow" EntitySet="GetProcesses" />
+    </AssociationSet>
+    <AssociationSet Name="workflow_parent_workflow" Association="DynamicsCRMDataStore.workflow_parent_workflow">
+      <End Role="Workflow1" EntitySet="GetProcesses" />
+      <End Role="Workflow" EntitySet="GetProcesses" />
+    </AssociationSet>
+    <AssociationSet Name="workflow_dependencies" Association="DynamicsCRMDataStore.workflow_dependencies">
+      <End Role="Workflow" EntitySet="GetProcesses" />
+      <End Role="WorkflowDependency" EntitySet="GetProcessDependencies" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AccountLead">
+    <Key>
+      <PropertyRef Name="AccountLeadId" />
+    </Key>
+    <Property Name="AccountLeadId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="AccountId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LeadId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="AccountId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Address1_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Address2_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccountCategoryCode" Type="int" />
+    <Property Name="CustomerSizeCode" Type="int" />
+    <Property Name="PreferredContactMethodCode" Type="int" />
+    <Property Name="CustomerTypeCode" Type="int" />
+    <Property Name="AccountRatingCode" Type="int" />
+    <Property Name="IndustryCode" Type="int" />
+    <Property Name="TerritoryCode" Type="int" />
+    <Property Name="AccountClassificationCode" Type="int" />
+    <Property Name="BusinessTypeCode" Type="int" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="PaymentTermsCode" Type="int" />
+    <Property Name="ShippingMethodCode" Type="int" />
+    <Property Name="ParticipatesInWorkflow" Type="bit" />
+    <Property Name="AccountNumber" Type="nvarchar(max)" />
+    <Property Name="Revenue" Type="decimal" Precision="18" />
+    <Property Name="NumberOfEmployees" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="SIC" Type="nvarchar(max)" />
+    <Property Name="OwnershipCode" Type="int" />
+    <Property Name="MarketCap" Type="decimal" Precision="18" />
+    <Property Name="SharesOutstanding" Type="int" />
+    <Property Name="TickerSymbol" Type="nvarchar(max)" />
+    <Property Name="StockExchange" Type="nvarchar(max)" />
+    <Property Name="WebSiteURL" Type="nvarchar(max)" />
+    <Property Name="FtpSiteURL" Type="nvarchar(max)" />
+    <Property Name="EMailAddress1" Type="nvarchar(max)" />
+    <Property Name="EMailAddress2" Type="nvarchar(max)" />
+    <Property Name="EMailAddress3" Type="nvarchar(max)" />
+    <Property Name="DoNotPhone" Type="bit" />
+    <Property Name="DoNotFax" Type="bit" />
+    <Property Name="Telephone1" Type="nvarchar(max)" />
+    <Property Name="DoNotEMail" Type="bit" />
+    <Property Name="Telephone2" Type="nvarchar(max)" />
+    <Property Name="Fax" Type="nvarchar(max)" />
+    <Property Name="Telephone3" Type="nvarchar(max)" />
+    <Property Name="DoNotPostalMail" Type="bit" />
+    <Property Name="DoNotBulkEMail" Type="bit" />
+    <Property Name="DoNotBulkPostalMail" Type="bit" />
+    <Property Name="CreditLimit" Type="decimal" Precision="18" />
+    <Property Name="CreditOnHold" Type="bit" />
+    <Property Name="IsPrivate" Type="bit" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="Aging30" Type="decimal" Precision="18" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="Aging60" Type="decimal" Precision="18" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="Aging90" Type="decimal" Precision="18" />
+    <Property Name="Address1_AddressTypeCode" Type="int" />
+    <Property Name="Address1_Name" Type="nvarchar(max)" />
+    <Property Name="Address1_PrimaryContactName" Type="nvarchar(max)" />
+    <Property Name="Address1_Line1" Type="nvarchar(max)" />
+    <Property Name="Address1_Line2" Type="nvarchar(max)" />
+    <Property Name="Address1_Line3" Type="nvarchar(max)" />
+    <Property Name="Address1_City" Type="nvarchar(max)" />
+    <Property Name="Address1_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="Address1_County" Type="nvarchar(max)" />
+    <Property Name="Address1_Country" Type="nvarchar(max)" />
+    <Property Name="Address1_PostOfficeBox" Type="nvarchar(max)" />
+    <Property Name="Address1_PostalCode" Type="nvarchar(max)" />
+    <Property Name="Address1_UTCOffset" Type="int" />
+    <Property Name="Address1_FreightTermsCode" Type="int" />
+    <Property Name="Address1_UPSZone" Type="nvarchar(max)" />
+    <Property Name="Address1_Latitude" Type="float" />
+    <Property Name="Address1_Telephone1" Type="nvarchar(max)" />
+    <Property Name="Address1_Longitude" Type="float" />
+    <Property Name="Address1_ShippingMethodCode" Type="int" />
+    <Property Name="Address1_Telephone2" Type="nvarchar(max)" />
+    <Property Name="Address1_Telephone3" Type="nvarchar(max)" />
+    <Property Name="Address1_Fax" Type="nvarchar(max)" />
+    <Property Name="Address2_AddressTypeCode" Type="int" />
+    <Property Name="Address2_Name" Type="nvarchar(max)" />
+    <Property Name="Address2_PrimaryContactName" Type="nvarchar(max)" />
+    <Property Name="Address2_Line1" Type="nvarchar(max)" />
+    <Property Name="Address2_Line2" Type="nvarchar(max)" />
+    <Property Name="Address2_Line3" Type="nvarchar(max)" />
+    <Property Name="Address2_City" Type="nvarchar(max)" />
+    <Property Name="Address2_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="Address2_County" Type="nvarchar(max)" />
+    <Property Name="Address2_Country" Type="nvarchar(max)" />
+    <Property Name="Address2_PostOfficeBox" Type="nvarchar(max)" />
+    <Property Name="Address2_PostalCode" Type="nvarchar(max)" />
+    <Property Name="Address2_UTCOffset" Type="int" />
+    <Property Name="Address2_FreightTermsCode" Type="int" />
+    <Property Name="Address2_UPSZone" Type="nvarchar(max)" />
+    <Property Name="Address2_Latitude" Type="float" />
+    <Property Name="Address2_Telephone1" Type="nvarchar(max)" />
+    <Property Name="Address2_Longitude" Type="float" />
+    <Property Name="Address2_ShippingMethodCode" Type="int" />
+    <Property Name="Address2_Telephone2" Type="nvarchar(max)" />
+    <Property Name="Address2_Telephone3" Type="nvarchar(max)" />
+    <Property Name="Address2_Fax" Type="nvarchar(max)" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="PreferredAppointmentDayCode" Type="int" />
+    <Property Name="PreferredSystemUserId" Type="uniqueidentifier" />
+    <Property Name="PreferredAppointmentTimeCode" Type="int" />
+    <Property Name="Merged" Type="bit" />
+    <Property Name="DoNotSendMM" Type="bit" />
+    <Property Name="LastUsedInCampaign" Type="datetime" />
+    <Property Name="PreferredServiceId" Type="uniqueidentifier" />
+    <Property Name="PreferredEquipmentId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="CreditLimit_Base" Type="decimal" Precision="18" />
+    <Property Name="Aging30_Base" Type="decimal" Precision="18" />
+    <Property Name="Revenue_Base" Type="decimal" Precision="18" />
+    <Property Name="Aging90_Base" Type="decimal" Precision="18" />
+    <Property Name="MarketCap_Base" Type="decimal" Precision="18" />
+    <Property Name="Aging60_Base" Type="decimal" Precision="18" />
+    <Property Name="YomiName" Type="nvarchar(max)" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="MasterId" Type="uniqueidentifier" />
+    <Property Name="ParentAccountId" Type="uniqueidentifier" />
+    <Property Name="PrimaryContactId" Type="uniqueidentifier" />
+    <Property Name="OriginatingLeadId" Type="uniqueidentifier" />
+    <Property Name="DefaultPriceLevelId" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+    <Property Name="TerritoryId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ActivityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ActivityTypeCode" Type="nvarchar(max)" />
+    <Property Name="ActualDurationMinutes" Type="int" />
+    <Property Name="ActualEnd" Type="datetime" />
+    <Property Name="ActualStart" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="ScheduledEnd" Type="datetime" />
+    <Property Name="ScheduledStart" Type="datetime" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="VersionNumber" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ActivityParty">
+    <Key>
+      <PropertyRef Name="ActivityPartyId" />
+    </Key>
+    <Property Name="AddressUsed" Type="nvarchar(max)" />
+    <Property Name="ActivityPartyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DoNotEMail" Type="bit" />
+    <Property Name="DoNotFax" Type="bit" />
+    <Property Name="DoNotPhone" Type="bit" />
+    <Property Name="DoNotPostalMail" Type="bit" />
+    <Property Name="Effort" Type="float" />
+    <Property Name="ExchangeEntryId" Type="nvarchar(max)" />
+    <Property Name="IsPartyDeleted" Type="bit" />
+    <Property Name="InstanceTypeCode" Type="int" />
+    <Property Name="ScheduledEnd" Type="datetime" />
+    <Property Name="ScheduledStart" Type="datetime" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ActivityId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="FileName" Type="nvarchar(max)" />
+    <Property Name="AttachmentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="FileSize" Type="int" />
+    <Property Name="MimeType" Type="nvarchar(max)" />
+    <Property Name="VersionNumber" Type="bigint" />
+  </EntityType>
+  <EntityType Name="CompetitorProduct">
+    <Key>
+      <PropertyRef Name="CompetitorProductId" />
+    </Key>
+    <Property Name="CompetitorProductId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="CompetitorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Competitor">
+    <Key>
+      <PropertyRef Name="CompetitorId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="CompetitorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Address1_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Address2_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="Overview" Type="nvarchar(max)" />
+    <Property Name="ReferenceInfoUrl" Type="nvarchar(max)" />
+    <Property Name="ReportedRevenue" Type="decimal" Precision="18" />
+    <Property Name="ReportingQuarter" Type="int" />
+    <Property Name="ReportingYear" Type="int" />
+    <Property Name="Strengths" Type="nvarchar(max)" />
+    <Property Name="Weaknesses" Type="nvarchar(max)" />
+    <Property Name="Opportunities" Type="nvarchar(max)" />
+    <Property Name="Threats" Type="nvarchar(max)" />
+    <Property Name="TickerSymbol" Type="nvarchar(max)" />
+    <Property Name="KeyProduct" Type="nvarchar(max)" />
+    <Property Name="StockExchange" Type="nvarchar(max)" />
+    <Property Name="WinPercentage" Type="float" />
+    <Property Name="WebSiteUrl" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="Address1_AddressTypeCode" Type="int" />
+    <Property Name="Address1_Name" Type="nvarchar(max)" />
+    <Property Name="Address1_Line1" Type="nvarchar(max)" />
+    <Property Name="Address1_Line2" Type="nvarchar(max)" />
+    <Property Name="Address1_Line3" Type="nvarchar(max)" />
+    <Property Name="Address1_City" Type="nvarchar(max)" />
+    <Property Name="Address1_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="Address1_County" Type="nvarchar(max)" />
+    <Property Name="Address1_Country" Type="nvarchar(max)" />
+    <Property Name="Address1_PostOfficeBox" Type="nvarchar(max)" />
+    <Property Name="Address1_PostalCode" Type="nvarchar(max)" />
+    <Property Name="Address1_UTCOffset" Type="int" />
+    <Property Name="Address1_UPSZone" Type="nvarchar(max)" />
+    <Property Name="Address1_Latitude" Type="float" />
+    <Property Name="Address1_Telephone1" Type="nvarchar(max)" />
+    <Property Name="Address1_Longitude" Type="float" />
+    <Property Name="Address1_ShippingMethodCode" Type="int" />
+    <Property Name="Address1_Telephone2" Type="nvarchar(max)" />
+    <Property Name="Address1_Telephone3" Type="nvarchar(max)" />
+    <Property Name="Address1_Fax" Type="nvarchar(max)" />
+    <Property Name="Address2_AddressTypeCode" Type="int" />
+    <Property Name="Address2_Name" Type="nvarchar(max)" />
+    <Property Name="Address2_Line1" Type="nvarchar(max)" />
+    <Property Name="Address2_Line2" Type="nvarchar(max)" />
+    <Property Name="Address2_Line3" Type="nvarchar(max)" />
+    <Property Name="Address2_City" Type="nvarchar(max)" />
+    <Property Name="Address2_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="Address2_County" Type="nvarchar(max)" />
+    <Property Name="Address2_Country" Type="nvarchar(max)" />
+    <Property Name="Address2_PostOfficeBox" Type="nvarchar(max)" />
+    <Property Name="Address2_PostalCode" Type="nvarchar(max)" />
+    <Property Name="Address2_UTCOffset" Type="int" />
+    <Property Name="Address2_UPSZone" Type="nvarchar(max)" />
+    <Property Name="Address2_Latitude" Type="float" />
+    <Property Name="Address2_Telephone1" Type="nvarchar(max)" />
+    <Property Name="Address2_Longitude" Type="float" />
+    <Property Name="Address2_ShippingMethodCode" Type="int" />
+    <Property Name="Address2_Telephone2" Type="nvarchar(max)" />
+    <Property Name="Address2_Telephone3" Type="nvarchar(max)" />
+    <Property Name="Address2_Fax" Type="nvarchar(max)" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="ReportedRevenue_Base" Type="decimal" Precision="18" />
+    <Property Name="YomiName" Type="nvarchar(max)" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="ContactLead">
+    <Key>
+      <PropertyRef Name="ContactLeadId" />
+    </Key>
+    <Property Name="ContactLeadId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ContactId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LeadId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContactOrder">
+    <Key>
+      <PropertyRef Name="ContactOrderId" />
+    </Key>
+    <Property Name="ContactOrderId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ContactId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SalesOrderId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="ContactId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Address1_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Address2_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CustomerSizeCode" Type="int" />
+    <Property Name="CustomerTypeCode" Type="int" />
+    <Property Name="PreferredContactMethodCode" Type="int" />
+    <Property Name="LeadSourceCode" Type="int" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="PaymentTermsCode" Type="int" />
+    <Property Name="ShippingMethodCode" Type="int" />
+    <Property Name="AccountId" Type="uniqueidentifier" />
+    <Property Name="ParticipatesInWorkflow" Type="bit" />
+    <Property Name="IsBackofficeCustomer" Type="bit" />
+    <Property Name="Salutation" Type="nvarchar(max)" />
+    <Property Name="JobTitle" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="Department" Type="nvarchar(max)" />
+    <Property Name="NickName" Type="nvarchar(max)" />
+    <Property Name="MiddleName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="Suffix" Type="nvarchar(max)" />
+    <Property Name="YomiFirstName" Type="nvarchar(max)" />
+    <Property Name="YomiMiddleName" Type="nvarchar(max)" />
+    <Property Name="YomiLastName" Type="nvarchar(max)" />
+    <Property Name="Anniversary" Type="datetime" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="GovernmentId" Type="nvarchar(max)" />
+    <Property Name="YomiFullName" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="EmployeeId" Type="nvarchar(max)" />
+    <Property Name="GenderCode" Type="int" />
+    <Property Name="AnnualIncome" Type="decimal" Precision="18" />
+    <Property Name="HasChildrenCode" Type="int" />
+    <Property Name="EducationCode" Type="int" />
+    <Property Name="WebSiteUrl" Type="nvarchar(max)" />
+    <Property Name="FamilyStatusCode" Type="int" />
+    <Property Name="FtpSiteUrl" Type="nvarchar(max)" />
+    <Property Name="EMailAddress1" Type="nvarchar(max)" />
+    <Property Name="SpousesName" Type="nvarchar(max)" />
+    <Property Name="AssistantName" Type="nvarchar(max)" />
+    <Property Name="EMailAddress2" Type="nvarchar(max)" />
+    <Property Name="AssistantPhone" Type="nvarchar(max)" />
+    <Property Name="EMailAddress3" Type="nvarchar(max)" />
+    <Property Name="DoNotPhone" Type="bit" />
+    <Property Name="ManagerName" Type="nvarchar(max)" />
+    <Property Name="ManagerPhone" Type="nvarchar(max)" />
+    <Property Name="DoNotFax" Type="bit" />
+    <Property Name="DoNotEMail" Type="bit" />
+    <Property Name="DoNotPostalMail" Type="bit" />
+    <Property Name="DoNotBulkEMail" Type="bit" />
+    <Property Name="DoNotBulkPostalMail" Type="bit" />
+    <Property Name="AccountRoleCode" Type="int" />
+    <Property Name="TerritoryCode" Type="int" />
+    <Property Name="IsPrivate" Type="bit" />
+    <Property Name="CreditLimit" Type="decimal" Precision="18" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreditOnHold" Type="bit" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="NumberOfChildren" Type="int" />
+    <Property Name="ChildrensNames" Type="nvarchar(max)" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="MobilePhone" Type="nvarchar(max)" />
+    <Property Name="Pager" Type="nvarchar(max)" />
+    <Property Name="Telephone1" Type="nvarchar(max)" />
+    <Property Name="Telephone2" Type="nvarchar(max)" />
+    <Property Name="Telephone3" Type="nvarchar(max)" />
+    <Property Name="Fax" Type="nvarchar(max)" />
+    <Property Name="Aging30" Type="decimal" Precision="18" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="Aging60" Type="decimal" Precision="18" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="Aging90" Type="decimal" Precision="18" />
+    <Property Name="ParentContactId" Type="uniqueidentifier" />
+    <Property Name="Address1_AddressTypeCode" Type="int" />
+    <Property Name="Address1_Name" Type="nvarchar(max)" />
+    <Property Name="Address1_PrimaryContactName" Type="nvarchar(max)" />
+    <Property Name="Address1_Line1" Type="nvarchar(max)" />
+    <Property Name="Address1_Line2" Type="nvarchar(max)" />
+    <Property Name="Address1_Line3" Type="nvarchar(max)" />
+    <Property Name="Address1_City" Type="nvarchar(max)" />
+    <Property Name="Address1_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="Address1_County" Type="nvarchar(max)" />
+    <Property Name="Address1_Country" Type="nvarchar(max)" />
+    <Property Name="Address1_PostOfficeBox" Type="nvarchar(max)" />
+    <Property Name="Address1_PostalCode" Type="nvarchar(max)" />
+    <Property Name="Address1_UTCOffset" Type="int" />
+    <Property Name="Address1_FreightTermsCode" Type="int" />
+    <Property Name="Address1_UPSZone" Type="nvarchar(max)" />
+    <Property Name="Address1_Latitude" Type="float" />
+    <Property Name="Address1_Telephone1" Type="nvarchar(max)" />
+    <Property Name="Address1_Longitude" Type="float" />
+    <Property Name="Address1_ShippingMethodCode" Type="int" />
+    <Property Name="Address1_Telephone2" Type="nvarchar(max)" />
+    <Property Name="Address1_Telephone3" Type="nvarchar(max)" />
+    <Property Name="Address1_Fax" Type="nvarchar(max)" />
+    <Property Name="Address2_AddressTypeCode" Type="int" />
+    <Property Name="Address2_Name" Type="nvarchar(max)" />
+    <Property Name="Address2_PrimaryContactName" Type="nvarchar(max)" />
+    <Property Name="Address2_Line1" Type="nvarchar(max)" />
+    <Property Name="Address2_Line2" Type="nvarchar(max)" />
+    <Property Name="Address2_Line3" Type="nvarchar(max)" />
+    <Property Name="Address2_City" Type="nvarchar(max)" />
+    <Property Name="Address2_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="Address2_County" Type="nvarchar(max)" />
+    <Property Name="Address2_Country" Type="nvarchar(max)" />
+    <Property Name="Address2_PostOfficeBox" Type="nvarchar(max)" />
+    <Property Name="Address2_PostalCode" Type="nvarchar(max)" />
+    <Property Name="Address2_UTCOffset" Type="int" />
+    <Property Name="Address2_FreightTermsCode" Type="int" />
+    <Property Name="Address2_UPSZone" Type="nvarchar(max)" />
+    <Property Name="Address2_Latitude" Type="float" />
+    <Property Name="Address2_Telephone1" Type="nvarchar(max)" />
+    <Property Name="Address2_Longitude" Type="float" />
+    <Property Name="Address2_ShippingMethodCode" Type="int" />
+    <Property Name="Address2_Telephone2" Type="nvarchar(max)" />
+    <Property Name="Address2_Telephone3" Type="nvarchar(max)" />
+    <Property Name="Address2_Fax" Type="nvarchar(max)" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="PreferredSystemUserId" Type="uniqueidentifier" />
+    <Property Name="PreferredServiceId" Type="uniqueidentifier" />
+    <Property Name="PreferredAppointmentDayCode" Type="int" />
+    <Property Name="PreferredAppointmentTimeCode" Type="int" />
+    <Property Name="DoNotSendMM" Type="bit" />
+    <Property Name="Merged" Type="bit" />
+    <Property Name="ExternalUserIdentifier" Type="nvarchar(max)" />
+    <Property Name="SubscriptionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PreferredEquipmentId" Type="uniqueidentifier" />
+    <Property Name="LastUsedInCampaign" Type="datetime" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="AnnualIncome_Base" Type="decimal" Precision="18" />
+    <Property Name="CreditLimit_Base" Type="decimal" Precision="18" />
+    <Property Name="Aging60_Base" Type="decimal" Precision="18" />
+    <Property Name="Aging90_Base" Type="decimal" Precision="18" />
+    <Property Name="Aging30_Base" Type="decimal" Precision="18" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="IsAutoCreate" Type="bit" />
+    <Property Name="ParentCustomerId" Type="uniqueidentifier" />
+    <Property Name="MasterId" Type="uniqueidentifier" />
+    <Property Name="OriginatingLeadId" Type="uniqueidentifier" />
+    <Property Name="DefaultPriceLevelId" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="ContractDetail">
+    <Key>
+      <PropertyRef Name="ContractDetailId" />
+    </Key>
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="ContractDetailId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AccountId" Type="uniqueidentifier" />
+    <Property Name="ServiceAddress" Type="uniqueidentifier" />
+    <Property Name="ProductSerialNumber" Type="nvarchar(max)" />
+    <Property Name="ContactId" Type="uniqueidentifier" />
+    <Property Name="LineItemOrder" Type="int" />
+    <Property Name="ServiceContractUnitsCode" Type="int" />
+    <Property Name="InitialQuantity" Type="int" />
+    <Property Name="EffectivityCalendar" Type="nvarchar(max)" />
+    <Property Name="ActiveOn" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ExpiresOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="TotalAllotments" Type="int" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="Rate" Type="decimal" Precision="18" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="Price" Type="decimal" Precision="18" />
+    <Property Name="Discount" Type="decimal" Precision="18" />
+    <Property Name="Net" Type="decimal" Precision="18" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="AllotmentsRemaining" Type="int" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="AllotmentsUsed" Type="int" />
+    <Property Name="ContractStateCode" Type="int" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DiscountPercentage" Type="decimal" Precision="18" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="Discount_Base" Type="decimal" Precision="18" />
+    <Property Name="Rate_Base" Type="decimal" Precision="18" />
+    <Property Name="Price_Base" Type="decimal" Precision="18" />
+    <Property Name="Net_Base" Type="decimal" Precision="18" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="AllotmentsOverage" Type="int" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="ContractId" Type="uniqueidentifier" />
+    <Property Name="ProductId" Type="uniqueidentifier" />
+    <Property Name="UoMId" Type="uniqueidentifier" />
+    <Property Name="UoMScheduleId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="ContractId" />
+    </Key>
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="ContractId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="ContractTemplateId" Type="uniqueidentifier" />
+    <Property Name="ContractServiceLevelCode" Type="int" />
+    <Property Name="ServiceAddress" Type="uniqueidentifier" />
+    <Property Name="BillToAddress" Type="uniqueidentifier" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="ContactId" Type="uniqueidentifier" />
+    <Property Name="AccountId" Type="uniqueidentifier" />
+    <Property Name="BillingAccountId" Type="uniqueidentifier" />
+    <Property Name="ContractNumber" Type="nvarchar(max)" />
+    <Property Name="BillingContactId" Type="uniqueidentifier" />
+    <Property Name="ActiveOn" Type="datetime" />
+    <Property Name="ExpiresOn" Type="datetime" />
+    <Property Name="CancelOn" Type="datetime" />
+    <Property Name="ContractLanguage" Type="nvarchar(max)" />
+    <Property Name="BillingStartOn" Type="datetime" />
+    <Property Name="EffectivityCalendar" Type="nvarchar(max)" />
+    <Property Name="BillingEndOn" Type="datetime" />
+    <Property Name="BillingFrequencyCode" Type="int" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="AllotmentTypeCode" Type="int" />
+    <Property Name="UseDiscountAsPercentage" Type="bit" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="TotalDiscount" Type="decimal" Precision="18" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="NetPrice" Type="decimal" Precision="18" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="Duration" Type="int" />
+    <Property Name="ContractTemplateAbbreviation" Type="nvarchar(max)" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="TotalDiscount_Base" Type="decimal" Precision="18" />
+    <Property Name="NetPrice_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalPrice_Base" Type="decimal" Precision="18" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="BillingCustomerId" Type="uniqueidentifier" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="OriginatingContract" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="InvoiceDetail">
+    <Key>
+      <PropertyRef Name="InvoiceDetailId" />
+    </Key>
+    <Property Name="InvoiceDetailId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SalesRepId" Type="uniqueidentifier" />
+    <Property Name="IsProductOverridden" Type="bit" />
+    <Property Name="LineItemNumber" Type="int" />
+    <Property Name="IsCopied" Type="bit" />
+    <Property Name="QuantityBackordered" Type="decimal" Precision="18" />
+    <Property Name="ActualDeliveryOn" Type="datetime" />
+    <Property Name="Quantity" Type="decimal" Precision="18" />
+    <Property Name="ManualDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="ProductDescription" Type="nvarchar(max)" />
+    <Property Name="VolumeDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="PricePerUnit" Type="decimal" Precision="18" />
+    <Property Name="BaseAmount" Type="decimal" Precision="18" />
+    <Property Name="QuantityCancelled" Type="decimal" Precision="18" />
+    <Property Name="ShippingTrackingNumber" Type="nvarchar(max)" />
+    <Property Name="ExtendedAmount" Type="decimal" Precision="18" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="IsPriceOverridden" Type="bit" />
+    <Property Name="ShipTo_Name" Type="nvarchar(max)" />
+    <Property Name="PricingErrorCode" Type="int" />
+    <Property Name="Tax" Type="decimal" Precision="18" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ShipTo_Line1" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ShipTo_Line2" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Line3" Type="nvarchar(max)" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ShipTo_City" Type="nvarchar(max)" />
+    <Property Name="ShipTo_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Country" Type="nvarchar(max)" />
+    <Property Name="ShipTo_PostalCode" Type="nvarchar(max)" />
+    <Property Name="WillCall" Type="bit" />
+    <Property Name="ShipTo_Telephone" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Fax" Type="nvarchar(max)" />
+    <Property Name="ShipTo_FreightTermsCode" Type="int" />
+    <Property Name="QuantityShipped" Type="decimal" Precision="18" />
+    <Property Name="InvoiceStateCode" Type="int" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="OwningUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="InvoiceIsPriceLocked" Type="bit" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="VolumeDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="BaseAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="PricePerUnit_Base" Type="decimal" Precision="18" />
+    <Property Name="Tax_Base" Type="decimal" Precision="18" />
+    <Property Name="ExtendedAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="ManualDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="InvoiceId" Type="uniqueidentifier" />
+    <Property Name="ProductId" Type="uniqueidentifier" />
+    <Property Name="UoMId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="InvoiceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PriorityCode" Type="int" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="LastBackofficeSubmit" Type="datetime" />
+    <Property Name="AccountId" Type="uniqueidentifier" />
+    <Property Name="ContactId" Type="uniqueidentifier" />
+    <Property Name="InvoiceNumber" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="FreightAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalAmountLessFreight" Type="decimal" Precision="18" />
+    <Property Name="TotalDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="TotalTax" Type="decimal" Precision="18" />
+    <Property Name="ShippingMethodCode" Type="int" />
+    <Property Name="PaymentTermsCode" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="ShipTo_Name" Type="nvarchar(max)" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="PricingErrorCode" Type="int" />
+    <Property Name="ShipTo_Line1" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Line2" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Line3" Type="nvarchar(max)" />
+    <Property Name="ShipTo_City" Type="nvarchar(max)" />
+    <Property Name="ShipTo_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Country" Type="nvarchar(max)" />
+    <Property Name="ShipTo_PostalCode" Type="nvarchar(max)" />
+    <Property Name="WillCall" Type="bit" />
+    <Property Name="ShipTo_Telephone" Type="nvarchar(max)" />
+    <Property Name="BillTo_Name" Type="nvarchar(max)" />
+    <Property Name="ShipTo_FreightTermsCode" Type="int" />
+    <Property Name="ShipTo_Fax" Type="nvarchar(max)" />
+    <Property Name="BillTo_Line1" Type="nvarchar(max)" />
+    <Property Name="BillTo_Line2" Type="nvarchar(max)" />
+    <Property Name="BillTo_Line3" Type="nvarchar(max)" />
+    <Property Name="BillTo_City" Type="nvarchar(max)" />
+    <Property Name="BillTo_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="BillTo_Country" Type="nvarchar(max)" />
+    <Property Name="BillTo_PostalCode" Type="nvarchar(max)" />
+    <Property Name="BillTo_Telephone" Type="nvarchar(max)" />
+    <Property Name="BillTo_Fax" Type="nvarchar(max)" />
+    <Property Name="DiscountPercentage" Type="decimal" Precision="18" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="IsPriceLocked" Type="bit" />
+    <Property Name="DateDelivered" Type="datetime" />
+    <Property Name="DueDate" Type="datetime" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="TotalLineItemAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalTax_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalAmountLessFreight_Base" Type="decimal" Precision="18" />
+    <Property Name="DiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="FreightAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="OpportunityId" Type="uniqueidentifier" />
+    <Property Name="PriceLevelId" Type="uniqueidentifier" />
+    <Property Name="SalesOrderId" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="LeadCompetitor">
+    <Key>
+      <PropertyRef Name="LeadCompetitorId" />
+    </Key>
+    <Property Name="LeadCompetitorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="CompetitorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LeadId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeadProduct">
+    <Key>
+      <PropertyRef Name="LeadProductId" />
+    </Key>
+    <Property Name="LeadProductId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="LeadId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lead">
+    <Key>
+      <PropertyRef Name="LeadId" />
+    </Key>
+    <Property Name="FullName" Type="nvarchar(max)" />
+    <Property Name="LeadId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Address1_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Address2_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ContactId" Type="uniqueidentifier" />
+    <Property Name="AccountId" Type="uniqueidentifier" />
+    <Property Name="LeadSourceCode" Type="int" />
+    <Property Name="LeadQualityCode" Type="int" />
+    <Property Name="PriorityCode" Type="int" />
+    <Property Name="IndustryCode" Type="int" />
+    <Property Name="PreferredContactMethodCode" Type="int" />
+    <Property Name="SalesStageCode" Type="int" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="ParticipatesInWorkflow" Type="bit" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="EstimatedValue" Type="float" />
+    <Property Name="EstimatedCloseDate" Type="datetime" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="MiddleName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="Revenue" Type="decimal" Precision="18" />
+    <Property Name="NumberOfEmployees" Type="int" />
+    <Property Name="DoNotPhone" Type="bit" />
+    <Property Name="SIC" Type="nvarchar(max)" />
+    <Property Name="DoNotFax" Type="bit" />
+    <Property Name="EMailAddress1" Type="nvarchar(max)" />
+    <Property Name="JobTitle" Type="nvarchar(max)" />
+    <Property Name="Salutation" Type="nvarchar(max)" />
+    <Property Name="DoNotEMail" Type="bit" />
+    <Property Name="EMailAddress2" Type="nvarchar(max)" />
+    <Property Name="DoNotPostalMail" Type="bit" />
+    <Property Name="EMailAddress3" Type="nvarchar(max)" />
+    <Property Name="YomiFirstName" Type="nvarchar(max)" />
+    <Property Name="WebSiteUrl" Type="nvarchar(max)" />
+    <Property Name="Telephone1" Type="nvarchar(max)" />
+    <Property Name="Telephone2" Type="nvarchar(max)" />
+    <Property Name="Telephone3" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="IsPrivate" Type="bit" />
+    <Property Name="Fax" Type="nvarchar(max)" />
+    <Property Name="YomiMiddleName" Type="nvarchar(max)" />
+    <Property Name="YomiLastName" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="YomiFullName" Type="nvarchar(max)" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="MobilePhone" Type="nvarchar(max)" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="Pager" Type="nvarchar(max)" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="Address1_AddressTypeCode" Type="int" />
+    <Property Name="Address1_Name" Type="nvarchar(max)" />
+    <Property Name="Address1_Line1" Type="nvarchar(max)" />
+    <Property Name="Address1_Line2" Type="nvarchar(max)" />
+    <Property Name="Address1_Line3" Type="nvarchar(max)" />
+    <Property Name="Address1_City" Type="nvarchar(max)" />
+    <Property Name="Address1_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="Address1_County" Type="nvarchar(max)" />
+    <Property Name="Address1_Country" Type="nvarchar(max)" />
+    <Property Name="Address1_PostOfficeBox" Type="nvarchar(max)" />
+    <Property Name="Address1_PostalCode" Type="nvarchar(max)" />
+    <Property Name="Address1_UTCOffset" Type="int" />
+    <Property Name="Address1_UPSZone" Type="nvarchar(max)" />
+    <Property Name="Address1_Latitude" Type="float" />
+    <Property Name="Address1_Telephone1" Type="nvarchar(max)" />
+    <Property Name="Address1_Longitude" Type="float" />
+    <Property Name="Address1_ShippingMethodCode" Type="int" />
+    <Property Name="Address1_Telephone2" Type="nvarchar(max)" />
+    <Property Name="Address1_Telephone3" Type="nvarchar(max)" />
+    <Property Name="Address1_Fax" Type="nvarchar(max)" />
+    <Property Name="Address2_AddressTypeCode" Type="int" />
+    <Property Name="Address2_Name" Type="nvarchar(max)" />
+    <Property Name="Address2_Line1" Type="nvarchar(max)" />
+    <Property Name="Address2_Line2" Type="nvarchar(max)" />
+    <Property Name="Address2_Line3" Type="nvarchar(max)" />
+    <Property Name="Address2_City" Type="nvarchar(max)" />
+    <Property Name="Address2_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="Address2_County" Type="nvarchar(max)" />
+    <Property Name="Address2_Country" Type="nvarchar(max)" />
+    <Property Name="Address2_PostOfficeBox" Type="nvarchar(max)" />
+    <Property Name="Address2_PostalCode" Type="nvarchar(max)" />
+    <Property Name="Address2_UTCOffset" Type="int" />
+    <Property Name="Address2_UPSZone" Type="nvarchar(max)" />
+    <Property Name="Address2_Latitude" Type="float" />
+    <Property Name="Address2_Telephone1" Type="nvarchar(max)" />
+    <Property Name="Address2_Longitude" Type="float" />
+    <Property Name="Address2_ShippingMethodCode" Type="int" />
+    <Property Name="Address2_Telephone2" Type="nvarchar(max)" />
+    <Property Name="Address2_Telephone3" Type="nvarchar(max)" />
+    <Property Name="Address2_Fax" Type="nvarchar(max)" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="CampaignId" Type="uniqueidentifier" />
+    <Property Name="DoNotSendMM" Type="bit" />
+    <Property Name="Merged" Type="bit" />
+    <Property Name="DoNotBulkEMail" Type="bit" />
+    <Property Name="LastUsedInCampaign" Type="datetime" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="EstimatedAmount" Type="decimal" Precision="18" />
+    <Property Name="EstimatedAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="Revenue_Base" Type="decimal" Precision="18" />
+    <Property Name="YomiCompanyName" Type="nvarchar(max)" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="IsAutoCreate" Type="bit" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="MasterId" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Opportunity">
+    <Key>
+      <PropertyRef Name="OpportunityId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="OpportunityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OpportunityRatingCode" Type="int" />
+    <Property Name="PriorityCode" Type="int" />
+    <Property Name="ContactId" Type="uniqueidentifier" />
+    <Property Name="AccountId" Type="uniqueidentifier" />
+    <Property Name="StepId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="EstimatedValue" Type="decimal" Precision="18" />
+    <Property Name="StepName" Type="nvarchar(max)" />
+    <Property Name="SalesStageCode" Type="int" />
+    <Property Name="ParticipatesInWorkflow" Type="bit" />
+    <Property Name="PricingErrorCode" Type="int" />
+    <Property Name="EstimatedCloseDate" Type="datetime" />
+    <Property Name="CloseProbability" Type="int" />
+    <Property Name="ActualValue" Type="decimal" Precision="18" />
+    <Property Name="ActualCloseDate" Type="datetime" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="IsPrivate" Type="bit" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="IsRevenueSystemCalculated" Type="bit" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="CampaignId" Type="uniqueidentifier" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ActualValue_Base" Type="decimal" Precision="18" />
+    <Property Name="EstimatedValue_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalTax" Type="decimal" Precision="18" />
+    <Property Name="DiscountPercentage" Type="decimal" Precision="18" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalAmountLessFreight" Type="decimal" Precision="18" />
+    <Property Name="FreightAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalTax_Base" Type="decimal" Precision="18" />
+    <Property Name="DiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalAmountLessFreight_Base" Type="decimal" Precision="18" />
+    <Property Name="FreightAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="OriginatingLeadId" Type="uniqueidentifier" />
+    <Property Name="PriceLevelId" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="OpportunityClose">
+    <Key>
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="ActivityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ActualStart" Type="datetime" />
+    <Property Name="ActualDurationMinutes" Type="int" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ActualRevenue" Type="decimal" Precision="18" />
+    <Property Name="ScheduledStart" Type="datetime" />
+    <Property Name="IsWorkflowCreated" Type="bit" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="ServiceId" Type="uniqueidentifier" />
+    <Property Name="IsBilled" Type="bit" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ActualEnd" Type="datetime" />
+    <Property Name="ScheduledEnd" Type="datetime" />
+    <Property Name="Category" Type="nvarchar(max)" />
+    <Property Name="ScheduledDurationMinutes" Type="int" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="Subcategory" Type="nvarchar(max)" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ActualRevenue_Base" Type="decimal" Precision="18" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ActivityTypeCode" Type="nvarchar(max)" />
+    <Property Name="IsRegularActivity" Type="bit" />
+    <Property Name="CompetitorId" Type="uniqueidentifier" />
+    <Property Name="OpportunityId" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="OpportunityCompetitor">
+    <Key>
+      <PropertyRef Name="OpportunityCompetitorId" />
+    </Key>
+    <Property Name="OpportunityCompetitorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="CompetitorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OpportunityId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OpportunityProduct">
+    <Key>
+      <PropertyRef Name="OpportunityProductId" />
+    </Key>
+    <Property Name="OpportunityProductId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PricingErrorCode" Type="int" />
+    <Property Name="IsProductOverridden" Type="bit" />
+    <Property Name="IsPriceOverridden" Type="bit" />
+    <Property Name="PricePerUnit" Type="decimal" Precision="18" />
+    <Property Name="BaseAmount" Type="decimal" Precision="18" />
+    <Property Name="ExtendedAmount" Type="decimal" Precision="18" />
+    <Property Name="ManualDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="Quantity" Type="decimal" Precision="18" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="VolumeDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="Tax" Type="decimal" Precision="18" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ProductDescription" Type="nvarchar(max)" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="OwningUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OpportunityStateCode" Type="int" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="BaseAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="ManualDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="VolumeDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="PricePerUnit_Base" Type="decimal" Precision="18" />
+    <Property Name="Tax_Base" Type="decimal" Precision="18" />
+    <Property Name="ExtendedAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="LineItemNumber" Type="int" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="OpportunityId" Type="uniqueidentifier" />
+    <Property Name="ProductId" Type="uniqueidentifier" />
+    <Property Name="UoMId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="PriceLevel">
+    <Key>
+      <PropertyRef Name="PriceLevelId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="PriceLevelId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ShippingMethodCode" Type="int" />
+    <Property Name="BeginDate" Type="datetime" />
+    <Property Name="PaymentMethodCode" Type="int" />
+    <Property Name="FreightTermsCode" Type="int" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="ProductId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SubjectId" Type="uniqueidentifier" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ProductTypeCode" Type="int" />
+    <Property Name="ProductUrl" Type="nvarchar(max)" />
+    <Property Name="Price" Type="decimal" Precision="18" />
+    <Property Name="IsKit" Type="bit" />
+    <Property Name="ProductNumber" Type="nvarchar(max)" />
+    <Property Name="Size" Type="nvarchar(max)" />
+    <Property Name="CurrentCost" Type="decimal" Precision="18" />
+    <Property Name="StockVolume" Type="decimal" Precision="18" />
+    <Property Name="StandardCost" Type="decimal" Precision="18" />
+    <Property Name="StockWeight" Type="decimal" Precision="18" />
+    <Property Name="QuantityDecimal" Type="int" />
+    <Property Name="QuantityOnHand" Type="decimal" Precision="18" />
+    <Property Name="IsStockItem" Type="bit" />
+    <Property Name="SupplierName" Type="nvarchar(max)" />
+    <Property Name="VendorName" Type="nvarchar(max)" />
+    <Property Name="VendorPartNumber" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="CurrentCost_Base" Type="decimal" Precision="18" />
+    <Property Name="Price_Base" Type="decimal" Precision="18" />
+    <Property Name="StandardCost_Base" Type="decimal" Precision="18" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="PriceLevelId" Type="uniqueidentifier" />
+    <Property Name="DefaultUoMId" Type="uniqueidentifier" />
+    <Property Name="DefaultUoMScheduleId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Queue">
+    <Key>
+      <PropertyRef Name="QueueId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="QueueId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BusinessUnitId" Type="uniqueidentifier" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="EMailAddress" Type="nvarchar(max)" />
+    <Property Name="PrimaryUserId" Type="uniqueidentifier" />
+    <Property Name="QueueTypeCode" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="IgnoreUnsolicitedEmail" Type="bit" />
+    <Property Name="IsFaxQueue" Type="bit" />
+    <Property Name="EmailPassword" Type="nvarchar(max)" />
+    <Property Name="IncomingEmailDeliveryMethod" Type="int" />
+    <Property Name="EmailUsername" Type="nvarchar(max)" />
+    <Property Name="OutgoingEmailDeliveryMethod" Type="int" />
+    <Property Name="AllowEmailCredentials" Type="bit" />
+    <Property Name="IncomingEmailFilteringMethod" Type="int" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="EmailRouterAccessApproval" Type="int" />
+  </EntityType>
+  <EntityType Name="QuoteClose">
+    <Key>
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="ActivityId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="IsWorkflowCreated" Type="bit" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Revision" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Subcategory" Type="nvarchar(max)" />
+    <Property Name="IsBilled" Type="bit" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ScheduledEnd" Type="datetime" />
+    <Property Name="QuoteNumber" Type="nvarchar(max)" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="ServiceId" Type="uniqueidentifier" />
+    <Property Name="ActualEnd" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="Category" Type="nvarchar(max)" />
+    <Property Name="ActualDurationMinutes" Type="int" />
+    <Property Name="ScheduledStart" Type="datetime" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="ScheduledDurationMinutes" Type="int" />
+    <Property Name="ActualStart" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ActivityTypeCode" Type="nvarchar(max)" />
+    <Property Name="IsRegularActivity" Type="bit" />
+    <Property Name="QuoteId" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="QuoteDetail">
+    <Key>
+      <PropertyRef Name="QuoteDetailId" />
+    </Key>
+    <Property Name="QuoteDetailId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SalesRepId" Type="uniqueidentifier" />
+    <Property Name="LineItemNumber" Type="int" />
+    <Property Name="RequestDeliveryBy" Type="datetime" />
+    <Property Name="Quantity" Type="decimal" Precision="18" />
+    <Property Name="PricingErrorCode" Type="int" />
+    <Property Name="ManualDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="ProductDescription" Type="nvarchar(max)" />
+    <Property Name="VolumeDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="PricePerUnit" Type="decimal" Precision="18" />
+    <Property Name="BaseAmount" Type="decimal" Precision="18" />
+    <Property Name="ExtendedAmount" Type="decimal" Precision="18" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Name" Type="nvarchar(max)" />
+    <Property Name="IsPriceOverridden" Type="bit" />
+    <Property Name="Tax" Type="decimal" Precision="18" />
+    <Property Name="ShipTo_Line1" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ShipTo_Line2" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ShipTo_Line3" Type="nvarchar(max)" />
+    <Property Name="ShipTo_City" Type="nvarchar(max)" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ShipTo_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Country" Type="nvarchar(max)" />
+    <Property Name="ShipTo_PostalCode" Type="nvarchar(max)" />
+    <Property Name="WillCall" Type="bit" />
+    <Property Name="IsProductOverridden" Type="bit" />
+    <Property Name="ShipTo_Telephone" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Fax" Type="nvarchar(max)" />
+    <Property Name="ShipTo_FreightTermsCode" Type="int" />
+    <Property Name="QuoteStateCode" Type="int" />
+    <Property Name="OwningUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ShipTo_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ShipTo_ContactName" Type="nvarchar(max)" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="Tax_Base" Type="decimal" Precision="18" />
+    <Property Name="ExtendedAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="PricePerUnit_Base" Type="decimal" Precision="18" />
+    <Property Name="BaseAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="ManualDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="VolumeDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ProductId" Type="uniqueidentifier" />
+    <Property Name="QuoteId" Type="uniqueidentifier" />
+    <Property Name="UoMId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Quote">
+    <Key>
+      <PropertyRef Name="QuoteId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="QuoteId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="AccountId" Type="uniqueidentifier" />
+    <Property Name="ContactId" Type="uniqueidentifier" />
+    <Property Name="QuoteNumber" Type="nvarchar(max)" />
+    <Property Name="RevisionNumber" Type="int" />
+    <Property Name="PricingErrorCode" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="FreightAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalAmountLessFreight" Type="decimal" Precision="18" />
+    <Property Name="EffectiveFrom" Type="datetime" />
+    <Property Name="TotalTax" Type="decimal" Precision="18" />
+    <Property Name="TotalDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="EffectiveTo" Type="datetime" />
+    <Property Name="ExpiresOn" Type="datetime" />
+    <Property Name="ClosedOn" Type="datetime" />
+    <Property Name="RequestDeliveryBy" Type="datetime" />
+    <Property Name="ShippingMethodCode" Type="int" />
+    <Property Name="PaymentTermsCode" Type="int" />
+    <Property Name="FreightTermsCode" Type="int" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="ShipTo_Name" Type="nvarchar(max)" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ShipTo_Line1" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Line2" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Line3" Type="nvarchar(max)" />
+    <Property Name="ShipTo_City" Type="nvarchar(max)" />
+    <Property Name="ShipTo_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Country" Type="nvarchar(max)" />
+    <Property Name="ShipTo_PostalCode" Type="nvarchar(max)" />
+    <Property Name="WillCall" Type="bit" />
+    <Property Name="ShipTo_Telephone" Type="nvarchar(max)" />
+    <Property Name="BillTo_Name" Type="nvarchar(max)" />
+    <Property Name="ShipTo_FreightTermsCode" Type="int" />
+    <Property Name="ShipTo_Fax" Type="nvarchar(max)" />
+    <Property Name="BillTo_Line1" Type="nvarchar(max)" />
+    <Property Name="BillTo_Line2" Type="nvarchar(max)" />
+    <Property Name="BillTo_Line3" Type="nvarchar(max)" />
+    <Property Name="BillTo_City" Type="nvarchar(max)" />
+    <Property Name="BillTo_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="BillTo_Country" Type="nvarchar(max)" />
+    <Property Name="BillTo_PostalCode" Type="nvarchar(max)" />
+    <Property Name="BillTo_Telephone" Type="nvarchar(max)" />
+    <Property Name="BillTo_Fax" Type="nvarchar(max)" />
+    <Property Name="DiscountPercentage" Type="decimal" Precision="18" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="CampaignId" Type="uniqueidentifier" />
+    <Property Name="ShipTo_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ShipTo_ContactName" Type="nvarchar(max)" />
+    <Property Name="BillTo_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BillTo_ContactName" Type="nvarchar(max)" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="UniqueDscId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="TotalLineItemDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalAmountLessFreight_Base" Type="decimal" Precision="18" />
+    <Property Name="DiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="FreightAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalTax_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="OpportunityId" Type="uniqueidentifier" />
+    <Property Name="PriceLevelId" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleTemplateId" Type="uniqueidentifier" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BusinessUnitId" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="OverwriteTime" Type="datetime" />
+    <Property Name="SupportingSolutionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ComponentState" Type="int" />
+    <Property Name="SolutionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleIdUnique" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="IsManaged" Type="bit" />
+    <Property Name="IsCustomizable" Type="bit" Nullable="false" />
+    <Property Name="ParentRoleId" Type="uniqueidentifier" />
+    <Property Name="ParentRootRoleId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="SalesOrderDetail">
+    <Key>
+      <PropertyRef Name="SalesOrderDetailId" />
+    </Key>
+    <Property Name="SalesOrderDetailId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SalesRepId" Type="uniqueidentifier" />
+    <Property Name="IsProductOverridden" Type="bit" />
+    <Property Name="IsCopied" Type="bit" />
+    <Property Name="QuantityShipped" Type="decimal" Precision="18" />
+    <Property Name="LineItemNumber" Type="int" />
+    <Property Name="QuantityBackordered" Type="decimal" Precision="18" />
+    <Property Name="QuantityCancelled" Type="decimal" Precision="18" />
+    <Property Name="RequestDeliveryBy" Type="datetime" />
+    <Property Name="Quantity" Type="decimal" Precision="18" />
+    <Property Name="PricingErrorCode" Type="int" />
+    <Property Name="ManualDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="ProductDescription" Type="nvarchar(max)" />
+    <Property Name="VolumeDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="PricePerUnit" Type="decimal" Precision="18" />
+    <Property Name="BaseAmount" Type="decimal" Precision="18" />
+    <Property Name="ExtendedAmount" Type="decimal" Precision="18" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="IsPriceOverridden" Type="bit" />
+    <Property Name="ShipTo_Name" Type="nvarchar(max)" />
+    <Property Name="Tax" Type="decimal" Precision="18" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ShipTo_Line1" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ShipTo_Line2" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Line3" Type="nvarchar(max)" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ShipTo_City" Type="nvarchar(max)" />
+    <Property Name="ShipTo_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Country" Type="nvarchar(max)" />
+    <Property Name="ShipTo_PostalCode" Type="nvarchar(max)" />
+    <Property Name="WillCall" Type="bit" />
+    <Property Name="ShipTo_Telephone" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Fax" Type="nvarchar(max)" />
+    <Property Name="ShipTo_FreightTermsCode" Type="int" />
+    <Property Name="SalesOrderStateCode" Type="int" />
+    <Property Name="ShipTo_ContactName" Type="nvarchar(max)" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OwningUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SalesOrderIsPriceLocked" Type="bit" />
+    <Property Name="ShipTo_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="BaseAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="PricePerUnit_Base" Type="decimal" Precision="18" />
+    <Property Name="VolumeDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="ExtendedAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="Tax_Base" Type="decimal" Precision="18" />
+    <Property Name="ManualDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ProductId" Type="uniqueidentifier" />
+    <Property Name="SalesOrderId" Type="uniqueidentifier" />
+    <Property Name="UoMId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="SalesOrder">
+    <Key>
+      <PropertyRef Name="SalesOrderId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="SalesOrderId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PriorityCode" Type="int" />
+    <Property Name="SubmitStatus" Type="int" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="SubmitDate" Type="datetime" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="SubmitStatusDescription" Type="nvarchar(max)" />
+    <Property Name="LastBackofficeSubmit" Type="datetime" />
+    <Property Name="AccountId" Type="uniqueidentifier" />
+    <Property Name="ContactId" Type="uniqueidentifier" />
+    <Property Name="OrderNumber" Type="nvarchar(max)" />
+    <Property Name="PricingErrorCode" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="DiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="FreightAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="TotalAmountLessFreight" Type="decimal" Precision="18" />
+    <Property Name="TotalDiscountAmount" Type="decimal" Precision="18" />
+    <Property Name="RequestDeliveryBy" Type="datetime" />
+    <Property Name="TotalTax" Type="decimal" Precision="18" />
+    <Property Name="ShippingMethodCode" Type="int" />
+    <Property Name="PaymentTermsCode" Type="int" />
+    <Property Name="FreightTermsCode" Type="int" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="ShipTo_Name" Type="nvarchar(max)" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ShipTo_Line1" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Line2" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Line3" Type="nvarchar(max)" />
+    <Property Name="ShipTo_City" Type="nvarchar(max)" />
+    <Property Name="ShipTo_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="ShipTo_Country" Type="nvarchar(max)" />
+    <Property Name="ShipTo_PostalCode" Type="nvarchar(max)" />
+    <Property Name="WillCall" Type="bit" />
+    <Property Name="ShipTo_Telephone" Type="nvarchar(max)" />
+    <Property Name="BillTo_Name" Type="nvarchar(max)" />
+    <Property Name="ShipTo_FreightTermsCode" Type="int" />
+    <Property Name="ShipTo_Fax" Type="nvarchar(max)" />
+    <Property Name="BillTo_Line1" Type="nvarchar(max)" />
+    <Property Name="BillTo_Line2" Type="nvarchar(max)" />
+    <Property Name="BillTo_Line3" Type="nvarchar(max)" />
+    <Property Name="BillTo_City" Type="nvarchar(max)" />
+    <Property Name="BillTo_StateOrProvince" Type="nvarchar(max)" />
+    <Property Name="BillTo_Country" Type="nvarchar(max)" />
+    <Property Name="BillTo_PostalCode" Type="nvarchar(max)" />
+    <Property Name="BillTo_Telephone" Type="nvarchar(max)" />
+    <Property Name="BillTo_Fax" Type="nvarchar(max)" />
+    <Property Name="DiscountPercentage" Type="decimal" Precision="18" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="BillTo_ContactName" Type="nvarchar(max)" />
+    <Property Name="CampaignId" Type="uniqueidentifier" />
+    <Property Name="BillTo_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ShipTo_AddressId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsPriceLocked" Type="bit" />
+    <Property Name="DateFulfilled" Type="datetime" />
+    <Property Name="ShipTo_ContactName" Type="nvarchar(max)" />
+    <Property Name="UTCConversionTimeZoneCode" Type="int" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="TimeZoneRuleVersionNumber" Type="int" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="TotalLineItemAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalAmountLessFreight_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="DiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="FreightAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalLineItemDiscountAmount_Base" Type="decimal" Precision="18" />
+    <Property Name="TotalTax_Base" Type="decimal" Precision="18" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CustomerId" Type="uniqueidentifier" />
+    <Property Name="OpportunityId" Type="uniqueidentifier" />
+    <Property Name="PriceLevelId" Type="uniqueidentifier" />
+    <Property Name="QuoteId" Type="uniqueidentifier" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="SdkMessagePair">
+    <Key>
+      <PropertyRef Name="SdkMessagePairId" />
+    </Key>
+    <Property Name="SdkMessagePairId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="CustomizationLevel" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="SdkMessagePairIdUnique" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Endpoint" Type="nvarchar(max)" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="Namespace" Type="nvarchar(max)" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="SdkMessageId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="SdkMessageRequest">
+    <Key>
+      <PropertyRef Name="SdkMessageRequestId" />
+    </Key>
+    <Property Name="SdkMessageRequestId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CustomizationLevel" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="SdkMessageRequestIdUnique" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="PrimaryObjectTypeCode" Type="nvarchar(max)" />
+    <Property Name="SdkMessagePairId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="SdkMessageResponse">
+    <Key>
+      <PropertyRef Name="SdkMessageResponseId" />
+    </Key>
+    <Property Name="SdkMessageResponseId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="SdkMessageResponseIdUnique" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="CustomizationLevel" Type="int" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="SdkMessageRequestId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="SdkMessage">
+    <Key>
+      <PropertyRef Name="SdkMessageId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="SdkMessageId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="IsPrivate" Type="bit" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CategoryName" Type="nvarchar(max)" />
+    <Property Name="CustomizationLevel" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="SdkMessageIdUnique" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Expand" Type="bit" />
+    <Property Name="AutoTransact" Type="bit" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="Availability" Type="int" />
+    <Property Name="Template" Type="bit" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ThrottleSettings" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Solution">
+    <Key>
+      <PropertyRef Name="SolutionId" />
+    </Key>
+    <Property Name="FriendlyName" Type="nvarchar(max)" />
+    <Property Name="SolutionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="InstalledOn" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="PublisherId" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="IsVisible" Type="bit" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="IsManaged" Type="bit" />
+    <Property Name="UniqueName" Type="nvarchar(max)" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="Version" Type="nvarchar(max)" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="PinpointSolutionId" Type="bigint" />
+    <Property Name="PinpointSolutionDefaultLocale" Type="nvarchar(max)" />
+    <Property Name="PinpointPublisherId" Type="bigint" />
+    <Property Name="ConfigurationPageId" Type="uniqueidentifier" />
+    <Property Name="PinpointAssetId" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TeamRole">
+    <Key>
+      <PropertyRef Name="TeamRoleId" />
+    </Key>
+    <Property Name="TeamRoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="TeamId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BusinessUnitId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="EMailAddress" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="AdministratorId" Type="uniqueidentifier" />
+    <Property Name="IsDefault" Type="bit" />
+    <Property Name="YomiName" Type="nvarchar(max)" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+    <Property Name="QueueId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Territory">
+    <Key>
+      <PropertyRef Name="TerritoryId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="TerritoryId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="ManagerId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="TransactionCurrencyId" Type="uniqueidentifier" />
+    <Property Name="ExchangeRate" Type="decimal" Precision="18" />
+  </EntityType>
+  <EntityType Name="UoM">
+    <Key>
+      <PropertyRef Name="UoMId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="UoMId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="18" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsScheduleBaseUoM" Type="bit" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="BaseUoM" Type="uniqueidentifier" />
+    <Property Name="UoMScheduleId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="UoMSchedule">
+    <Key>
+      <PropertyRef Name="UoMScheduleId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="UoMScheduleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="VersionNumber" Type="bigint" />
+    <Property Name="ImportSequenceNumber" Type="int" />
+    <Property Name="BaseUoMName" Type="nvarchar(max)" />
+    <Property Name="OverriddenCreatedOn" Type="datetime" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="StatusCode" Type="int" />
+  </EntityType>
+  <EntityType Name="WorkflowDependency">
+    <Key>
+      <PropertyRef Name="WorkflowDependencyId" />
+    </Key>
+    <Property Name="WorkflowDependencyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParameterName" Type="nvarchar(max)" />
+    <Property Name="RelatedEntityName" Type="nvarchar(max)" />
+    <Property Name="RelatedAttributeName" Type="nvarchar(max)" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Type" Type="int" />
+    <Property Name="EntityAttributes" Type="nvarchar(max)" />
+    <Property Name="CustomEntityName" Type="nvarchar(max)" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DependentEntityName" Type="nvarchar(max)" />
+    <Property Name="OwningUser" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DependentAttributeName" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ParameterType" Type="nvarchar(max)" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="SdkMessageId" Type="uniqueidentifier" />
+    <Property Name="WorkflowId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="WorkflowLog">
+    <Key>
+      <PropertyRef Name="WorkflowLogId" />
+    </Key>
+    <Property Name="WorkflowLogId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AsyncOperationId" Type="uniqueidentifier" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="CompletedOn" Type="datetime" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="StageName" Type="nvarchar(max)" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="StepName" Type="nvarchar(max)" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="RegardingObjectId" Type="uniqueidentifier" />
+    <Property Name="Status" Type="int" />
+    <Property Name="ErrorCode" Type="int" />
+    <Property Name="ActivityName" Type="nvarchar(max)" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="ChildWorkflowInstanceId" Type="uniqueidentifier" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="InteractionActivityResult" Type="nvarchar(max)" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Workflow">
+    <Key>
+      <PropertyRef Name="WorkflowId" />
+    </Key>
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="WorkflowId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OnDemand" Type="bit" />
+    <Property Name="PluginTypeId" Type="uniqueidentifier" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="Type" Type="int" />
+    <Property Name="PrimaryEntity" Type="nvarchar(max)" />
+    <Property Name="OwnerId" Type="uniqueidentifier" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="AsyncAutoDelete" Type="bit" />
+    <Property Name="IsCrmUIWorkflow" Type="bit" />
+    <Property Name="Subprocess" Type="bit" />
+    <Property Name="Scope" Type="int" />
+    <Property Name="StatusCode" Type="int" />
+    <Property Name="ModifiedBy" Type="uniqueidentifier" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="uniqueidentifier" />
+    <Property Name="OwningBusinessUnit" Type="uniqueidentifier" />
+    <Property Name="StateCode" Type="int" />
+    <Property Name="OwningUser" Type="uniqueidentifier" />
+    <Property Name="WorkflowIdUnique" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SupportingSolutionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SolutionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="OverwriteTime" Type="datetime" />
+    <Property Name="ComponentState" Type="int" />
+    <Property Name="CreatedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="ModifiedOnBehalfBy" Type="uniqueidentifier" />
+    <Property Name="Xaml" Type="nvarchar(max)" />
+    <Property Name="TriggerOnDelete" Type="bit" />
+    <Property Name="TriggerOnCreate" Type="bit" />
+    <Property Name="TriggerOnUpdateAttributeList" Type="nvarchar(max)" />
+    <Property Name="Category" Type="int" />
+    <Property Name="LanguageCode" Type="int" />
+    <Property Name="IsManaged" Type="bit" />
+    <Property Name="IsCustomizable" Type="bit" Nullable="false" />
+    <Property Name="InputParameters" Type="nvarchar(max)" />
+    <Property Name="OwningTeam" Type="uniqueidentifier" />
+    <Property Name="ActiveWorkflowId" Type="uniqueidentifier" />
+    <Property Name="ParentWorkflowId" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="X360Configuration">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CredentialsUri" Type="nvarchar(max)" />
+    <Property Name="DiscoveryUri" Type="nvarchar(max)" />
+    <Property Name="OrganizationName" Type="nvarchar(max)" />
+    <Property Name="OrganizationUri" Type="nvarchar(max)" />
+    <Property Name="Timeout" Type="nvarchar(max)" />
+    <Property Name="AuthenticationType" Type="nvarchar(max)" />
+    <Property Name="LicenseKey" Type="nvarchar(max)" />
+    <Property Name="LicenseKeyStatus" Type="nvarchar(max)" />
+    <Property Name="LastError" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="quote_customer_accounts">
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Quote" Type="DynamicsCRMDataStore.Quote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Quote">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="order_customer_accounts">
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SalesOrder" Type="DynamicsCRMDataStore.SalesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="SalesOrder">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="invoice_customer_accounts">
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Invoice" Type="DynamicsCRMDataStore.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="lead_customer_accounts">
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Lead" Type="DynamicsCRMDataStore.Lead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Lead">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="opportunity_customer_accounts">
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Opportunity" Type="DynamicsCRMDataStore.Opportunity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Opportunity">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="accountleads_association_account">
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="AccountLead" Type="DynamicsCRMDataStore.AccountLead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="AccountLead">
+        <PropertyRef Name="AccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="account_master_account">
+    <End Role="Account1" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account1">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="MasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="account_parent_account">
+    <End Role="Account1" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account1">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="ParentAccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contract_billingcustomer_accounts">
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Contract" Type="DynamicsCRMDataStore.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="BillingCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contract_customer_accounts">
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Contract" Type="DynamicsCRMDataStore.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contractlineitem_customer_accounts">
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ContractDetail" Type="DynamicsCRMDataStore.ContractDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="ContractDetail">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contact_customer_accounts">
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Contact" Type="DynamicsCRMDataStore.Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountId" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="ParentCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="activitypointer_activity_parties">
+    <End Role="Activity" Type="DynamicsCRMDataStore.Activity" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ActivityParty" Type="DynamicsCRMDataStore.ActivityParty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="ActivityId" />
+      </Principal>
+      <Dependent Role="ActivityParty">
+        <PropertyRef Name="ActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="leadcompetitors_association_competitor">
+    <End Role="Competitor" Type="DynamicsCRMDataStore.Competitor" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="LeadCompetitor" Type="DynamicsCRMDataStore.LeadCompetitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competitor">
+        <PropertyRef Name="CompetitorId" />
+      </Principal>
+      <Dependent Role="LeadCompetitor">
+        <PropertyRef Name="CompetitorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="competitor_opportunity_activities">
+    <End Role="Competitor" Type="DynamicsCRMDataStore.Competitor" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="OpportunityClose" Type="DynamicsCRMDataStore.OpportunityClose" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competitor">
+        <PropertyRef Name="CompetitorId" />
+      </Principal>
+      <Dependent Role="OpportunityClose">
+        <PropertyRef Name="CompetitorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="opportunitycompetitors_association_competitor">
+    <End Role="Competitor" Type="DynamicsCRMDataStore.Competitor" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="OpportunityCompetitor" Type="DynamicsCRMDataStore.OpportunityCompetitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competitor">
+        <PropertyRef Name="CompetitorId" />
+      </Principal>
+      <Dependent Role="OpportunityCompetitor">
+        <PropertyRef Name="CompetitorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="competitorproduct_association_competitor">
+    <End Role="Competitor" Type="DynamicsCRMDataStore.Competitor" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="CompetitorProduct" Type="DynamicsCRMDataStore.CompetitorProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competitor">
+        <PropertyRef Name="CompetitorId" />
+      </Principal>
+      <Dependent Role="CompetitorProduct">
+        <PropertyRef Name="CompetitorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="account_primary_contact">
+    <End Role="Contact" Type="DynamicsCRMDataStore.Contact" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="ContactId" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="PrimaryContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contactleads_association_contact">
+    <End Role="Contact" Type="DynamicsCRMDataStore.Contact" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ContactLead" Type="DynamicsCRMDataStore.ContactLead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="ContactId" />
+      </Principal>
+      <Dependent Role="ContactLead">
+        <PropertyRef Name="ContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contactorders_association_contact">
+    <End Role="Contact" Type="DynamicsCRMDataStore.Contact" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ContactOrder" Type="DynamicsCRMDataStore.ContactOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact">
+        <PropertyRef Name="ContactId" />
+      </Principal>
+      <Dependent Role="ContactOrder">
+        <PropertyRef Name="ContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contact_master_contact">
+    <End Role="Contact1" Type="DynamicsCRMDataStore.Contact" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Contact" Type="DynamicsCRMDataStore.Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contact1">
+        <PropertyRef Name="ContactId" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="MasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contract_originating_contract">
+    <End Role="Contract1" Type="DynamicsCRMDataStore.Contract" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Contract" Type="DynamicsCRMDataStore.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract1">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="OriginatingContract" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contract_line_items">
+    <End Role="Contract" Type="DynamicsCRMDataStore.Contract" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ContractDetail" Type="DynamicsCRMDataStore.ContractDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Contract">
+        <PropertyRef Name="ContractId" />
+      </Principal>
+      <Dependent Role="ContractDetail">
+        <PropertyRef Name="ContractId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="invoice_details">
+    <End Role="Invoice" Type="DynamicsCRMDataStore.Invoice" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="InvoiceDetail" Type="DynamicsCRMDataStore.InvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="InvoiceId" />
+      </Principal>
+      <Dependent Role="InvoiceDetail">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="accountleads_association_lead">
+    <End Role="Lead" Type="DynamicsCRMDataStore.Lead" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="AccountLead" Type="DynamicsCRMDataStore.AccountLead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="LeadId" />
+      </Principal>
+      <Dependent Role="AccountLead">
+        <PropertyRef Name="LeadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contactleads_association_lead">
+    <End Role="Lead" Type="DynamicsCRMDataStore.Lead" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ContactLead" Type="DynamicsCRMDataStore.ContactLead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="LeadId" />
+      </Principal>
+      <Dependent Role="ContactLead">
+        <PropertyRef Name="LeadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="leadcompetitors_association_lead">
+    <End Role="Lead" Type="DynamicsCRMDataStore.Lead" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="LeadCompetitor" Type="DynamicsCRMDataStore.LeadCompetitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="LeadId" />
+      </Principal>
+      <Dependent Role="LeadCompetitor">
+        <PropertyRef Name="LeadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="leadproduct_association_lead">
+    <End Role="Lead" Type="DynamicsCRMDataStore.Lead" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="LeadProduct" Type="DynamicsCRMDataStore.LeadProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="LeadId" />
+      </Principal>
+      <Dependent Role="LeadProduct">
+        <PropertyRef Name="LeadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="lead_master_lead">
+    <End Role="Lead1" Type="DynamicsCRMDataStore.Lead" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Lead" Type="DynamicsCRMDataStore.Lead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead1">
+        <PropertyRef Name="LeadId" />
+      </Principal>
+      <Dependent Role="Lead">
+        <PropertyRef Name="MasterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="account_originating_lead">
+    <End Role="Lead" Type="DynamicsCRMDataStore.Lead" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="LeadId" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="OriginatingLeadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contact_originating_lead">
+    <End Role="Lead" Type="DynamicsCRMDataStore.Lead" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Contact" Type="DynamicsCRMDataStore.Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="LeadId" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="OriginatingLeadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="opportunity_originating_lead">
+    <End Role="Lead" Type="DynamicsCRMDataStore.Lead" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Opportunity" Type="DynamicsCRMDataStore.Opportunity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lead">
+        <PropertyRef Name="LeadId" />
+      </Principal>
+      <Dependent Role="Opportunity">
+        <PropertyRef Name="OriginatingLeadId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="opportunity_quotes">
+    <End Role="Opportunity" Type="DynamicsCRMDataStore.Opportunity" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Quote" Type="DynamicsCRMDataStore.Quote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opportunity">
+        <PropertyRef Name="OpportunityId" />
+      </Principal>
+      <Dependent Role="Quote">
+        <PropertyRef Name="OpportunityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="opportunity_sales_orders">
+    <End Role="Opportunity" Type="DynamicsCRMDataStore.Opportunity" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SalesOrder" Type="DynamicsCRMDataStore.SalesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opportunity">
+        <PropertyRef Name="OpportunityId" />
+      </Principal>
+      <Dependent Role="SalesOrder">
+        <PropertyRef Name="OpportunityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="opportunity_invoices">
+    <End Role="Opportunity" Type="DynamicsCRMDataStore.Opportunity" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Invoice" Type="DynamicsCRMDataStore.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opportunity">
+        <PropertyRef Name="OpportunityId" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="OpportunityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="opportunitycompetitors_association_opportunity">
+    <End Role="Opportunity" Type="DynamicsCRMDataStore.Opportunity" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="OpportunityCompetitor" Type="DynamicsCRMDataStore.OpportunityCompetitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opportunity">
+        <PropertyRef Name="OpportunityId" />
+      </Principal>
+      <Dependent Role="OpportunityCompetitor">
+        <PropertyRef Name="OpportunityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Opportunity_OpportunityClose">
+    <End Role="Opportunity" Type="DynamicsCRMDataStore.Opportunity" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="OpportunityClose" Type="DynamicsCRMDataStore.OpportunityClose" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opportunity">
+        <PropertyRef Name="OpportunityId" />
+      </Principal>
+      <Dependent Role="OpportunityClose">
+        <PropertyRef Name="OpportunityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="product_opportunities">
+    <End Role="Opportunity" Type="DynamicsCRMDataStore.Opportunity" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="OpportunityProduct" Type="DynamicsCRMDataStore.OpportunityProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Opportunity">
+        <PropertyRef Name="OpportunityId" />
+      </Principal>
+      <Dependent Role="OpportunityProduct">
+        <PropertyRef Name="OpportunityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="price_level_quotes">
+    <End Role="PriceLevel" Type="DynamicsCRMDataStore.PriceLevel" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Quote" Type="DynamicsCRMDataStore.Quote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceLevel">
+        <PropertyRef Name="PriceLevelId" />
+      </Principal>
+      <Dependent Role="Quote">
+        <PropertyRef Name="PriceLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="price_level_orders">
+    <End Role="PriceLevel" Type="DynamicsCRMDataStore.PriceLevel" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SalesOrder" Type="DynamicsCRMDataStore.SalesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceLevel">
+        <PropertyRef Name="PriceLevelId" />
+      </Principal>
+      <Dependent Role="SalesOrder">
+        <PropertyRef Name="PriceLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="price_level_invoices">
+    <End Role="PriceLevel" Type="DynamicsCRMDataStore.PriceLevel" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Invoice" Type="DynamicsCRMDataStore.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceLevel">
+        <PropertyRef Name="PriceLevelId" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="PriceLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="price_level_opportunties">
+    <End Role="PriceLevel" Type="DynamicsCRMDataStore.PriceLevel" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Opportunity" Type="DynamicsCRMDataStore.Opportunity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceLevel">
+        <PropertyRef Name="PriceLevelId" />
+      </Principal>
+      <Dependent Role="Opportunity">
+        <PropertyRef Name="PriceLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="price_level_accounts">
+    <End Role="PriceLevel" Type="DynamicsCRMDataStore.PriceLevel" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceLevel">
+        <PropertyRef Name="PriceLevelId" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="DefaultPriceLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="price_level_contacts">
+    <End Role="PriceLevel" Type="DynamicsCRMDataStore.PriceLevel" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Contact" Type="DynamicsCRMDataStore.Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceLevel">
+        <PropertyRef Name="PriceLevelId" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="DefaultPriceLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="price_level_products">
+    <End Role="PriceLevel" Type="DynamicsCRMDataStore.PriceLevel" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Product" Type="DynamicsCRMDataStore.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PriceLevel">
+        <PropertyRef Name="PriceLevelId" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="PriceLevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="product_quote_details">
+    <End Role="Product" Type="DynamicsCRMDataStore.Product" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="QuoteDetail" Type="DynamicsCRMDataStore.QuoteDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="QuoteDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="product_order_details">
+    <End Role="Product" Type="DynamicsCRMDataStore.Product" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SalesOrderDetail" Type="DynamicsCRMDataStore.SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="product_invoice_details">
+    <End Role="Product" Type="DynamicsCRMDataStore.Product" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="InvoiceDetail" Type="DynamicsCRMDataStore.InvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="InvoiceDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="leadproduct_association_product">
+    <End Role="Product" Type="DynamicsCRMDataStore.Product" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="LeadProduct" Type="DynamicsCRMDataStore.LeadProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="LeadProduct">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="opportunity_products">
+    <End Role="Product" Type="DynamicsCRMDataStore.Product" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="OpportunityProduct" Type="DynamicsCRMDataStore.OpportunityProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="OpportunityProduct">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="competitorproduct_association_product">
+    <End Role="Product" Type="DynamicsCRMDataStore.Product" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="CompetitorProduct" Type="DynamicsCRMDataStore.CompetitorProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="CompetitorProduct">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="product_contract_line_items">
+    <End Role="Product" Type="DynamicsCRMDataStore.Product" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ContractDetail" Type="DynamicsCRMDataStore.ContractDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ContractDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="queue_team">
+    <End Role="Queue" Type="DynamicsCRMDataStore.Queue" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Queue">
+        <PropertyRef Name="QueueId" />
+      </Principal>
+      <Dependent Role="Team">
+        <PropertyRef Name="QueueId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Quote_QuoteClose">
+    <End Role="Quote" Type="DynamicsCRMDataStore.Quote" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="QuoteClose" Type="DynamicsCRMDataStore.QuoteClose" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Quote">
+        <PropertyRef Name="QuoteId" />
+      </Principal>
+      <Dependent Role="QuoteClose">
+        <PropertyRef Name="QuoteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="quote_details">
+    <End Role="Quote" Type="DynamicsCRMDataStore.Quote" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="QuoteDetail" Type="DynamicsCRMDataStore.QuoteDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Quote">
+        <PropertyRef Name="QuoteId" />
+      </Principal>
+      <Dependent Role="QuoteDetail">
+        <PropertyRef Name="QuoteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="quote_orders">
+    <End Role="Quote" Type="DynamicsCRMDataStore.Quote" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SalesOrder" Type="DynamicsCRMDataStore.SalesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Quote">
+        <PropertyRef Name="QuoteId" />
+      </Principal>
+      <Dependent Role="SalesOrder">
+        <PropertyRef Name="QuoteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="teamroles_association_role">
+    <End Role="Role" Type="DynamicsCRMDataStore.Role" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TeamRole" Type="DynamicsCRMDataStore.TeamRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="TeamRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="role_parent_role">
+    <End Role="Role1" Type="DynamicsCRMDataStore.Role" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Role" Type="DynamicsCRMDataStore.Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role1">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Role">
+        <PropertyRef Name="ParentRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="role_parent_root_role">
+    <End Role="Role1" Type="DynamicsCRMDataStore.Role" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Role" Type="DynamicsCRMDataStore.Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role1">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Role">
+        <PropertyRef Name="ParentRootRoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contactorders_association_salesorder">
+    <End Role="SalesOrder" Type="DynamicsCRMDataStore.SalesOrder" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ContactOrder" Type="DynamicsCRMDataStore.ContactOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrder">
+        <PropertyRef Name="SalesOrderId" />
+      </Principal>
+      <Dependent Role="ContactOrder">
+        <PropertyRef Name="SalesOrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="order_invoices">
+    <End Role="SalesOrder" Type="DynamicsCRMDataStore.SalesOrder" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Invoice" Type="DynamicsCRMDataStore.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrder">
+        <PropertyRef Name="SalesOrderId" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="SalesOrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="order_details">
+    <End Role="SalesOrder" Type="DynamicsCRMDataStore.SalesOrder" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SalesOrderDetail" Type="DynamicsCRMDataStore.SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesOrder">
+        <PropertyRef Name="SalesOrderId" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="SalesOrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="messagepair_sdkmessagerequest">
+    <End Role="SdkMessagePair" Type="DynamicsCRMDataStore.SdkMessagePair" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SdkMessageRequest" Type="DynamicsCRMDataStore.SdkMessageRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SdkMessagePair">
+        <PropertyRef Name="SdkMessagePairId" />
+      </Principal>
+      <Dependent Role="SdkMessageRequest">
+        <PropertyRef Name="SdkMessagePairId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="messagerequest_sdkmessageresponse">
+    <End Role="SdkMessageRequest" Type="DynamicsCRMDataStore.SdkMessageRequest" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SdkMessageResponse" Type="DynamicsCRMDataStore.SdkMessageResponse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SdkMessageRequest">
+        <PropertyRef Name="SdkMessageRequestId" />
+      </Principal>
+      <Dependent Role="SdkMessageResponse">
+        <PropertyRef Name="SdkMessageRequestId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="sdkmessageid_workflow_dependency">
+    <End Role="SdkMessage" Type="DynamicsCRMDataStore.SdkMessage" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="WorkflowDependency" Type="DynamicsCRMDataStore.WorkflowDependency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SdkMessage">
+        <PropertyRef Name="SdkMessageId" />
+      </Principal>
+      <Dependent Role="WorkflowDependency">
+        <PropertyRef Name="SdkMessageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="message_sdkmessagepair">
+    <End Role="SdkMessage" Type="DynamicsCRMDataStore.SdkMessage" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SdkMessagePair" Type="DynamicsCRMDataStore.SdkMessagePair" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SdkMessage">
+        <PropertyRef Name="SdkMessageId" />
+      </Principal>
+      <Dependent Role="SdkMessagePair">
+        <PropertyRef Name="SdkMessageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_workflow">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Workflow" Type="DynamicsCRMDataStore.Workflow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Workflow">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_workflowlog">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="WorkflowLog" Type="DynamicsCRMDataStore.WorkflowLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="WorkflowLog">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_quotes">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Quote" Type="DynamicsCRMDataStore.Quote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Quote">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_quoteclose">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="QuoteClose" Type="DynamicsCRMDataStore.QuoteClose" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="QuoteClose">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_orders">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SalesOrder" Type="DynamicsCRMDataStore.SalesOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="SalesOrder">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="teamroles_association_team">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TeamRole" Type="DynamicsCRMDataStore.TeamRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="TeamRole">
+        <PropertyRef Name="TeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_accounts">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_contacts">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Contact" Type="DynamicsCRMDataStore.Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Contact">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_service_contracts">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Contract" Type="DynamicsCRMDataStore.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_invoices">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Invoice" Type="DynamicsCRMDataStore.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="lead_owning_team">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Lead" Type="DynamicsCRMDataStore.Lead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Lead">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_opportunities">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Opportunity" Type="DynamicsCRMDataStore.Opportunity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Opportunity">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="team_opportunityclose">
+    <End Role="Team" Type="DynamicsCRMDataStore.Team" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="OpportunityClose" Type="DynamicsCRMDataStore.OpportunityClose" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="OpportunityClose">
+        <PropertyRef Name="OwningTeam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="territory_accounts">
+    <End Role="Territory" Type="DynamicsCRMDataStore.Territory" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Account" Type="DynamicsCRMDataStore.Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Territory">
+        <PropertyRef Name="TerritoryId" />
+      </Principal>
+      <Dependent Role="Account">
+        <PropertyRef Name="TerritoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="unit_of_measurement_base_unit">
+    <End Role="UoM1" Type="DynamicsCRMDataStore.UoM" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="UoM" Type="DynamicsCRMDataStore.UoM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UoM1">
+        <PropertyRef Name="UoMId" />
+      </Principal>
+      <Dependent Role="UoM">
+        <PropertyRef Name="BaseUoM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="unit_of_measurement_products">
+    <End Role="UoM" Type="DynamicsCRMDataStore.UoM" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Product" Type="DynamicsCRMDataStore.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UoM">
+        <PropertyRef Name="UoMId" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="DefaultUoMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="unit_of_measurement_contract_line_items">
+    <End Role="UoM" Type="DynamicsCRMDataStore.UoM" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ContractDetail" Type="DynamicsCRMDataStore.ContractDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UoM">
+        <PropertyRef Name="UoMId" />
+      </Principal>
+      <Dependent Role="ContractDetail">
+        <PropertyRef Name="UoMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="unit_of_measurement_invoice_details">
+    <End Role="UoM" Type="DynamicsCRMDataStore.UoM" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="InvoiceDetail" Type="DynamicsCRMDataStore.InvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UoM">
+        <PropertyRef Name="UoMId" />
+      </Principal>
+      <Dependent Role="InvoiceDetail">
+        <PropertyRef Name="UoMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="unit_of_measurement_opportunity_products">
+    <End Role="UoM" Type="DynamicsCRMDataStore.UoM" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="OpportunityProduct" Type="DynamicsCRMDataStore.OpportunityProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UoM">
+        <PropertyRef Name="UoMId" />
+      </Principal>
+      <Dependent Role="OpportunityProduct">
+        <PropertyRef Name="UoMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="unit_of_measurement_quote_details">
+    <End Role="UoM" Type="DynamicsCRMDataStore.UoM" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="QuoteDetail" Type="DynamicsCRMDataStore.QuoteDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UoM">
+        <PropertyRef Name="UoMId" />
+      </Principal>
+      <Dependent Role="QuoteDetail">
+        <PropertyRef Name="UoMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="unit_of_measurement_order_details">
+    <End Role="UoM" Type="DynamicsCRMDataStore.UoM" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="SalesOrderDetail" Type="DynamicsCRMDataStore.SalesOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UoM">
+        <PropertyRef Name="UoMId" />
+      </Principal>
+      <Dependent Role="SalesOrderDetail">
+        <PropertyRef Name="UoMId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="unit_of_measure_schedule_conversions">
+    <End Role="UoMSchedule" Type="DynamicsCRMDataStore.UoMSchedule" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="UoM" Type="DynamicsCRMDataStore.UoM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UoMSchedule">
+        <PropertyRef Name="UoMScheduleId" />
+      </Principal>
+      <Dependent Role="UoM">
+        <PropertyRef Name="UoMScheduleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="unit_of_measurement_schedule_products">
+    <End Role="UoMSchedule" Type="DynamicsCRMDataStore.UoMSchedule" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Product" Type="DynamicsCRMDataStore.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UoMSchedule">
+        <PropertyRef Name="UoMScheduleId" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="DefaultUoMScheduleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="contract_detail_unit_of_measure_schedule">
+    <End Role="UoMSchedule" Type="DynamicsCRMDataStore.UoMSchedule" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ContractDetail" Type="DynamicsCRMDataStore.ContractDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UoMSchedule">
+        <PropertyRef Name="UoMScheduleId" />
+      </Principal>
+      <Dependent Role="ContractDetail">
+        <PropertyRef Name="UoMScheduleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="workflow_active_workflow">
+    <End Role="Workflow1" Type="DynamicsCRMDataStore.Workflow" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Workflow" Type="DynamicsCRMDataStore.Workflow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workflow1">
+        <PropertyRef Name="WorkflowId" />
+      </Principal>
+      <Dependent Role="Workflow">
+        <PropertyRef Name="ActiveWorkflowId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="workflow_parent_workflow">
+    <End Role="Workflow1" Type="DynamicsCRMDataStore.Workflow" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Workflow" Type="DynamicsCRMDataStore.Workflow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workflow1">
+        <PropertyRef Name="WorkflowId" />
+      </Principal>
+      <Dependent Role="Workflow">
+        <PropertyRef Name="ParentWorkflowId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="workflow_dependencies">
+    <End Role="Workflow" Type="DynamicsCRMDataStore.Workflow" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="WorkflowDependency" Type="DynamicsCRMDataStore.WorkflowDependency" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workflow">
+        <PropertyRef Name="WorkflowId" />
+      </Principal>
+      <Dependent Role="WorkflowDependency">
+        <PropertyRef Name="WorkflowId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

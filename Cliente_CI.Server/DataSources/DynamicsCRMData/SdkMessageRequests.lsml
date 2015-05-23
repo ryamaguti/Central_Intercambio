@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="SdkMessageRequest">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="SdkMessageRequestId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Required />
+          <Hidden />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="CustomizationLevel"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OrganizationId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VersionNumber"
+        IsReadOnly="True"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SdkMessageRequestIdUnique"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String?" />
+      <EntityProperty
+        Name="CreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PrimaryObjectTypeCode"
+        IsReadOnly="True"
+        PropertyType=":String?" />
+      <NavigationProperty
+        Name="messagepair_sdkmessagerequest"
+        Association="messagepair_sdkmessagerequest"
+        FromEnd="SdkMessageRequest"
+        ToEnd="SdkMessagePair">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="sdkmessagepair" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="messagerequest_sdkmessageresponses"
+        Association="messagerequest_sdkmessageresponse"
+        FromEnd="SdkMessageRequest"
+        ToEnd="SdkMessageResponse">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="sdkmessageresponse" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="messagerequest_sdkmessageresponse">
+    <AssociationEnd
+      Name="SdkMessageRequest"
+      EntityType="SdkMessageRequest">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="SdkMessageResponse"
+      Multiplicity="Many"
+      EntityType="SdkMessageResponse" />
+  </Association>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="SdkMessageRequests"
+      EntityType="SdkMessageRequest" />
+    <AssociationSet
+      Name="messagerequest_sdkmessageresponse"
+      Association="messagerequest_sdkmessageresponse">
+      <AssociationSetEnd
+        Name="SdkMessageRequest"
+        EntitySet="SdkMessageRequests" />
+      <AssociationSetEnd
+        Name="SdkMessageResponse"
+        EntitySet="SdkMessageResponses" />
+    </AssociationSet>
+    <QueryOperation
+      Name="SdkMessageRequests_Single"
+      ReturnType="SdkMessageRequest">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="SdkMessageRequestId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="SdkMessageRequestId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SdkMessageRequests" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="SdkMessageRequestId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'SdkMessageRequestId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="SdkMessageRequests_SingleOrDefault"
+      ReturnType="SdkMessageRequest">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="SdkMessageRequestId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="SdkMessageRequestId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SdkMessageRequests" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="SdkMessageRequestId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'SdkMessageRequestId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="SdkMessageRequests">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetSdkMessageRequests"
+          EntityTypeName="Xpert360Lightning.SdkMessageRequest" />
+        <WcfRiaProperty
+          Name="SdkMessageRequestId"
+          Property="SdkMessageRequest/Properties[SdkMessageRequestId]" />
+        <WcfRiaProperty
+          Name="CustomizationLevel"
+          Property="SdkMessageRequest/Properties[CustomizationLevel]" />
+        <WcfRiaProperty
+          Name="ModifiedOn"
+          Property="SdkMessageRequest/Properties[ModifiedOn]" />
+        <WcfRiaProperty
+          Name="ModifiedBy"
+          Property="SdkMessageRequest/Properties[ModifiedBy]" />
+        <WcfRiaProperty
+          Name="OrganizationId"
+          Property="SdkMessageRequest/Properties[OrganizationId]" />
+        <WcfRiaProperty
+          Name="VersionNumber"
+          Property="SdkMessageRequest/Properties[VersionNumber]" />
+        <WcfRiaProperty
+          Name="SdkMessageRequestIdUnique"
+          Property="SdkMessageRequest/Properties[SdkMessageRequestIdUnique]" />
+        <WcfRiaProperty
+          Name="Name"
+          Property="SdkMessageRequest/Properties[Name]" />
+        <WcfRiaProperty
+          Name="CreatedOn"
+          Property="SdkMessageRequest/Properties[CreatedOn]" />
+        <WcfRiaProperty
+          Name="CreatedBy"
+          Property="SdkMessageRequest/Properties[CreatedBy]" />
+        <WcfRiaProperty
+          Name="CreatedOnBehalfBy"
+          Property="SdkMessageRequest/Properties[CreatedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOnBehalfBy"
+          Property="SdkMessageRequest/Properties[ModifiedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="PrimaryObjectTypeCode"
+          Property="SdkMessageRequest/Properties[PrimaryObjectTypeCode]" />
+        <WcfRiaProperty
+          Name="messagepair_sdkmessagerequest"
+          Property="SdkMessageRequest/Properties[messagepair_sdkmessagerequest]" />
+        <WcfRiaProperty
+          Name="messagerequest_sdkmessageresponses"
+          Property="SdkMessageRequest/Properties[messagerequest_sdkmessageresponses]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="messagerequest_sdkmessageresponse">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[messagerequest_sdkmessageresponse]/Members[SdkMessageRequest]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="SdkMessageRequestId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[messagerequest_sdkmessageresponse]/Members[SdkMessageResponse]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="SdkMessageRequestId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

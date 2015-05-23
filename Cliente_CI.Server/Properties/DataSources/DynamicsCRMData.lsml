@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityContainer
+    Name="DynamicsCRMData"
+    DataProvider="CustomDataProvider">
+    <EntityContainer.Attributes>
+      <Partial
+        IsPrimary="True" />
+    </EntityContainer.Attributes>
+    <SubmitOperation
+      Name="SaveChanges" />
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService"
+    EntityContainer="DynamicsCRMData">
+    <DataService.Attributes>
+      <Partial
+        IsPrimary="True" />
+    </DataService.Attributes>
+    <DataService.ConnectionProperties>
+      <ConnectionProperty
+        Name="AssemblyName"
+        Value="Xpert360Lightning.DynamicsCRM.Server" />
+      <ConnectionProperty
+        Name="FullClassName"
+        Value="Xpert360Lightning.DataSources.DynamicsCRM" />
+      <ConnectionProperty
+        Name="ConnectionStringGuid"
+        Value="c325f38f-e286-4b94-999f-cb8653fb7f2d" />
+      <ConnectionProperty
+        Name="ConnectionStringDescription"
+        Value="Please provide the path to the service configuration file." />
+    </DataService.ConnectionProperties>
+  </DataService>
+</ServiceApplication>

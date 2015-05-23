@@ -1,0 +1,2650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Account">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Account Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="AccountId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Required />
+          <Hidden />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Address1_AddressId"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: ID" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_AddressId"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: ID" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AccountCategoryCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Category" />
+          <SupportedValue
+            DisplayName="PreferredCustomer"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Standard"
+            Value="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CustomerSizeCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Customer Size" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PreferredContactMethodCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Preferred Method of Contact" />
+          <SupportedValue
+            DisplayName="Any"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Email"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Phone"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Fax"
+            Value="4" />
+          <SupportedValue
+            DisplayName="Mail"
+            Value="5" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CustomerTypeCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Relationship Type" />
+          <SupportedValue
+            DisplayName="Competitor"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Consultant"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Customer"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Investor"
+            Value="4" />
+          <SupportedValue
+            DisplayName="Partner"
+            Value="5" />
+          <SupportedValue
+            DisplayName="Influencer"
+            Value="6" />
+          <SupportedValue
+            DisplayName="Press"
+            Value="7" />
+          <SupportedValue
+            DisplayName="Prospect"
+            Value="8" />
+          <SupportedValue
+            DisplayName="Reseller"
+            Value="9" />
+          <SupportedValue
+            DisplayName="Supplier"
+            Value="10" />
+          <SupportedValue
+            DisplayName="Vendor"
+            Value="11" />
+          <SupportedValue
+            DisplayName="Other"
+            Value="12" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AccountRatingCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Account Rating" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IndustryCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Industry" />
+          <SupportedValue
+            DisplayName="Accounting"
+            Value="1" />
+          <SupportedValue
+            DisplayName="AgricultureNonpetrolNaturalResourceExtraction"
+            Value="2" />
+          <SupportedValue
+            DisplayName="BroadcastingPrintingPublishing"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Brokers"
+            Value="4" />
+          <SupportedValue
+            DisplayName="BuildingSupplyRetail"
+            Value="5" />
+          <SupportedValue
+            DisplayName="BusinessServices"
+            Value="6" />
+          <SupportedValue
+            DisplayName="Consulting"
+            Value="7" />
+          <SupportedValue
+            DisplayName="ConsumerServices"
+            Value="8" />
+          <SupportedValue
+            DisplayName="Design_DirectionCreativeManagement"
+            Value="9" />
+          <SupportedValue
+            DisplayName="Distributors_DispatchersProcessors"
+            Value="10" />
+          <SupportedValue
+            DisplayName="DoctorsOfficesClinics"
+            Value="11" />
+          <SupportedValue
+            DisplayName="DurableManufacturing"
+            Value="12" />
+          <SupportedValue
+            DisplayName="EatingDrinkingPlaces"
+            Value="13" />
+          <SupportedValue
+            DisplayName="EntertainmentRetail"
+            Value="14" />
+          <SupportedValue
+            DisplayName="EquipmentRentalLeasing"
+            Value="15" />
+          <SupportedValue
+            DisplayName="Financial"
+            Value="16" />
+          <SupportedValue
+            DisplayName="FoodTobaccoProcessing"
+            Value="17" />
+          <SupportedValue
+            DisplayName="InboundCapitalIntensiveProcessing"
+            Value="18" />
+          <SupportedValue
+            DisplayName="InboundRepairServices"
+            Value="19" />
+          <SupportedValue
+            DisplayName="Insurance"
+            Value="20" />
+          <SupportedValue
+            DisplayName="LegalServices"
+            Value="21" />
+          <SupportedValue
+            DisplayName="NonDurableMerchandiseRetail"
+            Value="22" />
+          <SupportedValue
+            DisplayName="OutboundConsumerService"
+            Value="23" />
+          <SupportedValue
+            DisplayName="PetrochemicalExtractionDistribution"
+            Value="24" />
+          <SupportedValue
+            DisplayName="ServiceRetail"
+            Value="25" />
+          <SupportedValue
+            DisplayName="SIGAffiliations"
+            Value="26" />
+          <SupportedValue
+            DisplayName="SocialServices"
+            Value="27" />
+          <SupportedValue
+            DisplayName="SpecialOutboundTradeContractors"
+            Value="28" />
+          <SupportedValue
+            DisplayName="SpecialtyRealty"
+            Value="29" />
+          <SupportedValue
+            DisplayName="Transportation"
+            Value="30" />
+          <SupportedValue
+            DisplayName="UtilityCreationDistribution"
+            Value="31" />
+          <SupportedValue
+            DisplayName="VehicleRetail"
+            Value="32" />
+          <SupportedValue
+            DisplayName="Wholesale"
+            Value="33" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TerritoryCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Territory Code" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AccountClassificationCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Classification" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BusinessTypeCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Business Type" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningBusinessUnit"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning Business Unit" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningUser"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning User" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PaymentTermsCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Payment Terms" />
+          <SupportedValue
+            DisplayName="Net30"
+            Value="1" />
+          <SupportedValue
+            DisplayName="e2_10_Net30"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Net45"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Net60"
+            Value="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ShippingMethodCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Shipping Method" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ParticipatesInWorkflow"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Participates in Workflow" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AccountNumber"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Account Number" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Revenue"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Annual Revenue" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NumberOfEmployees"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="No. of Employees" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Description" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SIC"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="SIC Code" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwnershipCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ownership" />
+          <SupportedValue
+            DisplayName="Public"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Private"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Subsidiary"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Other"
+            Value="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MarketCap"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Market Capitalization" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SharesOutstanding"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Shares Outstanding" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TickerSymbol"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ticker Symbol" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StockExchange"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Stock Exchange" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WebSiteURL"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Web Site" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FtpSiteURL"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="FTP Site" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EMailAddress1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="E-mail" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EMailAddress2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="E-mail Address 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EMailAddress3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="E-mail Address 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DoNotPhone"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Do not allow Phone Calls" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DoNotFax"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Do not allow Faxes" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Telephone1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Main Phone" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DoNotEMail"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Do not allow E-mails" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Telephone2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Other Phone" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fax"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Fax" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Telephone3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Telephone 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DoNotPostalMail"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Do not allow Mails" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DoNotBulkEMail"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Do not allow Bulk E-mails" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DoNotBulkPostalMail"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Do not allow Bulk Mails" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreditLimit"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Credit Limit" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreditOnHold"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Credit Hold" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsPrivate"
+        IsReadOnly="True"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VersionNumber"
+        IsReadOnly="True"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Aging30"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Aging 30" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StateCode"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status" />
+          <SupportedValue
+            DisplayName="Active"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Inactive"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Aging60"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Aging 60" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StatusCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status Reason" />
+          <SupportedValue
+            DisplayName="Active"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Inactive"
+            Value="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Aging90"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Aging 90" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_AddressTypeCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Address Type" />
+          <SupportedValue
+            DisplayName="BillTo"
+            Value="1" />
+          <SupportedValue
+            DisplayName="ShipTo"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Primary"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Other"
+            Value="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_PrimaryContactName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Primary Contact Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Line1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Street 1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Line2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Street 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Line3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Street 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_City"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: City" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_StateOrProvince"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: State/Province" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_County"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: County" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Country"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Country/Region" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_PostOfficeBox"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Post Office Box" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_PostalCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: ZIP/Postal Code" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_UTCOffset"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: UTC Offset" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_FreightTermsCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Freight Terms" />
+          <SupportedValue
+            DisplayName="FOB"
+            Value="1" />
+          <SupportedValue
+            DisplayName="NoCharge"
+            Value="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_UPSZone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: UPS Zone" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Latitude"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Latitude" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Telephone1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address Phone" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Longitude"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Longitude" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_ShippingMethodCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Shipping Method" />
+          <SupportedValue
+            DisplayName="Airborne"
+            Value="1" />
+          <SupportedValue
+            DisplayName="DHL"
+            Value="2" />
+          <SupportedValue
+            DisplayName="FedEx"
+            Value="3" />
+          <SupportedValue
+            DisplayName="UPS"
+            Value="4" />
+          <SupportedValue
+            DisplayName="PostalMail"
+            Value="5" />
+          <SupportedValue
+            DisplayName="FullLoad"
+            Value="6" />
+          <SupportedValue
+            DisplayName="WillCall"
+            Value="7" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Telephone2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Telephone 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Telephone3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Telephone 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Fax"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Fax" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_AddressTypeCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Address Type" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_PrimaryContactName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Primary Contact Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Line1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Street 1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Line2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Street 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Line3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Street 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_City"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: City" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_StateOrProvince"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: State/Province" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_County"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: County" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Country"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Country/Region" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_PostOfficeBox"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Post Office Box" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_PostalCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: ZIP/Postal Code" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_UTCOffset"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: UTC Offset" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_FreightTermsCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Freight Terms" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_UPSZone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: UPS Zone" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Latitude"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Latitude" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Telephone1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Telephone 1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Longitude"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Longitude" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_ShippingMethodCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Shipping Method" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Telephone2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Telephone 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Telephone3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Telephone 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Fax"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Fax" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwnerId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owner" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PreferredAppointmentDayCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Preferred Day" />
+          <SupportedValue
+            DisplayName="Sunday"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Monday"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Tuesday"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Wednesday"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Thursday"
+            Value="4" />
+          <SupportedValue
+            DisplayName="Friday"
+            Value="5" />
+          <SupportedValue
+            DisplayName="Saturday"
+            Value="6" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PreferredSystemUserId"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Preferred User" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PreferredAppointmentTimeCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Preferred Time" />
+          <SupportedValue
+            DisplayName="Morning"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Afternoon"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Evening"
+            Value="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Merged"
+        IsReadOnly="True"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Merged" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DoNotSendMM"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Send Marketing Materials" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LastUsedInCampaign"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Last Date Included in Campaign" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PreferredServiceId"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Preferred Service" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PreferredEquipmentId"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Preferred Facility/Equipment" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ExchangeRate"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Exchange Rate" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UTCConversionTimeZoneCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="UTC Conversion Time Zone Code" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OverriddenCreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Record Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TimeZoneRuleVersionNumber"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Time Zone Rule Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ImportSequenceNumber"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Import Sequence Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TransactionCurrencyId"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Currency" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreditLimit_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Credit Limit (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Aging30_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Aging 30 (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Revenue_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Annual Revenue (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Aging90_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Aging 90 (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MarketCap_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Market Capitalization (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Aging60_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Aging 60 (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="YomiName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Yomi Account Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Quote_customer_accounts"
+        Association="quote_customer_accounts"
+        FromEnd="Account"
+        ToEnd="Quote">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="quote" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Order_customer_accounts"
+        Association="order_customer_accounts"
+        FromEnd="Account"
+        ToEnd="SalesOrder">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="salesorder" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="team_accounts"
+        Association="team_accounts"
+        FromEnd="Account"
+        ToEnd="Team">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="team" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="territory_accounts"
+        Association="territory_accounts"
+        FromEnd="Account"
+        ToEnd="Territory">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="territory" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Invoice_customer_accounts"
+        Association="invoice_customer_accounts"
+        FromEnd="Account"
+        ToEnd="Invoice">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="invoice" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Lead_customer_accounts"
+        Association="lead_customer_accounts"
+        FromEnd="Account"
+        ToEnd="Lead">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="lead" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="account_originating_lead"
+        Association="account_originating_lead"
+        FromEnd="Account"
+        ToEnd="Lead">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="lead" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Opportunity_customer_accounts"
+        Association="opportunity_customer_accounts"
+        FromEnd="Account"
+        ToEnd="Opportunity">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="opportunity" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="price_level_accounts"
+        Association="price_level_accounts"
+        FromEnd="Account"
+        ToEnd="PriceLevel">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="pricelevel" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="accountleads_associations"
+        Association="accountleads_association_account"
+        FromEnd="Account"
+        ToEnd="AccountLead">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="AccountLead" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="account_master_account"
+        Association="account_master_account"
+        FromEnd="Account"
+        ToEnd="Account1">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="account" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="account_master_accounts"
+        Association="account_master_account"
+        FromEnd="Account1"
+        ToEnd="Account">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="account" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="account_parent_account"
+        Association="account_parent_account"
+        FromEnd="Account"
+        ToEnd="Account1">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="account" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="account_parent_accounts"
+        Association="account_parent_account"
+        FromEnd="Account1"
+        ToEnd="Account">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="account" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="account_primary_contact"
+        Association="account_primary_contact"
+        FromEnd="Account"
+        ToEnd="Contact">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="contact" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Contract_billingcustomer_accounts"
+        Association="contract_billingcustomer_accounts"
+        FromEnd="Account"
+        ToEnd="Contract">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="contract" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Contract_customer_accounts"
+        Association="contract_customer_accounts"
+        FromEnd="Account"
+        ToEnd="Contract">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="contract" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Contractlineitem_customer_accounts"
+        Association="contractlineitem_customer_accounts"
+        FromEnd="Account"
+        ToEnd="ContractDetail">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="contractdetail" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Contact_customer_accounts"
+        Association="contact_customer_accounts"
+        FromEnd="Account"
+        ToEnd="Contact">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="contact" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="quote_customer_accounts">
+    <AssociationEnd
+      Name="Quote"
+      Multiplicity="Many"
+      EntityType="Quote" />
+    <AssociationEnd
+      Name="Account"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="order_customer_accounts">
+    <AssociationEnd
+      Name="SalesOrder"
+      Multiplicity="Many"
+      EntityType="SalesOrder" />
+    <AssociationEnd
+      Name="Account"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="invoice_customer_accounts">
+    <AssociationEnd
+      Name="Invoice"
+      Multiplicity="Many"
+      EntityType="Invoice" />
+    <AssociationEnd
+      Name="Account"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="lead_customer_accounts">
+    <AssociationEnd
+      Name="Lead"
+      Multiplicity="Many"
+      EntityType="Lead" />
+    <AssociationEnd
+      Name="Account"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="opportunity_customer_accounts">
+    <AssociationEnd
+      Name="Opportunity"
+      Multiplicity="Many"
+      EntityType="Opportunity" />
+    <AssociationEnd
+      Name="Account"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="accountleads_association_account">
+    <AssociationEnd
+      Name="Account"
+      Multiplicity="One"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="AccountLead"
+      Multiplicity="Many"
+      EntityType="AccountLead" />
+  </Association>
+  <Association
+    Name="account_master_account">
+    <AssociationEnd
+      Name="Account"
+      Multiplicity="Many"
+      EntityType="Account" />
+    <AssociationEnd
+      Name="Account1"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="account_parent_account">
+    <AssociationEnd
+      Name="Account"
+      Multiplicity="Many"
+      EntityType="Account" />
+    <AssociationEnd
+      Name="Account1"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="contract_billingcustomer_accounts">
+    <AssociationEnd
+      Name="Account"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Contract"
+      Multiplicity="Many"
+      EntityType="Contract" />
+  </Association>
+  <Association
+    Name="contract_customer_accounts">
+    <AssociationEnd
+      Name="Account"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Contract"
+      Multiplicity="Many"
+      EntityType="Contract" />
+  </Association>
+  <Association
+    Name="contractlineitem_customer_accounts">
+    <AssociationEnd
+      Name="Account"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ContractDetail"
+      Multiplicity="Many"
+      EntityType="ContractDetail" />
+  </Association>
+  <Association
+    Name="contact_customer_accounts">
+    <AssociationEnd
+      Name="Account"
+      EntityType="Account">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Contact"
+      Multiplicity="Many"
+      EntityType="Contact" />
+  </Association>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Accounts"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Account" />
+    <AssociationSet
+      Name="quote_customer_accounts"
+      Association="quote_customer_accounts">
+      <AssociationSetEnd
+        Name="Quote"
+        EntitySet="Quotes" />
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet
+      Name="order_customer_accounts"
+      Association="order_customer_accounts">
+      <AssociationSetEnd
+        Name="SalesOrder"
+        EntitySet="SalesOrders" />
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet
+      Name="invoice_customer_accounts"
+      Association="invoice_customer_accounts">
+      <AssociationSetEnd
+        Name="Invoice"
+        EntitySet="Invoices" />
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet
+      Name="lead_customer_accounts"
+      Association="lead_customer_accounts">
+      <AssociationSetEnd
+        Name="Lead"
+        EntitySet="Leads" />
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet
+      Name="opportunity_customer_accounts"
+      Association="opportunity_customer_accounts">
+      <AssociationSetEnd
+        Name="Opportunity"
+        EntitySet="Opportunities" />
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet
+      Name="accountleads_association_account"
+      Association="accountleads_association_account">
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+      <AssociationSetEnd
+        Name="AccountLead"
+        EntitySet="AccountLeads" />
+    </AssociationSet>
+    <AssociationSet
+      Name="account_master_account"
+      Association="account_master_account">
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+      <AssociationSetEnd
+        Name="Account1"
+        EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet
+      Name="account_parent_account"
+      Association="account_parent_account">
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+      <AssociationSetEnd
+        Name="Account1"
+        EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet
+      Name="contract_billingcustomer_accounts"
+      Association="contract_billingcustomer_accounts">
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+      <AssociationSetEnd
+        Name="Contract"
+        EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet
+      Name="contract_customer_accounts"
+      Association="contract_customer_accounts">
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+      <AssociationSetEnd
+        Name="Contract"
+        EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet
+      Name="contractlineitem_customer_accounts"
+      Association="contractlineitem_customer_accounts">
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+      <AssociationSetEnd
+        Name="ContractDetail"
+        EntitySet="ContractDetails" />
+    </AssociationSet>
+    <AssociationSet
+      Name="contact_customer_accounts"
+      Association="contact_customer_accounts">
+      <AssociationSetEnd
+        Name="Account"
+        EntitySet="Accounts" />
+      <AssociationSetEnd
+        Name="Contact"
+        EntitySet="Contacts" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Accounts_Single"
+      ReturnType="Account">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="AccountId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="AccountId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Accounts" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="AccountId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'AccountId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Accounts_SingleOrDefault"
+      ReturnType="Account">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="AccountId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="AccountId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Accounts" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="AccountId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'AccountId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Accounts">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetAccounts"
+          EntityTypeName="Xpert360Lightning.Account" />
+        <WcfRiaProperty
+          Name="Name"
+          Property="Account/Properties[Name]" />
+        <WcfRiaProperty
+          Name="AccountId"
+          Property="Account/Properties[AccountId]" />
+        <WcfRiaProperty
+          Name="Address1_AddressId"
+          Property="Account/Properties[Address1_AddressId]" />
+        <WcfRiaProperty
+          Name="Address2_AddressId"
+          Property="Account/Properties[Address2_AddressId]" />
+        <WcfRiaProperty
+          Name="AccountCategoryCode"
+          Property="Account/Properties[AccountCategoryCode]" />
+        <WcfRiaProperty
+          Name="CustomerSizeCode"
+          Property="Account/Properties[CustomerSizeCode]" />
+        <WcfRiaProperty
+          Name="PreferredContactMethodCode"
+          Property="Account/Properties[PreferredContactMethodCode]" />
+        <WcfRiaProperty
+          Name="CustomerTypeCode"
+          Property="Account/Properties[CustomerTypeCode]" />
+        <WcfRiaProperty
+          Name="AccountRatingCode"
+          Property="Account/Properties[AccountRatingCode]" />
+        <WcfRiaProperty
+          Name="IndustryCode"
+          Property="Account/Properties[IndustryCode]" />
+        <WcfRiaProperty
+          Name="TerritoryCode"
+          Property="Account/Properties[TerritoryCode]" />
+        <WcfRiaProperty
+          Name="AccountClassificationCode"
+          Property="Account/Properties[AccountClassificationCode]" />
+        <WcfRiaProperty
+          Name="BusinessTypeCode"
+          Property="Account/Properties[BusinessTypeCode]" />
+        <WcfRiaProperty
+          Name="OwningBusinessUnit"
+          Property="Account/Properties[OwningBusinessUnit]" />
+        <WcfRiaProperty
+          Name="OwningUser"
+          Property="Account/Properties[OwningUser]" />
+        <WcfRiaProperty
+          Name="PaymentTermsCode"
+          Property="Account/Properties[PaymentTermsCode]" />
+        <WcfRiaProperty
+          Name="ShippingMethodCode"
+          Property="Account/Properties[ShippingMethodCode]" />
+        <WcfRiaProperty
+          Name="ParticipatesInWorkflow"
+          Property="Account/Properties[ParticipatesInWorkflow]" />
+        <WcfRiaProperty
+          Name="AccountNumber"
+          Property="Account/Properties[AccountNumber]" />
+        <WcfRiaProperty
+          Name="Revenue"
+          Property="Account/Properties[Revenue]" />
+        <WcfRiaProperty
+          Name="NumberOfEmployees"
+          Property="Account/Properties[NumberOfEmployees]" />
+        <WcfRiaProperty
+          Name="Description"
+          Property="Account/Properties[Description]" />
+        <WcfRiaProperty
+          Name="SIC"
+          Property="Account/Properties[SIC]" />
+        <WcfRiaProperty
+          Name="OwnershipCode"
+          Property="Account/Properties[OwnershipCode]" />
+        <WcfRiaProperty
+          Name="MarketCap"
+          Property="Account/Properties[MarketCap]" />
+        <WcfRiaProperty
+          Name="SharesOutstanding"
+          Property="Account/Properties[SharesOutstanding]" />
+        <WcfRiaProperty
+          Name="TickerSymbol"
+          Property="Account/Properties[TickerSymbol]" />
+        <WcfRiaProperty
+          Name="StockExchange"
+          Property="Account/Properties[StockExchange]" />
+        <WcfRiaProperty
+          Name="WebSiteURL"
+          Property="Account/Properties[WebSiteURL]" />
+        <WcfRiaProperty
+          Name="FtpSiteURL"
+          Property="Account/Properties[FtpSiteURL]" />
+        <WcfRiaProperty
+          Name="EMailAddress1"
+          Property="Account/Properties[EMailAddress1]" />
+        <WcfRiaProperty
+          Name="EMailAddress2"
+          Property="Account/Properties[EMailAddress2]" />
+        <WcfRiaProperty
+          Name="EMailAddress3"
+          Property="Account/Properties[EMailAddress3]" />
+        <WcfRiaProperty
+          Name="DoNotPhone"
+          Property="Account/Properties[DoNotPhone]" />
+        <WcfRiaProperty
+          Name="DoNotFax"
+          Property="Account/Properties[DoNotFax]" />
+        <WcfRiaProperty
+          Name="Telephone1"
+          Property="Account/Properties[Telephone1]" />
+        <WcfRiaProperty
+          Name="DoNotEMail"
+          Property="Account/Properties[DoNotEMail]" />
+        <WcfRiaProperty
+          Name="Telephone2"
+          Property="Account/Properties[Telephone2]" />
+        <WcfRiaProperty
+          Name="Fax"
+          Property="Account/Properties[Fax]" />
+        <WcfRiaProperty
+          Name="Telephone3"
+          Property="Account/Properties[Telephone3]" />
+        <WcfRiaProperty
+          Name="DoNotPostalMail"
+          Property="Account/Properties[DoNotPostalMail]" />
+        <WcfRiaProperty
+          Name="DoNotBulkEMail"
+          Property="Account/Properties[DoNotBulkEMail]" />
+        <WcfRiaProperty
+          Name="DoNotBulkPostalMail"
+          Property="Account/Properties[DoNotBulkPostalMail]" />
+        <WcfRiaProperty
+          Name="CreditLimit"
+          Property="Account/Properties[CreditLimit]" />
+        <WcfRiaProperty
+          Name="CreditOnHold"
+          Property="Account/Properties[CreditOnHold]" />
+        <WcfRiaProperty
+          Name="IsPrivate"
+          Property="Account/Properties[IsPrivate]" />
+        <WcfRiaProperty
+          Name="CreatedOn"
+          Property="Account/Properties[CreatedOn]" />
+        <WcfRiaProperty
+          Name="CreatedBy"
+          Property="Account/Properties[CreatedBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOn"
+          Property="Account/Properties[ModifiedOn]" />
+        <WcfRiaProperty
+          Name="ModifiedBy"
+          Property="Account/Properties[ModifiedBy]" />
+        <WcfRiaProperty
+          Name="VersionNumber"
+          Property="Account/Properties[VersionNumber]" />
+        <WcfRiaProperty
+          Name="Aging30"
+          Property="Account/Properties[Aging30]" />
+        <WcfRiaProperty
+          Name="StateCode"
+          Property="Account/Properties[StateCode]" />
+        <WcfRiaProperty
+          Name="Aging60"
+          Property="Account/Properties[Aging60]" />
+        <WcfRiaProperty
+          Name="StatusCode"
+          Property="Account/Properties[StatusCode]" />
+        <WcfRiaProperty
+          Name="Aging90"
+          Property="Account/Properties[Aging90]" />
+        <WcfRiaProperty
+          Name="Address1_AddressTypeCode"
+          Property="Account/Properties[Address1_AddressTypeCode]" />
+        <WcfRiaProperty
+          Name="Address1_Name"
+          Property="Account/Properties[Address1_Name]" />
+        <WcfRiaProperty
+          Name="Address1_PrimaryContactName"
+          Property="Account/Properties[Address1_PrimaryContactName]" />
+        <WcfRiaProperty
+          Name="Address1_Line1"
+          Property="Account/Properties[Address1_Line1]" />
+        <WcfRiaProperty
+          Name="Address1_Line2"
+          Property="Account/Properties[Address1_Line2]" />
+        <WcfRiaProperty
+          Name="Address1_Line3"
+          Property="Account/Properties[Address1_Line3]" />
+        <WcfRiaProperty
+          Name="Address1_City"
+          Property="Account/Properties[Address1_City]" />
+        <WcfRiaProperty
+          Name="Address1_StateOrProvince"
+          Property="Account/Properties[Address1_StateOrProvince]" />
+        <WcfRiaProperty
+          Name="Address1_County"
+          Property="Account/Properties[Address1_County]" />
+        <WcfRiaProperty
+          Name="Address1_Country"
+          Property="Account/Properties[Address1_Country]" />
+        <WcfRiaProperty
+          Name="Address1_PostOfficeBox"
+          Property="Account/Properties[Address1_PostOfficeBox]" />
+        <WcfRiaProperty
+          Name="Address1_PostalCode"
+          Property="Account/Properties[Address1_PostalCode]" />
+        <WcfRiaProperty
+          Name="Address1_UTCOffset"
+          Property="Account/Properties[Address1_UTCOffset]" />
+        <WcfRiaProperty
+          Name="Address1_FreightTermsCode"
+          Property="Account/Properties[Address1_FreightTermsCode]" />
+        <WcfRiaProperty
+          Name="Address1_UPSZone"
+          Property="Account/Properties[Address1_UPSZone]" />
+        <WcfRiaProperty
+          Name="Address1_Latitude"
+          Property="Account/Properties[Address1_Latitude]" />
+        <WcfRiaProperty
+          Name="Address1_Telephone1"
+          Property="Account/Properties[Address1_Telephone1]" />
+        <WcfRiaProperty
+          Name="Address1_Longitude"
+          Property="Account/Properties[Address1_Longitude]" />
+        <WcfRiaProperty
+          Name="Address1_ShippingMethodCode"
+          Property="Account/Properties[Address1_ShippingMethodCode]" />
+        <WcfRiaProperty
+          Name="Address1_Telephone2"
+          Property="Account/Properties[Address1_Telephone2]" />
+        <WcfRiaProperty
+          Name="Address1_Telephone3"
+          Property="Account/Properties[Address1_Telephone3]" />
+        <WcfRiaProperty
+          Name="Address1_Fax"
+          Property="Account/Properties[Address1_Fax]" />
+        <WcfRiaProperty
+          Name="Address2_AddressTypeCode"
+          Property="Account/Properties[Address2_AddressTypeCode]" />
+        <WcfRiaProperty
+          Name="Address2_Name"
+          Property="Account/Properties[Address2_Name]" />
+        <WcfRiaProperty
+          Name="Address2_PrimaryContactName"
+          Property="Account/Properties[Address2_PrimaryContactName]" />
+        <WcfRiaProperty
+          Name="Address2_Line1"
+          Property="Account/Properties[Address2_Line1]" />
+        <WcfRiaProperty
+          Name="Address2_Line2"
+          Property="Account/Properties[Address2_Line2]" />
+        <WcfRiaProperty
+          Name="Address2_Line3"
+          Property="Account/Properties[Address2_Line3]" />
+        <WcfRiaProperty
+          Name="Address2_City"
+          Property="Account/Properties[Address2_City]" />
+        <WcfRiaProperty
+          Name="Address2_StateOrProvince"
+          Property="Account/Properties[Address2_StateOrProvince]" />
+        <WcfRiaProperty
+          Name="Address2_County"
+          Property="Account/Properties[Address2_County]" />
+        <WcfRiaProperty
+          Name="Address2_Country"
+          Property="Account/Properties[Address2_Country]" />
+        <WcfRiaProperty
+          Name="Address2_PostOfficeBox"
+          Property="Account/Properties[Address2_PostOfficeBox]" />
+        <WcfRiaProperty
+          Name="Address2_PostalCode"
+          Property="Account/Properties[Address2_PostalCode]" />
+        <WcfRiaProperty
+          Name="Address2_UTCOffset"
+          Property="Account/Properties[Address2_UTCOffset]" />
+        <WcfRiaProperty
+          Name="Address2_FreightTermsCode"
+          Property="Account/Properties[Address2_FreightTermsCode]" />
+        <WcfRiaProperty
+          Name="Address2_UPSZone"
+          Property="Account/Properties[Address2_UPSZone]" />
+        <WcfRiaProperty
+          Name="Address2_Latitude"
+          Property="Account/Properties[Address2_Latitude]" />
+        <WcfRiaProperty
+          Name="Address2_Telephone1"
+          Property="Account/Properties[Address2_Telephone1]" />
+        <WcfRiaProperty
+          Name="Address2_Longitude"
+          Property="Account/Properties[Address2_Longitude]" />
+        <WcfRiaProperty
+          Name="Address2_ShippingMethodCode"
+          Property="Account/Properties[Address2_ShippingMethodCode]" />
+        <WcfRiaProperty
+          Name="Address2_Telephone2"
+          Property="Account/Properties[Address2_Telephone2]" />
+        <WcfRiaProperty
+          Name="Address2_Telephone3"
+          Property="Account/Properties[Address2_Telephone3]" />
+        <WcfRiaProperty
+          Name="Address2_Fax"
+          Property="Account/Properties[Address2_Fax]" />
+        <WcfRiaProperty
+          Name="OwnerId"
+          Property="Account/Properties[OwnerId]" />
+        <WcfRiaProperty
+          Name="PreferredAppointmentDayCode"
+          Property="Account/Properties[PreferredAppointmentDayCode]" />
+        <WcfRiaProperty
+          Name="PreferredSystemUserId"
+          Property="Account/Properties[PreferredSystemUserId]" />
+        <WcfRiaProperty
+          Name="PreferredAppointmentTimeCode"
+          Property="Account/Properties[PreferredAppointmentTimeCode]" />
+        <WcfRiaProperty
+          Name="Merged"
+          Property="Account/Properties[Merged]" />
+        <WcfRiaProperty
+          Name="DoNotSendMM"
+          Property="Account/Properties[DoNotSendMM]" />
+        <WcfRiaProperty
+          Name="LastUsedInCampaign"
+          Property="Account/Properties[LastUsedInCampaign]" />
+        <WcfRiaProperty
+          Name="PreferredServiceId"
+          Property="Account/Properties[PreferredServiceId]" />
+        <WcfRiaProperty
+          Name="PreferredEquipmentId"
+          Property="Account/Properties[PreferredEquipmentId]" />
+        <WcfRiaProperty
+          Name="ExchangeRate"
+          Property="Account/Properties[ExchangeRate]" />
+        <WcfRiaProperty
+          Name="UTCConversionTimeZoneCode"
+          Property="Account/Properties[UTCConversionTimeZoneCode]" />
+        <WcfRiaProperty
+          Name="OverriddenCreatedOn"
+          Property="Account/Properties[OverriddenCreatedOn]" />
+        <WcfRiaProperty
+          Name="TimeZoneRuleVersionNumber"
+          Property="Account/Properties[TimeZoneRuleVersionNumber]" />
+        <WcfRiaProperty
+          Name="ImportSequenceNumber"
+          Property="Account/Properties[ImportSequenceNumber]" />
+        <WcfRiaProperty
+          Name="TransactionCurrencyId"
+          Property="Account/Properties[TransactionCurrencyId]" />
+        <WcfRiaProperty
+          Name="CreditLimit_Base"
+          Property="Account/Properties[CreditLimit_Base]" />
+        <WcfRiaProperty
+          Name="Aging30_Base"
+          Property="Account/Properties[Aging30_Base]" />
+        <WcfRiaProperty
+          Name="Revenue_Base"
+          Property="Account/Properties[Revenue_Base]" />
+        <WcfRiaProperty
+          Name="Aging90_Base"
+          Property="Account/Properties[Aging90_Base]" />
+        <WcfRiaProperty
+          Name="MarketCap_Base"
+          Property="Account/Properties[MarketCap_Base]" />
+        <WcfRiaProperty
+          Name="Aging60_Base"
+          Property="Account/Properties[Aging60_Base]" />
+        <WcfRiaProperty
+          Name="YomiName"
+          Property="Account/Properties[YomiName]" />
+        <WcfRiaProperty
+          Name="CreatedOnBehalfBy"
+          Property="Account/Properties[CreatedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOnBehalfBy"
+          Property="Account/Properties[ModifiedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="Quote_customer_accounts"
+          Property="Account/Properties[Quote_customer_accounts]" />
+        <WcfRiaProperty
+          Name="Order_customer_accounts"
+          Property="Account/Properties[Order_customer_accounts]" />
+        <WcfRiaProperty
+          Name="team_accounts"
+          Property="Account/Properties[team_accounts]" />
+        <WcfRiaProperty
+          Name="territory_accounts"
+          Property="Account/Properties[territory_accounts]" />
+        <WcfRiaProperty
+          Name="Invoice_customer_accounts"
+          Property="Account/Properties[Invoice_customer_accounts]" />
+        <WcfRiaProperty
+          Name="Lead_customer_accounts"
+          Property="Account/Properties[Lead_customer_accounts]" />
+        <WcfRiaProperty
+          Name="account_originating_lead"
+          Property="Account/Properties[account_originating_lead]" />
+        <WcfRiaProperty
+          Name="Opportunity_customer_accounts"
+          Property="Account/Properties[Opportunity_customer_accounts]" />
+        <WcfRiaProperty
+          Name="price_level_accounts"
+          Property="Account/Properties[price_level_accounts]" />
+        <WcfRiaProperty
+          Name="accountleads_associations"
+          Property="Account/Properties[accountleads_associations]" />
+        <WcfRiaProperty
+          Name="account_master_account"
+          Property="Account/Properties[account_master_account]" />
+        <WcfRiaProperty
+          Name="account_master_accounts"
+          Property="Account/Properties[account_master_accounts]" />
+        <WcfRiaProperty
+          Name="account_parent_account"
+          Property="Account/Properties[account_parent_account]" />
+        <WcfRiaProperty
+          Name="account_parent_accounts"
+          Property="Account/Properties[account_parent_accounts]" />
+        <WcfRiaProperty
+          Name="account_primary_contact"
+          Property="Account/Properties[account_primary_contact]" />
+        <WcfRiaProperty
+          Name="Contract_billingcustomer_accounts"
+          Property="Account/Properties[Contract_billingcustomer_accounts]" />
+        <WcfRiaProperty
+          Name="Contract_customer_accounts"
+          Property="Account/Properties[Contract_customer_accounts]" />
+        <WcfRiaProperty
+          Name="Contractlineitem_customer_accounts"
+          Property="Account/Properties[Contractlineitem_customer_accounts]" />
+        <WcfRiaProperty
+          Name="Contact_customer_accounts"
+          Property="Account/Properties[Contact_customer_accounts]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="quote_customer_accounts">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[quote_customer_accounts]/Members[Quote]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CustomerId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[quote_customer_accounts]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="order_customer_accounts">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[order_customer_accounts]/Members[SalesOrder]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CustomerId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[order_customer_accounts]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="invoice_customer_accounts">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[invoice_customer_accounts]/Members[Invoice]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CustomerId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[invoice_customer_accounts]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="lead_customer_accounts">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[lead_customer_accounts]/Members[Lead]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CustomerId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[lead_customer_accounts]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="opportunity_customer_accounts">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[opportunity_customer_accounts]/Members[Opportunity]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CustomerId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[opportunity_customer_accounts]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="accountleads_association_account">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[accountleads_association_account]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[accountleads_association_account]/Members[AccountLead]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="account_master_account">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[account_master_account]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="MasterId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[account_master_account]/Members[Account1]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="account_parent_account">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[account_parent_account]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="ParentAccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[account_parent_account]/Members[Account1]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="contract_billingcustomer_accounts">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[contract_billingcustomer_accounts]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[contract_billingcustomer_accounts]/Members[Contract]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="BillingCustomerId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="contract_customer_accounts">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[contract_customer_accounts]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[contract_customer_accounts]/Members[Contract]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CustomerId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="contractlineitem_customer_accounts">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[contractlineitem_customer_accounts]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[contractlineitem_customer_accounts]/Members[ContractDetail]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CustomerId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="contact_customer_accounts">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[contact_customer_accounts]/Members[Account]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="AccountId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[contact_customer_accounts]/Members[Contact]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="ParentCustomerId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

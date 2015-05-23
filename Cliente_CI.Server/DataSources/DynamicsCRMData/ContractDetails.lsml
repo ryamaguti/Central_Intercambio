@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="ContractDetail">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="Title"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Title" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="ContractDetailId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Required />
+          <Hidden />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="AccountId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Account" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ServiceAddress"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Location" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ProductSerialNumber"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Serial Number" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ContactId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Contact" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LineItemOrder"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Line Item Order" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ServiceContractUnitsCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Service Contract Units" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InitialQuantity"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Quantity" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EffectivityCalendar"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Support Calendar" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ActiveOn"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Start Date" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ExpiresOn"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="End Date" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TotalAllotments"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Allotments" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Rate"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Rate" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VersionNumber"
+        IsReadOnly="True"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Price"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Price" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Discount"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Discount" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Net"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Net" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StateCode"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status" />
+          <SupportedValue
+            DisplayName="Existing"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Renewed"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Canceled"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Expired"
+            Value="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AllotmentsRemaining"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Allotments Remaining" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StatusCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status Reason" />
+          <SupportedValue
+            DisplayName="New"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Renewed"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Canceled"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Expired"
+            Value="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AllotmentsUsed"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Allotments Used" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ContractStateCode"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Contract State" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningBusinessUnit"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning Business Unit" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningUser"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning User" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiscountPercentage"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Discount (%)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TimeZoneRuleVersionNumber"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Time Zone Rule Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ImportSequenceNumber"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Import Sequence Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OverriddenCreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Record Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TransactionCurrencyId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Currency" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ExchangeRate"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Exchange Rate" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UTCConversionTimeZoneCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="UTC Conversion Time Zone Code" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Discount_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Discount (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Rate_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Rate (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Price_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Total Price (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Net_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Net (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwnerId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owner" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AllotmentsOverage"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Allotments Overage" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="unit_of_measurement_contract_line_items"
+        Association="unit_of_measurement_contract_line_items"
+        FromEnd="ContractDetail"
+        ToEnd="UoM">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="uom" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="contract_detail_unit_of_measure_schedule"
+        Association="contract_detail_unit_of_measure_schedule"
+        FromEnd="ContractDetail"
+        ToEnd="UoMSchedule">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="uomschedule" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="product_contract_line_items"
+        Association="product_contract_line_items"
+        FromEnd="ContractDetail"
+        ToEnd="Product">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="product" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="contractlineitem_customer_accounts"
+        Association="contractlineitem_customer_accounts"
+        FromEnd="ContractDetail"
+        ToEnd="Account">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="account" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="contract_line_items"
+        Association="contract_line_items"
+        FromEnd="ContractDetail"
+        ToEnd="Contract">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="contract" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="ContractDetails"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ContractDetail" />
+    <QueryOperation
+      Name="ContractDetails_Single"
+      ReturnType="ContractDetail">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ContractDetailId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ContractDetailId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ContractDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ContractDetailId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'ContractDetailId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ContractDetails_SingleOrDefault"
+      ReturnType="ContractDetail">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ContractDetailId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ContractDetailId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ContractDetails" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ContractDetailId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'ContractDetailId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="ContractDetails">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetContractLines"
+          EntityTypeName="Xpert360Lightning.ContractDetail" />
+        <WcfRiaProperty
+          Name="Title"
+          Property="ContractDetail/Properties[Title]" />
+        <WcfRiaProperty
+          Name="ContractDetailId"
+          Property="ContractDetail/Properties[ContractDetailId]" />
+        <WcfRiaProperty
+          Name="AccountId"
+          Property="ContractDetail/Properties[AccountId]" />
+        <WcfRiaProperty
+          Name="ServiceAddress"
+          Property="ContractDetail/Properties[ServiceAddress]" />
+        <WcfRiaProperty
+          Name="ProductSerialNumber"
+          Property="ContractDetail/Properties[ProductSerialNumber]" />
+        <WcfRiaProperty
+          Name="ContactId"
+          Property="ContractDetail/Properties[ContactId]" />
+        <WcfRiaProperty
+          Name="LineItemOrder"
+          Property="ContractDetail/Properties[LineItemOrder]" />
+        <WcfRiaProperty
+          Name="ServiceContractUnitsCode"
+          Property="ContractDetail/Properties[ServiceContractUnitsCode]" />
+        <WcfRiaProperty
+          Name="InitialQuantity"
+          Property="ContractDetail/Properties[InitialQuantity]" />
+        <WcfRiaProperty
+          Name="EffectivityCalendar"
+          Property="ContractDetail/Properties[EffectivityCalendar]" />
+        <WcfRiaProperty
+          Name="ActiveOn"
+          Property="ContractDetail/Properties[ActiveOn]" />
+        <WcfRiaProperty
+          Name="CreatedOn"
+          Property="ContractDetail/Properties[CreatedOn]" />
+        <WcfRiaProperty
+          Name="ExpiresOn"
+          Property="ContractDetail/Properties[ExpiresOn]" />
+        <WcfRiaProperty
+          Name="CreatedBy"
+          Property="ContractDetail/Properties[CreatedBy]" />
+        <WcfRiaProperty
+          Name="TotalAllotments"
+          Property="ContractDetail/Properties[TotalAllotments]" />
+        <WcfRiaProperty
+          Name="ModifiedBy"
+          Property="ContractDetail/Properties[ModifiedBy]" />
+        <WcfRiaProperty
+          Name="Rate"
+          Property="ContractDetail/Properties[Rate]" />
+        <WcfRiaProperty
+          Name="ModifiedOn"
+          Property="ContractDetail/Properties[ModifiedOn]" />
+        <WcfRiaProperty
+          Name="VersionNumber"
+          Property="ContractDetail/Properties[VersionNumber]" />
+        <WcfRiaProperty
+          Name="Price"
+          Property="ContractDetail/Properties[Price]" />
+        <WcfRiaProperty
+          Name="Discount"
+          Property="ContractDetail/Properties[Discount]" />
+        <WcfRiaProperty
+          Name="Net"
+          Property="ContractDetail/Properties[Net]" />
+        <WcfRiaProperty
+          Name="StateCode"
+          Property="ContractDetail/Properties[StateCode]" />
+        <WcfRiaProperty
+          Name="AllotmentsRemaining"
+          Property="ContractDetail/Properties[AllotmentsRemaining]" />
+        <WcfRiaProperty
+          Name="StatusCode"
+          Property="ContractDetail/Properties[StatusCode]" />
+        <WcfRiaProperty
+          Name="AllotmentsUsed"
+          Property="ContractDetail/Properties[AllotmentsUsed]" />
+        <WcfRiaProperty
+          Name="ContractStateCode"
+          Property="ContractDetail/Properties[ContractStateCode]" />
+        <WcfRiaProperty
+          Name="OwningBusinessUnit"
+          Property="ContractDetail/Properties[OwningBusinessUnit]" />
+        <WcfRiaProperty
+          Name="OwningUser"
+          Property="ContractDetail/Properties[OwningUser]" />
+        <WcfRiaProperty
+          Name="DiscountPercentage"
+          Property="ContractDetail/Properties[DiscountPercentage]" />
+        <WcfRiaProperty
+          Name="TimeZoneRuleVersionNumber"
+          Property="ContractDetail/Properties[TimeZoneRuleVersionNumber]" />
+        <WcfRiaProperty
+          Name="ImportSequenceNumber"
+          Property="ContractDetail/Properties[ImportSequenceNumber]" />
+        <WcfRiaProperty
+          Name="OverriddenCreatedOn"
+          Property="ContractDetail/Properties[OverriddenCreatedOn]" />
+        <WcfRiaProperty
+          Name="TransactionCurrencyId"
+          Property="ContractDetail/Properties[TransactionCurrencyId]" />
+        <WcfRiaProperty
+          Name="ExchangeRate"
+          Property="ContractDetail/Properties[ExchangeRate]" />
+        <WcfRiaProperty
+          Name="UTCConversionTimeZoneCode"
+          Property="ContractDetail/Properties[UTCConversionTimeZoneCode]" />
+        <WcfRiaProperty
+          Name="Discount_Base"
+          Property="ContractDetail/Properties[Discount_Base]" />
+        <WcfRiaProperty
+          Name="Rate_Base"
+          Property="ContractDetail/Properties[Rate_Base]" />
+        <WcfRiaProperty
+          Name="Price_Base"
+          Property="ContractDetail/Properties[Price_Base]" />
+        <WcfRiaProperty
+          Name="Net_Base"
+          Property="ContractDetail/Properties[Net_Base]" />
+        <WcfRiaProperty
+          Name="OwnerId"
+          Property="ContractDetail/Properties[OwnerId]" />
+        <WcfRiaProperty
+          Name="AllotmentsOverage"
+          Property="ContractDetail/Properties[AllotmentsOverage]" />
+        <WcfRiaProperty
+          Name="CreatedOnBehalfBy"
+          Property="ContractDetail/Properties[CreatedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOnBehalfBy"
+          Property="ContractDetail/Properties[ModifiedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="unit_of_measurement_contract_line_items"
+          Property="ContractDetail/Properties[unit_of_measurement_contract_line_items]" />
+        <WcfRiaProperty
+          Name="contract_detail_unit_of_measure_schedule"
+          Property="ContractDetail/Properties[contract_detail_unit_of_measure_schedule]" />
+        <WcfRiaProperty
+          Name="product_contract_line_items"
+          Property="ContractDetail/Properties[product_contract_line_items]" />
+        <WcfRiaProperty
+          Name="contractlineitem_customer_accounts"
+          Property="ContractDetail/Properties[contractlineitem_customer_accounts]" />
+        <WcfRiaProperty
+          Name="contract_line_items"
+          Property="ContractDetail/Properties[contract_line_items]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

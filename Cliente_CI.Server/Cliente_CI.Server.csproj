@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectTypeGuids>{8BB0C5E8-0616-4F60-8E55-A43933E57E9C};{349c5851-65df-11da-9384-00065b846f21};{FAE04EC0-301F-11d3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{84A95E8A-E387-43E9-8FAB-BEA692F3A67A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LightSwitchApplication</RootNamespace>
+    <AssemblyName>Application.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <LightSwitchVersion>v4.5</LightSwitchVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <SupportedCultures>en-US</SupportedCultures>
+    <FileAlignment>512</FileAlignment>
+    <IgnoreDeployManagedRuntimeVersion>True</IgnoreDeployManagedRuntimeVersion>
+    <UseDeclareParametersXMLInMsDeploy>False</UseDeclareParametersXMLInMsDeploy>
+    <LightSwitchDisplayName>Server</LightSwitchDisplayName>
+    <LightSwitchProjectTypeV45>Server</LightSwitchProjectTypeV45>
+    <MicrosoftSdkDir Condition=" '$(MicrosoftSdkDir)' == '' ">$([System.IO.Path]::Combine($(MSBuildProgramFiles32), 'Microsoft SDKs'))</MicrosoftSdkDir>
+    <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' == '' ">$([System.IO.Path]::Combine($(MicrosoftSdkDir), 'LightSwitch', $(LightSwitchVersion)))</LightSwitchSDKPath>
+    <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' != '' and !HasTrailingSlash('$(LightSwitchSDKPath)')">$(LightSwitchSDKPath)\</LightSwitchSDKPath>
+    <NuGetPackagesFolder Condition=" Exists('..\Packages')">..\Packages\</NuGetPackagesFolder>
+    <NuGetPackagesFolder Condition=" Exists('..\..\Packages')">..\..\Packages\</NuGetPackagesFolder>
+    <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
+    <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+    <NoWarn>1522</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseDesignTimeFeatures>false</UseDesignTimeFeatures>
+    <NoWarn>1522</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.LightSwitch.Chart.Common">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.Chart\Server\Reference\C1.LightSwitch.Chart.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.Chart.Server">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.Chart\Server\Reference\C1.LightSwitch.Chart.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.FlexGrid.Common">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Server\Reference\C1.LightSwitch.FlexGrid.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.FlexGrid.Server">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Server\Reference\C1.LightSwitch.FlexGrid.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.Olap.Common">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.Olap\Server\Reference\C1.LightSwitch.Olap.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.Olap.Server">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.Olap\Server\Reference\C1.LightSwitch.Olap.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.PdfViewer.Common">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.PdfViewer\Server\Reference\C1.LightSwitch.PdfViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.PdfViewer.Server">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.PdfViewer\Server\Reference\C1.LightSwitch.PdfViewer.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.RichTextBox.Common">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.RichTextBox\Server\Reference\C1.LightSwitch.RichTextBox.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.RichTextBox.Server">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.RichTextBox\Server\Reference\C1.LightSwitch.RichTextBox.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.Schedule.Common">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.Schedule\Server\Reference\C1.LightSwitch.Schedule.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.Schedule.Server">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.Schedule\Server\Reference\C1.LightSwitch.Schedule.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk">
+      <HintPath>..\_Pvt_Extensions\Xpert360Lightning.DynamicsCRM\Server\Reference\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="PixataCustomControls.Common">
+      <HintPath>..\_Pvt_Extensions\PixataCustomControls\Server\Reference\PixataCustomControls.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="PixataCustomControls.Server">
+      <HintPath>..\_Pvt_Extensions\PixataCustomControls\Server\Reference\PixataCustomControls.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Core">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Data">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Xml">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Web">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.AppBridge">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.AppBridge.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.ExportProvider, Version=10.0.12.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.ExportProvider.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.CodeMarker, Version=12.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.CodeMarker.dll</HintPath>
+      <SpecificVersion>True</SpecificVersion>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.ManifestService">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.ManifestService.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Model.Xaml">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Model.Xaml.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Server">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.LightSwitch.Server.Host">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Server.Host.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.PollingDuplex">
+      <HintPath>$(LightSwitchSDKPath)\Server\System.ServiceModel.PollingDuplex.dll</HintPath>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Services.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client">
+      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt">
+      <HintPath>$(NuGetPackagesFolder)\System.IdentityModel.Tokens.Jwt.1.0.0\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Spatial">
+      <HintPath>$(LightSwitchSDKPath)\Server\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Hosting.OData">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Hosting.OData.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.ServiceModel.DomainServices.Server">
+      <HintPath>$(WCFRIASERVICESSDKPath)\v1.0\Libraries\Server\System.ServiceModel.DomainServices.Server.dll</HintPath>
+      <Private>True</Private>
+      <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="Wijmo.LightSwitch.Common">
+      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Server\Reference\Wijmo.LightSwitch.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Wijmo.LightSwitch.Server">
+      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Server\Reference\Wijmo.LightSwitch.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpert360Lightning.DynamicsCRM.Common">
+      <HintPath>..\_Pvt_Extensions\Xpert360Lightning.DynamicsCRM\Server\Reference\Xpert360Lightning.DynamicsCRM.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpert360Lightning.DynamicsCRM.Server">
+      <HintPath>..\_Pvt_Extensions\Xpert360Lightning.DynamicsCRM\Server\Reference\Xpert360Lightning.DynamicsCRM.Server.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchModel Include="Properties\Service.lsml">
+      <ProjectCritical>true</ProjectCritical>
+    </LightSwitchModel>
+  </ItemGroup>
+  <ItemGroup>
+    <_ServerFile Include="LogIn.aspx" />
+    <_ServerFile Include="LogOut.aspx" />
+    <Content Include="Web.config" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\UoMs.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\UoMSchedules.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Workflows.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\WorkflowDependencies.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\WorkflowLogs.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Quotes.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\QuoteCloses.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\QuoteDetails.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Roles.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\SalesOrders.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\SalesOrderDetails.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\SdkMessages.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\SdkMessagePairs.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\SdkMessageRequests.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\SdkMessageResponses.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Solutions.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Teams.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\TeamRoles.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Territories.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Invoices.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\InvoiceDetails.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Leads.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\LeadCompetitors.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\LeadProducts.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Opportunities.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\OpportunityCloses.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\OpportunityCompetitors.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\OpportunityProducts.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\PriceLevels.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Products.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Queues.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\X360Configurations.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Accounts.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\AccountLeads.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Attachments.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Competitors.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\CompetitorProducts.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Contacts.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\ContactLeads.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\ContactOrders.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Contracts.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\ContractDetails.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\Activities.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\ActivityParties.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\DynamicsCRMData.lsml" />
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetUoM.lsml">
+      <DependentUpon>UoMs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetUoMSchedule.lsml">
+      <DependentUpon>UoMSchedules.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetWorkflow.lsml">
+      <DependentUpon>Workflows.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetWorkflowDependency.lsml">
+      <DependentUpon>WorkflowDependencies.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetWorkflowLog.lsml">
+      <DependentUpon>WorkflowLogs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetQuote.lsml">
+      <DependentUpon>Quotes.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetQuoteClose.lsml">
+      <DependentUpon>QuoteCloses.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetQuoteDetail.lsml">
+      <DependentUpon>QuoteDetails.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetRole.lsml">
+      <DependentUpon>Roles.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSalesOrder.lsml">
+      <DependentUpon>SalesOrders.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSalesOrderDetail.lsml">
+      <DependentUpon>SalesOrderDetails.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSdkMessage.lsml">
+      <DependentUpon>SdkMessages.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSdkMessagePair.lsml">
+      <DependentUpon>SdkMessagePairs.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSdkMessageRequest.lsml">
+      <DependentUpon>SdkMessageRequests.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSdkMessageResponse.lsml">
+      <DependentUpon>SdkMessageResponses.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSolution.lsml">
+      <DependentUpon>Solutions.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetTeam.lsml">
+      <DependentUpon>Teams.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetTeamRoles.lsml">
+      <DependentUpon>TeamRoles.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetTerritory.lsml">
+      <DependentUpon>Territories.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetInvoice.lsml">
+      <DependentUpon>Invoices.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetInvoiceDetail.lsml">
+      <DependentUpon>InvoiceDetails.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetLead.lsml">
+      <DependentUpon>Leads.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetLeadCompetitor.lsml">
+      <DependentUpon>LeadCompetitors.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetLeadProduct.lsml">
+      <DependentUpon>LeadProducts.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetOpportunity.lsml">
+      <DependentUpon>Opportunities.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetOpportunityClose.lsml">
+      <DependentUpon>OpportunityCloses.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetOpportunityCompetitor.lsml">
+      <DependentUpon>OpportunityCompetitors.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetOpportunityProduct.lsml">
+      <DependentUpon>OpportunityProducts.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetPriceLevel.lsml">
+      <DependentUpon>PriceLevels.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetProduct.lsml">
+      <DependentUpon>Products.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetQueue.lsml">
+      <DependentUpon>Queues.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetAccount.lsml">
+      <DependentUpon>Accounts.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetAccountLead.lsml">
+      <DependentUpon>AccountLeads.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetAttachment.lsml">
+      <DependentUpon>Attachments.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetCompetitor.lsml">
+      <DependentUpon>Competitors.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetCompetitorProduct.lsml">
+      <DependentUpon>CompetitorProducts.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetContact.lsml">
+      <DependentUpon>Contacts.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetContactLead.lsml">
+      <DependentUpon>ContactLeads.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetContactOrder.lsml">
+      <DependentUpon>ContactOrders.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetContract.lsml">
+      <DependentUpon>Contracts.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetContractDetail.lsml">
+      <DependentUpon>ContractDetails.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetActivity.lsml">
+      <DependentUpon>Activities.lsml</DependentUpon>
+    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetActivityParty.lsml">
+      <DependentUpon>ActivityParties.lsml</DependentUpon>
+    </LightSwitchModel>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="packages.config" />
+    <_ServerFile Include="default.aspx" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3555/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{8BB0C5E8-0616-4F60-8E55-A43933E57E9C}" Configuration="Debug|Any CPU">
+        <SpecializedConfiguration />
+      </FlavorProperties>
+      <FlavorProperties GUID="{8BB0C5E8-0616-4F60-8E55-A43933E57E9C}" Configuration="Release|Any CPU">
+        <SpecializedConfiguration />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

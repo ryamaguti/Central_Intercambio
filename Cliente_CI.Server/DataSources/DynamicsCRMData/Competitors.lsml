@@ -1,0 +1,1232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Competitor">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="CompetitorId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Required />
+          <Hidden />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Address1_AddressId"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: ID" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_AddressId"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: ID" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OrganizationId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Organization" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Overview"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Overview" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReferenceInfoUrl"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Reference Info URL" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReportedRevenue"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Reported Revenue" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReportingQuarter"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Reporting Quarter" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReportingYear"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Reporting Year" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Strengths"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Strength" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Weaknesses"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Weakness" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Opportunities"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Opportunity" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Threats"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Threat" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TickerSymbol"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Ticker Symbol" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="KeyProduct"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Key Product" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StockExchange"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Stock Exchange" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WinPercentage"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Win Percentage" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WebSiteUrl"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Web Site" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VersionNumber"
+        IsReadOnly="True"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_AddressTypeCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Address Type" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Line1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Street 1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Line2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Street 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Line3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Street 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_City"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="City" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_StateOrProvince"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="State/Province" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_County"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: County" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Country"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Country/Region" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_PostOfficeBox"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Post Office Box" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_PostalCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="ZIP/Postal Code" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_UTCOffset"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: UTC Offset" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_UPSZone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: UPS Zone" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Latitude"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Latitude" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Telephone1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Telephone 1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Longitude"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Longitude" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_ShippingMethodCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Shipping Method" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Telephone2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Telephone 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Telephone3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Telephone 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address1_Fax"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 1: Fax" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_AddressTypeCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Address Type" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Line1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Street 1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Line2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Street 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Line3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Street 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_City"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: City" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_StateOrProvince"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: State/Province" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_County"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: County" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Country"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Country/Region" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_PostOfficeBox"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Post Office Box" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_PostalCode"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: ZIP/Postal Code" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_UTCOffset"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: UTC Offset" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_UPSZone"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: UPS Zone" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Latitude"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Latitude" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Telephone1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Telephone 1" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Longitude"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Longitude" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_ShippingMethodCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Shipping Method" />
+          <SupportedValue
+            DisplayName="DefaultValue"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Telephone2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Telephone 2" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Telephone3"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Telephone 3" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Address2_Fax"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Address 2: Fax" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UTCConversionTimeZoneCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="UTC Conversion Time Zone Code" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TimeZoneRuleVersionNumber"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Time Zone Rule Version Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OverriddenCreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Record Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ExchangeRate"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Exchange Rate" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TransactionCurrencyId"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Currency" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ImportSequenceNumber"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Import Sequence Number" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ReportedRevenue_Base"
+        IsReadOnly="True"
+        PropertyType=":Decimal?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Reported Revenue (Base)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="YomiName"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Yomi Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="leadcompetitors_associations"
+        Association="leadcompetitors_association_competitor"
+        FromEnd="Competitor"
+        ToEnd="LeadCompetitor">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="LeadCompetitor" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Competitor_opportunity_activities"
+        Association="competitor_opportunity_activities"
+        FromEnd="Competitor"
+        ToEnd="OpportunityClose">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="opportunityclose" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="opportunitycompetitors_associations"
+        Association="opportunitycompetitors_association_competitor"
+        FromEnd="Competitor"
+        ToEnd="OpportunityCompetitor">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="OpportunityCompetitor" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="competitorproduct_associations"
+        Association="competitorproduct_association_competitor"
+        FromEnd="Competitor"
+        ToEnd="CompetitorProduct">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="CompetitorProduct" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="leadcompetitors_association_competitor">
+    <AssociationEnd
+      Name="LeadCompetitor"
+      Multiplicity="Many"
+      EntityType="LeadCompetitor" />
+    <AssociationEnd
+      Name="Competitor"
+      Multiplicity="One"
+      EntityType="Competitor">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="competitor_opportunity_activities">
+    <AssociationEnd
+      Name="OpportunityClose"
+      Multiplicity="Many"
+      EntityType="OpportunityClose" />
+    <AssociationEnd
+      Name="Competitor"
+      EntityType="Competitor">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="opportunitycompetitors_association_competitor">
+    <AssociationEnd
+      Name="OpportunityCompetitor"
+      Multiplicity="Many"
+      EntityType="OpportunityCompetitor" />
+    <AssociationEnd
+      Name="Competitor"
+      Multiplicity="One"
+      EntityType="Competitor">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="competitorproduct_association_competitor">
+    <AssociationEnd
+      Name="Competitor"
+      Multiplicity="One"
+      EntityType="Competitor">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="CompetitorProduct"
+      Multiplicity="Many"
+      EntityType="CompetitorProduct" />
+  </Association>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Competitors"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Competitor" />
+    <AssociationSet
+      Name="leadcompetitors_association_competitor"
+      Association="leadcompetitors_association_competitor">
+      <AssociationSetEnd
+        Name="LeadCompetitor"
+        EntitySet="LeadCompetitors" />
+      <AssociationSetEnd
+        Name="Competitor"
+        EntitySet="Competitors" />
+    </AssociationSet>
+    <AssociationSet
+      Name="competitor_opportunity_activities"
+      Association="competitor_opportunity_activities">
+      <AssociationSetEnd
+        Name="OpportunityClose"
+        EntitySet="OpportunityCloses" />
+      <AssociationSetEnd
+        Name="Competitor"
+        EntitySet="Competitors" />
+    </AssociationSet>
+    <AssociationSet
+      Name="opportunitycompetitors_association_competitor"
+      Association="opportunitycompetitors_association_competitor">
+      <AssociationSetEnd
+        Name="OpportunityCompetitor"
+        EntitySet="OpportunityCompetitors" />
+      <AssociationSetEnd
+        Name="Competitor"
+        EntitySet="Competitors" />
+    </AssociationSet>
+    <AssociationSet
+      Name="competitorproduct_association_competitor"
+      Association="competitorproduct_association_competitor">
+      <AssociationSetEnd
+        Name="Competitor"
+        EntitySet="Competitors" />
+      <AssociationSetEnd
+        Name="CompetitorProduct"
+        EntitySet="CompetitorProducts" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Competitors_Single"
+      ReturnType="Competitor">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="CompetitorId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="CompetitorId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Competitors" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CompetitorId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'CompetitorId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Competitors_SingleOrDefault"
+      ReturnType="Competitor">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="CompetitorId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="CompetitorId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Competitors" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="CompetitorId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'CompetitorId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Competitors">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetCompetitors"
+          EntityTypeName="Xpert360Lightning.Competitor" />
+        <WcfRiaProperty
+          Name="Name"
+          Property="Competitor/Properties[Name]" />
+        <WcfRiaProperty
+          Name="CompetitorId"
+          Property="Competitor/Properties[CompetitorId]" />
+        <WcfRiaProperty
+          Name="Address1_AddressId"
+          Property="Competitor/Properties[Address1_AddressId]" />
+        <WcfRiaProperty
+          Name="Address2_AddressId"
+          Property="Competitor/Properties[Address2_AddressId]" />
+        <WcfRiaProperty
+          Name="OrganizationId"
+          Property="Competitor/Properties[OrganizationId]" />
+        <WcfRiaProperty
+          Name="Overview"
+          Property="Competitor/Properties[Overview]" />
+        <WcfRiaProperty
+          Name="ReferenceInfoUrl"
+          Property="Competitor/Properties[ReferenceInfoUrl]" />
+        <WcfRiaProperty
+          Name="ReportedRevenue"
+          Property="Competitor/Properties[ReportedRevenue]" />
+        <WcfRiaProperty
+          Name="ReportingQuarter"
+          Property="Competitor/Properties[ReportingQuarter]" />
+        <WcfRiaProperty
+          Name="ReportingYear"
+          Property="Competitor/Properties[ReportingYear]" />
+        <WcfRiaProperty
+          Name="Strengths"
+          Property="Competitor/Properties[Strengths]" />
+        <WcfRiaProperty
+          Name="Weaknesses"
+          Property="Competitor/Properties[Weaknesses]" />
+        <WcfRiaProperty
+          Name="Opportunities"
+          Property="Competitor/Properties[Opportunities]" />
+        <WcfRiaProperty
+          Name="Threats"
+          Property="Competitor/Properties[Threats]" />
+        <WcfRiaProperty
+          Name="TickerSymbol"
+          Property="Competitor/Properties[TickerSymbol]" />
+        <WcfRiaProperty
+          Name="KeyProduct"
+          Property="Competitor/Properties[KeyProduct]" />
+        <WcfRiaProperty
+          Name="StockExchange"
+          Property="Competitor/Properties[StockExchange]" />
+        <WcfRiaProperty
+          Name="WinPercentage"
+          Property="Competitor/Properties[WinPercentage]" />
+        <WcfRiaProperty
+          Name="WebSiteUrl"
+          Property="Competitor/Properties[WebSiteUrl]" />
+        <WcfRiaProperty
+          Name="CreatedOn"
+          Property="Competitor/Properties[CreatedOn]" />
+        <WcfRiaProperty
+          Name="CreatedBy"
+          Property="Competitor/Properties[CreatedBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOn"
+          Property="Competitor/Properties[ModifiedOn]" />
+        <WcfRiaProperty
+          Name="ModifiedBy"
+          Property="Competitor/Properties[ModifiedBy]" />
+        <WcfRiaProperty
+          Name="VersionNumber"
+          Property="Competitor/Properties[VersionNumber]" />
+        <WcfRiaProperty
+          Name="Address1_AddressTypeCode"
+          Property="Competitor/Properties[Address1_AddressTypeCode]" />
+        <WcfRiaProperty
+          Name="Address1_Name"
+          Property="Competitor/Properties[Address1_Name]" />
+        <WcfRiaProperty
+          Name="Address1_Line1"
+          Property="Competitor/Properties[Address1_Line1]" />
+        <WcfRiaProperty
+          Name="Address1_Line2"
+          Property="Competitor/Properties[Address1_Line2]" />
+        <WcfRiaProperty
+          Name="Address1_Line3"
+          Property="Competitor/Properties[Address1_Line3]" />
+        <WcfRiaProperty
+          Name="Address1_City"
+          Property="Competitor/Properties[Address1_City]" />
+        <WcfRiaProperty
+          Name="Address1_StateOrProvince"
+          Property="Competitor/Properties[Address1_StateOrProvince]" />
+        <WcfRiaProperty
+          Name="Address1_County"
+          Property="Competitor/Properties[Address1_County]" />
+        <WcfRiaProperty
+          Name="Address1_Country"
+          Property="Competitor/Properties[Address1_Country]" />
+        <WcfRiaProperty
+          Name="Address1_PostOfficeBox"
+          Property="Competitor/Properties[Address1_PostOfficeBox]" />
+        <WcfRiaProperty
+          Name="Address1_PostalCode"
+          Property="Competitor/Properties[Address1_PostalCode]" />
+        <WcfRiaProperty
+          Name="Address1_UTCOffset"
+          Property="Competitor/Properties[Address1_UTCOffset]" />
+        <WcfRiaProperty
+          Name="Address1_UPSZone"
+          Property="Competitor/Properties[Address1_UPSZone]" />
+        <WcfRiaProperty
+          Name="Address1_Latitude"
+          Property="Competitor/Properties[Address1_Latitude]" />
+        <WcfRiaProperty
+          Name="Address1_Telephone1"
+          Property="Competitor/Properties[Address1_Telephone1]" />
+        <WcfRiaProperty
+          Name="Address1_Longitude"
+          Property="Competitor/Properties[Address1_Longitude]" />
+        <WcfRiaProperty
+          Name="Address1_ShippingMethodCode"
+          Property="Competitor/Properties[Address1_ShippingMethodCode]" />
+        <WcfRiaProperty
+          Name="Address1_Telephone2"
+          Property="Competitor/Properties[Address1_Telephone2]" />
+        <WcfRiaProperty
+          Name="Address1_Telephone3"
+          Property="Competitor/Properties[Address1_Telephone3]" />
+        <WcfRiaProperty
+          Name="Address1_Fax"
+          Property="Competitor/Properties[Address1_Fax]" />
+        <WcfRiaProperty
+          Name="Address2_AddressTypeCode"
+          Property="Competitor/Properties[Address2_AddressTypeCode]" />
+        <WcfRiaProperty
+          Name="Address2_Name"
+          Property="Competitor/Properties[Address2_Name]" />
+        <WcfRiaProperty
+          Name="Address2_Line1"
+          Property="Competitor/Properties[Address2_Line1]" />
+        <WcfRiaProperty
+          Name="Address2_Line2"
+          Property="Competitor/Properties[Address2_Line2]" />
+        <WcfRiaProperty
+          Name="Address2_Line3"
+          Property="Competitor/Properties[Address2_Line3]" />
+        <WcfRiaProperty
+          Name="Address2_City"
+          Property="Competitor/Properties[Address2_City]" />
+        <WcfRiaProperty
+          Name="Address2_StateOrProvince"
+          Property="Competitor/Properties[Address2_StateOrProvince]" />
+        <WcfRiaProperty
+          Name="Address2_County"
+          Property="Competitor/Properties[Address2_County]" />
+        <WcfRiaProperty
+          Name="Address2_Country"
+          Property="Competitor/Properties[Address2_Country]" />
+        <WcfRiaProperty
+          Name="Address2_PostOfficeBox"
+          Property="Competitor/Properties[Address2_PostOfficeBox]" />
+        <WcfRiaProperty
+          Name="Address2_PostalCode"
+          Property="Competitor/Properties[Address2_PostalCode]" />
+        <WcfRiaProperty
+          Name="Address2_UTCOffset"
+          Property="Competitor/Properties[Address2_UTCOffset]" />
+        <WcfRiaProperty
+          Name="Address2_UPSZone"
+          Property="Competitor/Properties[Address2_UPSZone]" />
+        <WcfRiaProperty
+          Name="Address2_Latitude"
+          Property="Competitor/Properties[Address2_Latitude]" />
+        <WcfRiaProperty
+          Name="Address2_Telephone1"
+          Property="Competitor/Properties[Address2_Telephone1]" />
+        <WcfRiaProperty
+          Name="Address2_Longitude"
+          Property="Competitor/Properties[Address2_Longitude]" />
+        <WcfRiaProperty
+          Name="Address2_ShippingMethodCode"
+          Property="Competitor/Properties[Address2_ShippingMethodCode]" />
+        <WcfRiaProperty
+          Name="Address2_Telephone2"
+          Property="Competitor/Properties[Address2_Telephone2]" />
+        <WcfRiaProperty
+          Name="Address2_Telephone3"
+          Property="Competitor/Properties[Address2_Telephone3]" />
+        <WcfRiaProperty
+          Name="Address2_Fax"
+          Property="Competitor/Properties[Address2_Fax]" />
+        <WcfRiaProperty
+          Name="UTCConversionTimeZoneCode"
+          Property="Competitor/Properties[UTCConversionTimeZoneCode]" />
+        <WcfRiaProperty
+          Name="TimeZoneRuleVersionNumber"
+          Property="Competitor/Properties[TimeZoneRuleVersionNumber]" />
+        <WcfRiaProperty
+          Name="OverriddenCreatedOn"
+          Property="Competitor/Properties[OverriddenCreatedOn]" />
+        <WcfRiaProperty
+          Name="ExchangeRate"
+          Property="Competitor/Properties[ExchangeRate]" />
+        <WcfRiaProperty
+          Name="TransactionCurrencyId"
+          Property="Competitor/Properties[TransactionCurrencyId]" />
+        <WcfRiaProperty
+          Name="ImportSequenceNumber"
+          Property="Competitor/Properties[ImportSequenceNumber]" />
+        <WcfRiaProperty
+          Name="ReportedRevenue_Base"
+          Property="Competitor/Properties[ReportedRevenue_Base]" />
+        <WcfRiaProperty
+          Name="YomiName"
+          Property="Competitor/Properties[YomiName]" />
+        <WcfRiaProperty
+          Name="CreatedOnBehalfBy"
+          Property="Competitor/Properties[CreatedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOnBehalfBy"
+          Property="Competitor/Properties[ModifiedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="leadcompetitors_associations"
+          Property="Competitor/Properties[leadcompetitors_associations]" />
+        <WcfRiaProperty
+          Name="Competitor_opportunity_activities"
+          Property="Competitor/Properties[Competitor_opportunity_activities]" />
+        <WcfRiaProperty
+          Name="opportunitycompetitors_associations"
+          Property="Competitor/Properties[opportunitycompetitors_associations]" />
+        <WcfRiaProperty
+          Name="competitorproduct_associations"
+          Property="Competitor/Properties[competitorproduct_associations]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="leadcompetitors_association_competitor">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[leadcompetitors_association_competitor]/Members[LeadCompetitor]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CompetitorId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[leadcompetitors_association_competitor]/Members[Competitor]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CompetitorId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="competitor_opportunity_activities">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[competitor_opportunity_activities]/Members[OpportunityClose]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CompetitorId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[competitor_opportunity_activities]/Members[Competitor]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CompetitorId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="opportunitycompetitors_association_competitor">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[opportunitycompetitors_association_competitor]/Members[OpportunityCompetitor]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CompetitorId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[opportunitycompetitors_association_competitor]/Members[Competitor]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CompetitorId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="competitorproduct_association_competitor">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[competitorproduct_association_competitor]/Members[Competitor]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CompetitorId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[competitorproduct_association_competitor]/Members[CompetitorProduct]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="CompetitorId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Workflow">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Process Name" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="WorkflowId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <KeyProperty.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Required />
+          <Hidden />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="OnDemand"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Run as OnDemand" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PluginTypeId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Type"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Type" />
+          <SupportedValue
+            DisplayName="Definition"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Activation"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Template"
+            Value="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PrimaryEntity"
+        IsReadOnly="True"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Primary Entity" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwnerId"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owner" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOn"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified On" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AsyncAutoDelete"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Delete Job On Completion" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsCrmUIWorkflow"
+        IsReadOnly="True"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Is CRM Process" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Subprocess"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Is Child Process" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Scope"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Scope" />
+          <SupportedValue
+            DisplayName="User"
+            Value="1" />
+          <SupportedValue
+            DisplayName="BusinessUnit"
+            Value="2" />
+          <SupportedValue
+            DisplayName="Parent_ChildBusinessUnits"
+            Value="3" />
+          <SupportedValue
+            DisplayName="Organization"
+            Value="4" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StatusCode"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status Reason" />
+          <SupportedValue
+            DisplayName="Draft"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Activated"
+            Value="2" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Description" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningBusinessUnit"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning Business Unit" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StateCode"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Status" />
+          <SupportedValue
+            DisplayName="Draft"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Activated"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OwningUser"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Owning User" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="WorkflowIdUnique"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SupportingSolutionId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Solution" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SolutionId"
+        IsReadOnly="True"
+        PropertyType=":Guid">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Solution" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OverwriteTime"
+        IsReadOnly="True"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Record Overwrite Time" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ComponentState"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Component State" />
+          <SupportedValue
+            DisplayName="Published"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Unpublished"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Deleted"
+            Value="2" />
+          <SupportedValue
+            DisplayName="DeletedUnpublished"
+            Value="3" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Created By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedOnBehalfBy"
+        IsReadOnly="True"
+        PropertyType=":Guid?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Modified By (Delegate)" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Xaml"
+        PropertyType=":String?" />
+      <EntityProperty
+        Name="TriggerOnDelete"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Trigger On Delete" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TriggerOnCreate"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Trigger On Create" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TriggerOnUpdateAttributeList"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Trigger On Update Attribute List" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Category"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Category" />
+          <SupportedValue
+            DisplayName="Workflow"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Dialog"
+            Value="1" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LanguageCode"
+        IsReadOnly="True"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Language" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsManaged"
+        IsReadOnly="True"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Is Managed" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IsCustomizable"
+        PropertyType=":Boolean">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Customizable" />
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="InputParameters"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <DisplayName
+            Value="Input Parameters" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="workflow_active_workflow"
+        Association="workflow_active_workflow"
+        FromEnd="Workflow"
+        ToEnd="Workflow1">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="workflow" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="workflow_active_workflows"
+        Association="workflow_active_workflow"
+        FromEnd="Workflow1"
+        ToEnd="Workflow">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="workflow" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="team_workflow"
+        Association="team_workflow"
+        FromEnd="Workflow"
+        ToEnd="Team">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="team" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="workflow_parent_workflow"
+        Association="workflow_parent_workflow"
+        FromEnd="Workflow"
+        ToEnd="Workflow1">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="workflow" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="workflow_parent_workflows"
+        Association="workflow_parent_workflow"
+        FromEnd="Workflow1"
+        ToEnd="Workflow">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="workflow" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="Workflow_dependencies"
+        Association="workflow_dependencies"
+        FromEnd="Workflow"
+        ToEnd="WorkflowDependency">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="workflowdependency" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="workflow_active_workflow">
+    <AssociationEnd
+      Name="Workflow"
+      Multiplicity="Many"
+      EntityType="Workflow" />
+    <AssociationEnd
+      Name="Workflow1"
+      EntityType="Workflow">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="workflow_parent_workflow">
+    <AssociationEnd
+      Name="Workflow"
+      Multiplicity="Many"
+      EntityType="Workflow" />
+    <AssociationEnd
+      Name="Workflow1"
+      EntityType="Workflow">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
+  <Association
+    Name="workflow_dependencies">
+    <AssociationEnd
+      Name="Workflow"
+      EntityType="Workflow">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="WorkflowDependency"
+      Multiplicity="Many"
+      EntityType="WorkflowDependency" />
+  </Association>
+  <EntityContainer
+    Name="DynamicsCRMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Workflows"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Workflow" />
+    <AssociationSet
+      Name="workflow_active_workflow"
+      Association="workflow_active_workflow">
+      <AssociationSetEnd
+        Name="Workflow"
+        EntitySet="Workflows" />
+      <AssociationSetEnd
+        Name="Workflow1"
+        EntitySet="Workflows" />
+    </AssociationSet>
+    <AssociationSet
+      Name="workflow_parent_workflow"
+      Association="workflow_parent_workflow">
+      <AssociationSetEnd
+        Name="Workflow"
+        EntitySet="Workflows" />
+      <AssociationSetEnd
+        Name="Workflow1"
+        EntitySet="Workflows" />
+    </AssociationSet>
+    <AssociationSet
+      Name="workflow_dependencies"
+      Association="workflow_dependencies">
+      <AssociationSetEnd
+        Name="Workflow"
+        EntitySet="Workflows" />
+      <AssociationSetEnd
+        Name="WorkflowDependency"
+        EntitySet="WorkflowDependencies" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Workflows_Single"
+      ReturnType="Workflow">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="WorkflowId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="WorkflowId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Workflows" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="WorkflowId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'WorkflowId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Workflows_SingleOrDefault"
+      ReturnType="Workflow">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="WorkflowId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="WorkflowId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Workflows" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="WorkflowId"
+        ParameterType="Microsoft.LightSwitch:Guid?">
+        <QueryOperationParameter.Attributes>
+          <DisplayName
+            Value="Id" />
+          <Description
+            Value="The value of the 'WorkflowId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="DynamicsCRMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Workflows">
+      <EntitySetMapping.Attributes>
+        <WcfRiaEntitySet
+          EntitySetQuery="GetProcesses"
+          EntityTypeName="Xpert360Lightning.Workflow" />
+        <WcfRiaProperty
+          Name="Name"
+          Property="Workflow/Properties[Name]" />
+        <WcfRiaProperty
+          Name="WorkflowId"
+          Property="Workflow/Properties[WorkflowId]" />
+        <WcfRiaProperty
+          Name="OnDemand"
+          Property="Workflow/Properties[OnDemand]" />
+        <WcfRiaProperty
+          Name="PluginTypeId"
+          Property="Workflow/Properties[PluginTypeId]" />
+        <WcfRiaProperty
+          Name="CreatedOn"
+          Property="Workflow/Properties[CreatedOn]" />
+        <WcfRiaProperty
+          Name="Type"
+          Property="Workflow/Properties[Type]" />
+        <WcfRiaProperty
+          Name="PrimaryEntity"
+          Property="Workflow/Properties[PrimaryEntity]" />
+        <WcfRiaProperty
+          Name="OwnerId"
+          Property="Workflow/Properties[OwnerId]" />
+        <WcfRiaProperty
+          Name="ModifiedOn"
+          Property="Workflow/Properties[ModifiedOn]" />
+        <WcfRiaProperty
+          Name="AsyncAutoDelete"
+          Property="Workflow/Properties[AsyncAutoDelete]" />
+        <WcfRiaProperty
+          Name="IsCrmUIWorkflow"
+          Property="Workflow/Properties[IsCrmUIWorkflow]" />
+        <WcfRiaProperty
+          Name="Subprocess"
+          Property="Workflow/Properties[Subprocess]" />
+        <WcfRiaProperty
+          Name="Scope"
+          Property="Workflow/Properties[Scope]" />
+        <WcfRiaProperty
+          Name="StatusCode"
+          Property="Workflow/Properties[StatusCode]" />
+        <WcfRiaProperty
+          Name="ModifiedBy"
+          Property="Workflow/Properties[ModifiedBy]" />
+        <WcfRiaProperty
+          Name="Description"
+          Property="Workflow/Properties[Description]" />
+        <WcfRiaProperty
+          Name="CreatedBy"
+          Property="Workflow/Properties[CreatedBy]" />
+        <WcfRiaProperty
+          Name="OwningBusinessUnit"
+          Property="Workflow/Properties[OwningBusinessUnit]" />
+        <WcfRiaProperty
+          Name="StateCode"
+          Property="Workflow/Properties[StateCode]" />
+        <WcfRiaProperty
+          Name="OwningUser"
+          Property="Workflow/Properties[OwningUser]" />
+        <WcfRiaProperty
+          Name="WorkflowIdUnique"
+          Property="Workflow/Properties[WorkflowIdUnique]" />
+        <WcfRiaProperty
+          Name="SupportingSolutionId"
+          Property="Workflow/Properties[SupportingSolutionId]" />
+        <WcfRiaProperty
+          Name="SolutionId"
+          Property="Workflow/Properties[SolutionId]" />
+        <WcfRiaProperty
+          Name="OverwriteTime"
+          Property="Workflow/Properties[OverwriteTime]" />
+        <WcfRiaProperty
+          Name="ComponentState"
+          Property="Workflow/Properties[ComponentState]" />
+        <WcfRiaProperty
+          Name="CreatedOnBehalfBy"
+          Property="Workflow/Properties[CreatedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="ModifiedOnBehalfBy"
+          Property="Workflow/Properties[ModifiedOnBehalfBy]" />
+        <WcfRiaProperty
+          Name="Xaml"
+          Property="Workflow/Properties[Xaml]" />
+        <WcfRiaProperty
+          Name="TriggerOnDelete"
+          Property="Workflow/Properties[TriggerOnDelete]" />
+        <WcfRiaProperty
+          Name="TriggerOnCreate"
+          Property="Workflow/Properties[TriggerOnCreate]" />
+        <WcfRiaProperty
+          Name="TriggerOnUpdateAttributeList"
+          Property="Workflow/Properties[TriggerOnUpdateAttributeList]" />
+        <WcfRiaProperty
+          Name="Category"
+          Property="Workflow/Properties[Category]" />
+        <WcfRiaProperty
+          Name="LanguageCode"
+          Property="Workflow/Properties[LanguageCode]" />
+        <WcfRiaProperty
+          Name="IsManaged"
+          Property="Workflow/Properties[IsManaged]" />
+        <WcfRiaProperty
+          Name="IsCustomizable"
+          Property="Workflow/Properties[IsCustomizable]" />
+        <WcfRiaProperty
+          Name="InputParameters"
+          Property="Workflow/Properties[InputParameters]" />
+        <WcfRiaProperty
+          Name="workflow_active_workflow"
+          Property="Workflow/Properties[workflow_active_workflow]" />
+        <WcfRiaProperty
+          Name="workflow_active_workflows"
+          Property="Workflow/Properties[workflow_active_workflows]" />
+        <WcfRiaProperty
+          Name="team_workflow"
+          Property="Workflow/Properties[team_workflow]" />
+        <WcfRiaProperty
+          Name="workflow_parent_workflow"
+          Property="Workflow/Properties[workflow_parent_workflow]" />
+        <WcfRiaProperty
+          Name="workflow_parent_workflows"
+          Property="Workflow/Properties[workflow_parent_workflows]" />
+        <WcfRiaProperty
+          Name="Workflow_dependencies"
+          Property="Workflow/Properties[Workflow_dependencies]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="workflow_active_workflow">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[workflow_active_workflow]/Members[Workflow]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="ActiveWorkflowId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[workflow_active_workflow]/Members[Workflow1]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="WorkflowId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="workflow_parent_workflow">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[workflow_parent_workflow]/Members[Workflow]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="ParentWorkflowId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[workflow_parent_workflow]/Members[Workflow1]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="WorkflowId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="workflow_dependencies">
+      <AssociationSetMapping.Attributes>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[workflow_dependencies]/Members[Workflow]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="WorkflowId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+        <WcfRiaAssociationSetEnd
+          End="DynamicsCRMData/Members[workflow_dependencies]/Members[WorkflowDependency]">
+          <WcfRiaAssociationSetEnd.Attributes>
+            <WcfRiaPropertyRef
+              Name="WorkflowId" />
+          </WcfRiaAssociationSetEnd.Attributes>
+        </WcfRiaAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>
