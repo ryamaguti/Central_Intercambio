@@ -102,6 +102,9 @@
     <Content Include="Screens\Home.lsml.js">
       <DependentUpon>Home.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\ListContacts.lsml.js">
+      <DependentUpon>ListContacts.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\Reports.lsml.js">
       <DependentUpon>Reports.lsml</DependentUpon>
     </Content>
@@ -133,9 +136,9 @@
     <Content Include="Scripts\lodash.js" />
     <Content Include="Scripts\lodash.min.js" />
     <Content Include="Scripts\MIT-LICENSE.txt" />
-    <Content Include="Scripts\msls.js" />
     <Content Include="Scripts\msls-2.5.2-vsdoc.js" />
     <Content Include="Scripts\msls-2.5.2.js" />
+    <Content Include="Scripts\msls.js" />
     <Content Include="Scripts\msls-2.5.2.min.js" />
     <Content Include="Scripts\README.txt" />
     <Content Include="Scripts\winjs-1.0.js" />
@@ -153,6 +156,7 @@
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\Home.lsml" />
+    <LightSwitchModel Include="Screens\ListContacts.lsml" />
     <LightSwitchModel Include="Screens\Reports.lsml" />
   </ItemGroup>
   <ItemGroup>

@@ -22,8 +22,8 @@
       </EntityContainerGroupProperty.Attributes>
     </EntityContainerGroupProperty>
     <EntityContainerGroupProperty
-      Name="DynamicsCRMData"
-      EntityContainer="DynamicsCRMData" />
+      Name="CIContextData"
+      EntityContainer="CIContextData" />
   </EntityContainerGroup>
   <Permission
     Name="Manager">

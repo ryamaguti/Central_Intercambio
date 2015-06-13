@@ -260,180 +260,275 @@
     <_ServerFile Include="LogIn.aspx" />
     <_ServerFile Include="LogOut.aspx" />
     <Content Include="Web.config" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\UoMs.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\UoMSchedules.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Workflows.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\WorkflowDependencies.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\WorkflowLogs.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Quotes.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\QuoteCloses.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\QuoteDetails.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Roles.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\SalesOrders.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\SalesOrderDetails.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\SdkMessages.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\SdkMessagePairs.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\SdkMessageRequests.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\SdkMessageResponses.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Solutions.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Teams.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\TeamRoles.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Territories.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Invoices.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\InvoiceDetails.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Leads.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\LeadCompetitors.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\LeadProducts.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Opportunities.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\OpportunityCloses.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\OpportunityCompetitors.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\OpportunityProducts.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\PriceLevels.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Products.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Queues.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\X360Configurations.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Accounts.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\AccountLeads.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Attachments.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Competitors.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\CompetitorProducts.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Contacts.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\ContactLeads.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\ContactOrders.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Contracts.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\ContractDetails.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\Activities.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\ActivityParties.lsml" />
-    <LightSwitchModel Include="Properties\DataSources\DynamicsCRMData.lsml" />
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetUoM.lsml">
-      <DependentUpon>UoMs.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetUoMSchedule.lsml">
-      <DependentUpon>UoMSchedules.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetWorkflow.lsml">
-      <DependentUpon>Workflows.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetWorkflowDependency.lsml">
-      <DependentUpon>WorkflowDependencies.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetWorkflowLog.lsml">
-      <DependentUpon>WorkflowLogs.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetQuote.lsml">
-      <DependentUpon>Quotes.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetQuoteClose.lsml">
-      <DependentUpon>QuoteCloses.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetQuoteDetail.lsml">
-      <DependentUpon>QuoteDetails.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetRole.lsml">
-      <DependentUpon>Roles.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSalesOrder.lsml">
-      <DependentUpon>SalesOrders.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSalesOrderDetail.lsml">
-      <DependentUpon>SalesOrderDetails.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSdkMessage.lsml">
-      <DependentUpon>SdkMessages.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSdkMessagePair.lsml">
-      <DependentUpon>SdkMessagePairs.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSdkMessageRequest.lsml">
-      <DependentUpon>SdkMessageRequests.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSdkMessageResponse.lsml">
-      <DependentUpon>SdkMessageResponses.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetSolution.lsml">
-      <DependentUpon>Solutions.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetTeam.lsml">
-      <DependentUpon>Teams.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetTeamRoles.lsml">
-      <DependentUpon>TeamRoles.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetTerritory.lsml">
-      <DependentUpon>Territories.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetInvoice.lsml">
-      <DependentUpon>Invoices.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetInvoiceDetail.lsml">
-      <DependentUpon>InvoiceDetails.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetLead.lsml">
-      <DependentUpon>Leads.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetLeadCompetitor.lsml">
-      <DependentUpon>LeadCompetitors.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetLeadProduct.lsml">
-      <DependentUpon>LeadProducts.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetOpportunity.lsml">
-      <DependentUpon>Opportunities.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetOpportunityClose.lsml">
-      <DependentUpon>OpportunityCloses.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetOpportunityCompetitor.lsml">
-      <DependentUpon>OpportunityCompetitors.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetOpportunityProduct.lsml">
-      <DependentUpon>OpportunityProducts.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetPriceLevel.lsml">
-      <DependentUpon>PriceLevels.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetProduct.lsml">
-      <DependentUpon>Products.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetQueue.lsml">
-      <DependentUpon>Queues.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetAccount.lsml">
-      <DependentUpon>Accounts.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetAccountLead.lsml">
-      <DependentUpon>AccountLeads.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetAttachment.lsml">
-      <DependentUpon>Attachments.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetCompetitor.lsml">
-      <DependentUpon>Competitors.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetCompetitorProduct.lsml">
-      <DependentUpon>CompetitorProducts.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetContact.lsml">
-      <DependentUpon>Contacts.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetContactLead.lsml">
-      <DependentUpon>ContactLeads.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetContactOrder.lsml">
-      <DependentUpon>ContactOrders.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetContract.lsml">
-      <DependentUpon>Contracts.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetContractDetail.lsml">
-      <DependentUpon>ContractDetails.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetActivity.lsml">
-      <DependentUpon>Activities.lsml</DependentUpon>
-    </LightSwitchModel>
-    <LightSwitchModel Include="DataSources\DynamicsCRMData\GetActivityParty.lsml">
-      <DependentUpon>ActivityParties.lsml</DependentUpon>
-    </LightSwitchModel>
+    <LightSwitchModel Include="DataSources\CIContextData\codek_text_file_import_export_logSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_idiomasSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\OpportunityCompetitorsSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SystemFormSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\RoleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CustomerRelationshipSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_sequential_numberSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SdkMessageRequestFieldSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_survey_answerSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_operator_logSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\AccountSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ConnectionRoleAssociationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\BulkOperationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_answer_typeSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ActivityPointerSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ReportCategorySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CampaignActivitySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SdkMessageFilterSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ContactQuotesSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_grupoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\QuoteDetailSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\FieldPermissionSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_idiomasdocontatoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TeamMembershipSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\FieldSecurityProfileSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ConnectionSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PublisherSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_trackingSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\InvalidDependencySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SalesOrderDetailSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ci_contadorSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_processo_vendaSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_option_answer_codek_answer_typeSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PublisherAddressSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_option_answerSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CampaignResponseSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\OrganizationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\WorkflowLogSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_dicionariodehyperlinkSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PostLikeSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ConnectionRoleObjectTypeCodeSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ImportLogSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ImportEntityMappingSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_complementoprocednSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\UoMScheduleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PickListMappingSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\RolePrivilegesSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SalesLiteratureSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\OpportunityCloseSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PluginTypeSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\LeadAddressSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\BusinessUnitSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\RollupFieldSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ContactSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_procednSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TemplateSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\InvoiceSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ActivityMimeAttachmentSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_subject_operatorSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ListMemberSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\QuoteSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\LookUpMappingSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_navegacaoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_wordtemplateSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\AttributeMapSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_client_styleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\AccountLeadsSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ResourceGroupSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_testeSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_pdfwordbookmarkconfigSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SdkMessageProcessingStepImageSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\DuplicateRuleConditionSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\xbitz_CounterSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_connector_default_valueSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ProductSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CompetitorProductSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_survey_questionSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\EmailSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_searchSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\RecurringAppointmentMasterSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TransformationParameterMappingSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PostSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\OrderCloseSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\DuplicateRecordSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\KbArticleTemplateSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ImportMapSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\IncidentSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SystemUserSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SystemUserProfilesSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ServiceSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\OrganizationUISet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\GoalRollupQuerySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SalesLiteratureItemSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_interval_reasonSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_subject_default_answer_entitySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\MailMergeTemplateSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TerritorySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CampaignActivityItemSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PostFollowSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CampaignItemSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SolutionSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TaskSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CompetitorSalesLiteratureSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PostCommentSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_resultado_envio_vtSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_categoriadohyperlinkSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\UserEntityUISettingsSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ReportSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\OpportunityProductSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CustomerAddressSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CustomerOpportunityRoleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ResourceSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SdkMessagePairSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\LeadProductSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ContractDetailSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_envio_externoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ResourceSpecSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TeamSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SdkMessageResponseFieldSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ProductAssociationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SavedQuerySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\new_matriculaSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\OpportunitySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_areaformacaoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_connector_sql_info_crm_connectionSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TeamProfilesSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ProcessSessionSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_instituicaoensinoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\GoalSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ConstraintBasedGroupSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\IncidentResolutionSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\AsyncOperationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\EquipmentSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\WebResourceSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ActivityPartySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\MetricSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ImportFileSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\FaxSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\new_tributeSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ServiceEndpointSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\Tridea_stateSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_historicoemailecentrySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SavedQueryVisualizationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SdkMessageRequestSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\AuditSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_condiesdepagamentoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\OwnerMappingSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_configurationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ServiceAppointmentSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TimeZoneRuleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\LetterSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\BusinessUnitNewsArticleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_default_answersSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ContactInvoicesSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TransactionCurrencySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CalendarSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SdkMessageSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\BulkOperationLogSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ReportEntitySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ci_contact_productSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CampaignSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\QueueSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\QuarterlyFiscalCalendarSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ContactLeadsSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\DuplicateRuleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_wordtemplateemailSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\DisplayStringSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\UserFormSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\UserSettingsSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\AnnualFiscalCalendarSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\RelationshipRoleMapSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_cursoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\BulkDeleteFailureSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_businessunitSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\LeadSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ImportJobSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_tracking_detailSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SiteMapSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PrincipalObjectAttributeAccessSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TeamRolesSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SystemUserRolesSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_surveySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\WorkflowSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SiteSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SdkMessageProcessingStepSecureConfigSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_configSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ReportVisibilitySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_questionSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\KbArticleCommentSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ColumnMappingSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\UserQuerySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PriceLevelSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_cidadeSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_connector_optionset_mapSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TransformationMappingSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\WorkflowDependencySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ImportSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\MonthlyFiscalCalendarSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\FixedMonthlyFiscalCalendarSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SubjectSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SemiAnnualFiscalCalendarSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\Tridea_countrySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PluginAssemblySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_subjectSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_text_file_import_exportSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\AppointmentSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ConnectionRoleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\mbs_pluginprofileSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\AnnotationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\KbArticleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_cepSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\QueueItemSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\UserQueryVisualizationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CompetitorSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\RecurrenceRuleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\UserEntityInstanceDataSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_answer_listSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_lojaSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SystemUserLicensesSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TimeZoneLocalizedNameSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_search_visitor_configSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_itemdopedidoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SharePointDocumentLocationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_search_messageSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ProductSubstituteSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_operatorSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_formaderecebimentoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\new_markent1Set.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ListSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ContractTemplateSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_retorno_envio_externoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_connector_mappingSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_prodpaxSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\RelationshipRoleSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PluginTypeStatisticSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ProductPriceLevelSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SolutionComponentSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_event_logSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SdkMessageProcessingStepSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\IsvConfigSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SalesOrderSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\BulkDeleteOperationSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\DiscountTypeSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_formadepagamentoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\LicenseSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_eventfieldSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\DiscountSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\new_e1Set.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_prodfilefinadmSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_answerSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\TimeZoneDefinitionSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\InvoiceDetailSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\DependencySet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PrivilegeSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\CI_log_compartilhamentoSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ReportLinkSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SdkMessageResponseSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ContactOrdersSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\EntityMapSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\SharePointSiteSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_integration_log_tmpSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_attribute_mapSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\codek_livechat_form_visitor_configSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\QuoteCloseSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\LeadCompetitorsSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\PhoneCallSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ContractSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\UoMSet.lsml" />
+    <LightSwitchModel Include="DataSources\CIContextData\ProductSalesLiteratureSet.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -450,7 +545,9 @@
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -466,7 +563,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:3555/</IISUrl>
+          <IISUrl>http://localhost:8033/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
